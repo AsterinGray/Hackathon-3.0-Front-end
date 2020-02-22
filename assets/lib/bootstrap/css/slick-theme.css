@@ -88,11 +88,11 @@
 }
 .slick-prev:before
 {
-    content: url(../../../../assets/img/double_arrow_prev.png);
+    content: url(../../../../assets/img/about/double_arrow_prev.png);
 }
 [dir='rtl'] .slick-prev:before
 {
-    content: url(../../../../assets/img/double_arrow_prev.png);
+    content: url(../../../../assets/img/about/double_arrow_prev.png);
 }
 
 .slick-next
@@ -106,11 +106,11 @@
 }
 .slick-next:before
 {
-    content: url(../../../../assets/img/double_arrow_next.png);
+    content: url(../../../../assets/img/about/double_arrow_next.png);
 }
 [dir='rtl'] .slick-next:before
 {
-    content: url(../../../../assets/img/double_arrow_next.png);
+    content: url(../../../../assets/img/about/double_arrow_next.png);
 }
 
 /* Dots */

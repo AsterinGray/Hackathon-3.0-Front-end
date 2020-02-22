@@ -12,6 +12,16 @@ html, body{
 }
 
 
+/* img{
+    max-width: 100%;
+    height: auto;
+} */
+
+.about{
+    position: relative;
+    overflow: hidden;
+}
+
  #about-heading{
     font-family : "CircularStd";
     font-weight: 500;
@@ -29,10 +39,8 @@ html, body{
     width: 50%;
 }
 
-img{
-    max-width: 100%;
-    height: auto;
-    /* min-width: 50%; */
+.about-width{
+    width: inherit;
 }
 
 #object1{
@@ -51,9 +59,7 @@ img{
 
 .carousel-content{
     text-align: center;
-    /* margin:0; */
     padding: 5px 0;
-    /* height: 0px; */
     background-color: white;
 }
 
@@ -62,24 +68,20 @@ img{
     overflow: hidden;
     margin:0 5px;
     opacity: .5;
-    /* width: 50%; */
 }
 
 .slick-current{
     opacity: 1;
-    width: 200px;
 }
 
-.card,.slick-slide{
-    width: 100px;
+.slick-slide.slick-current img{
+    height: 25%;
+    width: 120%;
 }
 
-.card > img{
-    width: 80%;
-}
-
-.slick-current img{
+.slick-slide img{
     width: 100%;
+    height: 20%;
 }
 
 .slick-track{

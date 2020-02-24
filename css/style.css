@@ -3,9 +3,42 @@ html, body{
     padding: 0;
     font-family: 'CircularStd';
     scroll-behavior: smooth;
+    background-color: #1D2134;
 }
 
 @font-face{
     font-family: "CircularStd";
     src: url("../assets/fonts/CircularStd-Medium.otf");
+}
+
+.head{
+    position: fixed;
+    top: 0;
+    background-color: #1D2134;
+    z-index: 99;
+}
+
+.nav-img{
+    width: 5.5rem;
+    height: auto;
+}
+
+.nav-link{
+    font-size: 1.1rem;
+    margin: 0 1rem;
+    border-bottom: 1.5px solid transparent;
+}
+
+.nav-link:hover, .active{
+    border-bottom: 1.5px solid #E74C3C;
+}
+
+#register{
+    padding: .2rem 1rem;
+    border-radius: 50px;
+    border: 2px solid #E74C3C;
+}
+
+#register:hover{
+    background-color: #E74C3C;
 }

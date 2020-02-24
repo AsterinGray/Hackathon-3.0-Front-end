@@ -10,12 +10,67 @@
     <link rel="stylesheet" href="assets/lib/bootstrap/css/slick-theme.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <header>
-        
+<body data-spy="scroll" data-target=".navbar">
+    <header class="head px-5 w-100">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="#home">
+                <img class="nav-img" src="assets/img/Hackathon-logo.png" alt="Hackathon-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse nav-a" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="text-light nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="text-light nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="text-light nav-link" href="#faq">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="text-light nav-link" href="#sponsor">Sponsor</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="text-light nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="text-light nav-link" id="register" href="#">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="text-light nav-link" href="#">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </header>
-    <section class="home" id="home">
-        
+    <section class="home container-fluid vh-100 justify-content-center py-5" id="home">
+        <div class="home-content row align-items-center justify-content-center py-3">
+            <div class="home-left col-lg-5 col-md-10">
+                <div id="title">BNCC HACKTHON 3.0</div>
+                <div id="slogan">Transform ideas, Code Your Solution</div>
+                <div class="extra">will be coming at</div>
+                <div id="date">11th-13th July 2020</div>
+                <div class="guide">
+                    <div class="extra my-4">Get your guide book here!!</div>
+                    <button>
+                        <a href="assets/img/Hackathon-logo.png" download="Hackathon-logo.png">DOWNLOAD</a>
+                    </button>
+                </div>
+            </div>
+            <div class="home-right col-lg-5 col-md-10">
+                <img src="assets/img/home/1stSection_image-min.png" alt="">
+            </div>
+        </div>
+        <div class="more-info">
+            <div>More Information</div>
+            <a href="#about"><img src="assets/img/home/double-arrow.svg" alt=""></a>
+        </div>
     </section>
     <section class="about container-fluid min-vh-100 d-flex justify-content-center" id="about">
         <img src="assets/img/about/Object1.png" id="object1"> 
@@ -67,12 +122,12 @@
     <section class="footer">
 
     </section>
-</body>
-<script src="assets/lib/bootstrap/js/jquery-1.11.0.min.js"></script>
-<script src="assets/lib/bootstrap/js/jquery-migrate-1.2.1.min.js"></script>
-<script src="assets/lib/bootstrap/js/slick.min.js"></script>
-<script src="js/main.js"></script>
-<script>
     
-</script>
+    <script src="assets/lib/bootstrap/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/lib/bootstrap/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/lib/bootstrap/js/slick.min.js"></script>
+    <script src="assets/lib/jquery.js"></script>
+    <script src="assets/lib/bootstrap/js/bootstrap.js"></script>
+    <script src="js/main.js"></script>
+</body>
 </html>

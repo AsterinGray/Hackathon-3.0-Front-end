@@ -12,7 +12,7 @@ html, body{
 }
 
 .head{
-    position: fixed;
+    position: sticky;
     top: 0;
     background-color: #1D2134;
     z-index: 99;
@@ -43,14 +43,12 @@ html, body{
     background-color: #E74C3C;
 }
 
-
-
 .home{
     background: url("../assets/img/home/BG_Home_1920-min.png") no-repeat; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
+        background-size: cover;
 }
 
 .home-content img{
@@ -108,7 +106,7 @@ html, body{
     
 .about{
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
  #about-heading{

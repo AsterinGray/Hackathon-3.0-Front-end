@@ -11,6 +11,12 @@ html, body{
     src: url("../assets/fonts/CircularStd-Medium.otf");
 }
 
+@font-face{
+    font-family: "CircularStd";
+    font-weight: bold;
+    src: url("../assets/fonts/CircularStd-Bold.otf");
+}
+
 .head{
     position: sticky;
     top: 0;
@@ -48,7 +54,7 @@ html, body{
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-        background-size: cover;
+    background-size: cover;
 }
 
 .home-content img{
@@ -106,20 +112,6 @@ html, body{
     
 .about{
     position: relative;
-    /* overflow: hidden; */
-}
-
- #about-heading{
-    font-family : "CircularStd";
-    font-weight: 500;
-    font-size : 2.5rem; 
-    color : #E74C3C;
-}
-
-#about-content{
-    font-family: "CircularStd";
-    font-size: 1rem;
-    color: white;
 }
 
 #about-left{
@@ -132,7 +124,7 @@ html, body{
 
 #object1{
     position: absolute;
-    top: -22%;
+    top: -18%;
     right: 8%;
     width: 40%;
 }
@@ -151,6 +143,7 @@ html, body{
 }
 
 .card{
+    border: 0;
     border-radius: 30px;
     overflow: hidden;
     margin:0 5px;
@@ -163,15 +156,90 @@ html, body{
 
 .slick-slide.slick-current img{
     height: 25%;
-    width: 120%;
+    width: 100%;
 }
 
 .slick-slide img{
-    width: 100%;
+    width: 80%;
     height: 20%;
 }
 
 .slick-track{
     display: flex;
     align-items: center;
+}
+
+.carousel-image{
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.why-bg{
+    opacity: .2;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: khaki;
+}
+
+.why-bg-container{
+    width: inherit;
+    position: absolute;
+}
+
+.heading{
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+.why-content{
+    z-index: 1;
+}
+
+.why-icon{
+   width: 100px;
+   margin-bottom: 20px;
+}
+
+.why-card{
+    text-align: center;
+    width: auto;
+    margin: 5% 3% 0% 3%;
+}
+
+.fontStyle1{
+    color : #e74c3c;
+    font-family : "CircularStd";
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+.fontStyle2{
+    color: white;
+    font-size: 1rem;
+    font-family : "CircularStd";
+    font-weight: normal;
+}
+
+.heading{
+    font-weight: bold;
+    font-size : 2.5rem; 
+}
+@media only screen and (max-width:991px){
+    .why-card{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .why-card-container{
+        display: block !important;
+        /* margin-top: 55px; */
+    }
+    /* .why-icon{
+        margin-top: 20px;
+    } */
+    .why-master-container{
+        margin-top: 50px;
+    }
 }

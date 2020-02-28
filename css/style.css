@@ -12,7 +12,7 @@ html, body{
 }
 
 .head{
-    position: sticky;
+    position: fixed;
     top: 0;
     background-color: #1D2134;
     z-index: 99;
@@ -174,4 +174,70 @@ html, body{
 .slick-track{
     display: flex;
     align-items: center;
+}
+
+.faq{
+    color: #FFFFFF;
+}
+
+.faq > h1{
+
+    color : #E74C3C;
+}
+
+.faq-content{
+    width: 100%;
+    margin: 2em 0;
+}
+
+.faq-question{
+    display: flex;
+    background-color: #252A41;
+    padding: 1em 2em;
+    border-radius: 15px;
+    /* font-weight: bold; */
+}
+
+.faq-question:hover{
+    background-color: rgba(37, 42, 65, 0.1);
+    cursor: pointer;
+}
+
+.faq-ans{
+    display: none;
+    opacity: 0.8;
+    padding: 0 2em;
+    border-radius: 0 0 15px 15px;
+    background-color: rgba(37, 42, 65, 0.1);
+}
+
+.faq-active{
+    border-radius: 15px 15px 0 0;
+    background-color: rgba(37, 42, 65, 0.1);
+}
+
+.circle{
+    background-color: #252A41;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+
+.horizontal, .vertical{
+    transition: all 0.5s ease-in-out;
+    background-color: white;
+    width: 1.3rem;
+    height: .1rem;
+}
+
+.vertical{
+    transform: rotate(90deg);
+}
+
+.rotate1{
+    transform: rotate(-180deg);
+}
+
+.rotate2{
+    transform: rotate(90deg);
 }

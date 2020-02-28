@@ -38,3 +38,18 @@ $(document).ready(function(){
                 slidesToShow: 1}}]
     });
   });
+
+  $(".faq-question").click(function(){
+      if($(this).next().is(":hidden")){
+        $(".faq-active").next().slideToggle();
+        $(".faq-active").children(".circle").children(".vertical").css({"transform":"rotate(270deg)"})
+        $(".faq-active").removeClass("faq-active");
+        $(this).addClass("faq-active");
+        $(this).children(".circle").children(".vertical").css({"transform":"rotate(-180deg)"})
+        $(this).next().slideToggle();
+      }else{
+        $(this).children(".circle").children(".vertical").css({"transform":"rotate(270deg)"})
+        $(this).removeClass("faq-active");
+        $(this).next().slideToggle();
+      }
+  })

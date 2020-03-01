@@ -106,7 +106,6 @@ html, body{
     
 .about{
     position: relative;
-    /* overflow: hidden; */
 }
 
  #about-heading{
@@ -187,46 +186,56 @@ html, body{
 
 .faq-content{
     width: 100%;
-    margin: 2em 0;
+    margin: 1rem 0;
 }
 
 .faq-question{
     display: flex;
-    background-color: #252A41;
+    background-size: 100% 200%;
+    background-image: linear-gradient( #252A41 50%, rgba(37, 42, 65, 0.1) 50%);
+    transition: background-position .5s cubic-bezier(.5, .8, .1, .1);
     padding: 1em 2em;
     border-radius: 15px;
-    /* font-weight: bold; */
 }
 
-.faq-question:hover{
-    background-color: rgba(37, 42, 65, 0.1);
-    cursor: pointer;
-}
+/* .faq-question:hover{
+    background-position: 0 100%;
+} */
 
 .faq-ans{
     display: none;
-    opacity: 0.8;
-    padding: 0 2em;
+    opacity: 0.5;
+    padding: 0 2rem;
+    padding-right: 4rem;
     border-radius: 0 0 15px 15px;
-    background-color: rgba(37, 42, 65, 0.1);
+    background-size: 100% 200%;
+    background-image: linear-gradient( #252A41 50%, rgba(37, 42, 65, 0.1) 50%);
+    transition: background-position .5s cubic-bezier(.5, .8, .1, .1);
 }
 
 .faq-active{
     border-radius: 15px 15px 0 0;
-    background-color: rgba(37, 42, 65, 0.1);
 }
 
 .circle{
     background-color: #252A41;
+    background-size: 200%;
+    background-image: radial-gradient(#252A41 50%,);
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
+    animation-timing-function: ease-in;
+    cursor: pointer;
+}
+
+.click-ani{
+    animation: gradient 300ms;
 }
 
 .horizontal, .vertical{
     transition: all 0.5s ease-in-out;
     background-color: white;
-    width: 1.3rem;
+    width: 1rem;
     height: .1rem;
 }
 
@@ -234,10 +243,38 @@ html, body{
     transform: rotate(90deg);
 }
 
-.rotate1{
-    transform: rotate(-180deg);
-}
-
-.rotate2{
-    transform: rotate(90deg);
-}
+@keyframes gradient {
+    0% {
+      background: radial-gradient(circle at center, #3498DB 0%, #252A41 0%, #252A41 100%);
+    }
+    25% {
+      background: radial-gradient(circle at center, #3498DB 55%, #252A41 25%, #252A41 100%);
+    }
+    50% {
+      background: radial-gradient(circle at center, #252A41 50%, #3498DB 49%, #252A41 100%);
+    }
+    75% {
+      background: radial-gradient(circle at center, #252A41 50%, #3498DB 74%, #252A41 100%);
+    }
+    100% {
+      background: radial-gradient(circle at center, #252A41 99%, #252A41 100%, #252A41 100%);
+    }
+  }
+/* 
+  @keyframes gradient {
+    0% {
+      background: radial-gradient(circle at center, white 0%, #252A41 0%, #252A41 100%);
+    }
+    25% {
+      background: radial-gradient(circle at center, white 55%, #252A41 25%, #252A41 100%);
+    }
+    50% {
+      background: radial-gradient(circle at center, #252A41 50%, white 49%, #252A41 100%);
+    }
+    75% {
+      background: radial-gradient(circle at center, #252A41 50%, white 74%, #252A41 100%);
+    }
+    100% {
+      background: radial-gradient(circle at center, #252A41 99%, #252A41 100%, #252A41 100%);
+    }
+  } */

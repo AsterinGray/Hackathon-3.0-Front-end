@@ -39,17 +39,32 @@ $(document).ready(function(){
     });
   });
 
-  $(".faq-question").click(function(){
-      if($(this).next().is(":hidden")){
-        $(".faq-active").next().slideToggle();
-        $(".faq-active").children(".circle").children(".vertical").css({"transform":"rotate(270deg)"})
-        $(".faq-active").removeClass("faq-active");
-        $(this).addClass("faq-active");
-        $(this).children(".circle").children(".vertical").css({"transform":"rotate(-180deg)"})
-        $(this).next().slideToggle();
-      }else{
-        $(this).children(".circle").children(".vertical").css({"transform":"rotate(270deg)"})
-        $(this).removeClass("faq-active");
-        $(this).next().slideToggle();
-      }
-  })
+  //FAQ Animation
+  $(".circle").click(function(){
+    let q = $(this).parent();
+    let a = q.next();
+    let active = $(".circle").parent(".faq-active");
+    let vertical = $(this).children(".vertical");
+    if(a.is(":hidden")){
+      $(this).removeClass("click-ani");
+      active.css({"background-position":"initial"});
+      active.next().css({"background-position":"initial"});
+      active.next().slideToggle();
+      active.children(".circle").children(".vertical").css({"transform":"rotate(90deg)"});
+      active.removeClass("faq-active");
+      q.addClass("faq-active");
+      q.css({"background-position":"0 100%"});
+      vertical.css({"transform":"rotate(-0deg)"});
+      a.slideToggle();
+      a.css({"background-position":"0 -100%"});
+      $(this).addClass("click-ani");
+    }else{
+      $(this).removeClass("click-ani");
+      q.css({"background-position":"initial"});
+      a.css({"background-position":"initial"});
+      vertical.css({"transform":"rotate(90deg)"});
+      q.removeClass("faq-active");
+      a.slideToggle();
+      $(this).addClass("click-ani");
+    }
+})

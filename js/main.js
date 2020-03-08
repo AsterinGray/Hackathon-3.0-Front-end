@@ -20,8 +20,8 @@ $(document).ready(function(){
         dots: true,
         centerPadding: '65px',
         slidesToShow: 1,
-        autoplay: false,
-        autoplaySpeed: 500,
+        autoplay: true,
+        autoplaySpeed: 1500,
         responsive: [{
             breakpoint: 768,
             settings: {

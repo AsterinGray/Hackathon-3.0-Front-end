@@ -177,36 +177,9 @@ html, body{
     margin: 0;
 }
 
-.why-bg{
-    opacity: .2;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-}
-
-.why-bg-container{
-    width: inherit;
-    position: absolute;
-}
-
 .heading{
     font-weight: 600;
     font-size: 2.5rem;
-}
-
-.why-content{
-    z-index: 1;
-}
-
-.why-icon{
-   width: 150px;
-   margin-bottom: 20px;
-}
-
-.why-card{
-    text-align: center;
-    width: 20%;
-    margin: 9% 3% 0% 3%;
 }
 
 .fontStyle1{
@@ -227,24 +200,98 @@ html, body{
     font-weight: bold;
     font-size : 2.5rem; 
 }
-@media only screen and (max-width:991px){
-    .why-card{
-        width: 100%;
-        margin: 0;
-        padding: 5%;
-    }
-    .why-card-container{
-        display: block !important;
-        /* margin-top: 55px; */
-    }
-    /* .why-icon{
-        margin-top: 20px;
-    } */
-    .why-master-container{
-        margin-top: 50px;
-    }
+
+.why-container{
+    margin: 1em;
+
 }
-/* #why{
-    background-color: #1D2134;
-    z-index: 5;
-} */
+
+.why-content{
+    height: 20em;
+    margin-top: 2em;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+}
+
+.why-left{
+    background-color: rgba(255,255,255,.1);
+    border-radius: 1em 0px 0px 1em;
+    padding: 2em;
+    height: 100%;
+}
+.why-right{
+    background-color: rgba(255,255,255,.5);
+    border-radius: 0px 1em 1em 0;
+    height: 100%;
+}
+
+.why-heading-container{
+    margin-left: 3em;
+}
+
+.why-left-img{
+    width: 6.67em;
+    height: auto;
+    /* background-color: #e74c3c; */
+    margin-right: 2em;
+}
+
+.why-left-container{
+    /* background-color: yellow; */
+}
+
+#why-active-heading{
+    font-size: 24px;
+}
+
+#why-active-par{
+    color: #FFFFFF;
+    font-size: 1.1rem;
+    font-weight: normal;
+}
+
+.why-card{
+    position: relative;
+    height: 90%;
+    width: 30%;
+    margin: 1em;
+    align-items: center;
+    background-color: #252A41;
+    opacity: 1;
+    top: -4em;
+    overflow: hidden;
+    box-shadow: 5px 10px 15px rgba(0,0,0,.5);
+}
+
+.why-right-img{
+    width: 6.67em;
+    margin-top: 20%;
+}
+
+.why-card-content{
+    background-color: #FFFFFF;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 15.5%;
+    transition: .5s ease;
+    padding-top: .9em;
+}
+
+.why-card span{
+    color: red;
+    font-size: 0.78em;
+}
+
+.why-card-content-heading{
+    text-align: center;
+    font-size: 1em;
+}
+
+.why-card:hover .why-card-content{
+    height: 45%;
+}
+
+.why-card-content-par{
+    font-size: 0.78em;
+}

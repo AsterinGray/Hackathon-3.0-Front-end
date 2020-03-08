@@ -110,35 +110,43 @@
                     </div>
                 </div>
     </section>
-    <section class="why min-vh-100 d-flex justify-content-center align-content-center w-100" id="why">
-        <div class="why-bg-container min-vh-100 d-flex justify-content-center align-content-center">
-            <img class="why-bg" src="assets/img/why/IMG_3697.jpg" alt="">
-        </div>
-        <div class="why-content min-vh-100 w-100 d-flex justify-content-center align-items-center">
-            <div class="why-master-container d-block">
-                <div class="w-100" style="text-align: center;">
-                    <h1 class="heading fontStyle1">Why Should You Join?</h1>
+    <section class="why min-vh-100 d-flex justify-items-center align-content-center align-items-center w-100" id="why">
+        <div class="why-container min-vh-100 w-100 h-100 d-flex align-items-center justify-content-center flex-column align-content-center">
+            <div class="why-heading-container align-self-start">    
+                <h1 class="fontStyle1 heading">Why Should You Join?</h1>
+            </div>
+            <div class="why-content d-flex col-lg-12 justify-content-center">
+                <div class="why-left col-lg-5">
+                    <div class="d-flex align-items-center h-100">
+                        <img id="why-active-image" class="why-left-img" src="assets/img/why/Icon_1.png" alt="Networking">
+                        <div class="why-left-container">
+                            <h2 id="why-active-heading" class="fontStyle1">Networking</h2>
+                            <p id="why-active-par">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, itaque molestias eum dignissimos voluptatem quae?</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="why-card-container d-flex justify-content-center w-100" style="padding:0 10%;">
-                    <div  class="why-card">
-                        <img class="why-icon" src="assets/img/why/Icon_1.png">
-                        <h2 class="fontStyle1">Networking</h2>
-                        <p class="fontStyle2">Peserta akan mendapatkan koneksi dari sesama peserta, mentor, hingga juri dari BNCC Hackathon 3.0</p>
+                <div class="why-right col-lg-7 d-flex">
+                    <div class="why-card card" onclick="replace('Mentoring','Icon_2.png',this)">
+                        <img class="why-right-img flex-column" src="assets/img/why/Icon_2.png" alt="Mentoring">
+                        <div class="why-card-content card-body">
+                            <h5 class="why-card-content-heading">Mentoring</h5>
+                            <p class="why-card-content-par">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, blanditiis!<br><span>Click to enlarge</span></p>
+                        </div>
                     </div>
-                    <div class="why-card">
-                        <img class="why-icon" src="assets/img/why/Icon_2.png">
-                        <h2 class="fontStyle1">Mentoring</h2>
-                        <p class="fontStyle2">Kesempatan mentoring langsung tentang teknologi, design, hingga bisnis dengan experts dari perusahaan</p>
+                    <div class="why-card card" onclick="replace('Seminar','Icon_3.png',this)">
+                        <img class="why-right-img flex-column" src="assets/img/why/Icon_3.png" alt="Seminar">
+                        <div class="why-card-content card-body">
+                            <h5 class="why-card-content-heading">Seminar</h5>
+                            <p class="why-card-content-par">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, blanditiis!<br><span>Click to enlarge</span></p>
+                        </div>
                     </div>
-                    <div class="why-card">
-                        <img class="why-icon" src="assets/img/why/Icon_3.png">
-                        <h2 class="fontStyle1">Job Interview</h2>
-                        <p class="fontStyle2">CV dari pemenang dan peserta hackathon akan disalurkan langsung ke perusahaan sponsor BNCC Hackathon 3.0</p>
-                    </div>
-                    <div class="why-card">
-                        <img class="why-icon" src="assets/img/why/Icon_4.png">
-                        <h2 class="fontStyle1">Seminar</h2>
-                        <p class="fontStyle2">Peserta mengikuti seminar teknologi yang dibawakan oleh perusahaan/startup terkenal</p>
+                    <div class="why-card card" onclick="replace('Job Interview','Icon_4.png',this)">
+                        <img class="why-right-img flex-column" src="assets/img/why/Icon_4.png" alt="Job Interview">
+                        <div class="why-card-content card-body">
+                            <h5 class="why-card-content-heading">Job Interview</h5>
+                            <p class="why-card-content-par">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, blanditiis!<br><span>Click to enlarge</span></p>
+                            
+                        </div>
                     </div>
                 </div>
             </div>

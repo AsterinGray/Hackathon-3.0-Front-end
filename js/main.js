@@ -38,3 +38,15 @@ $(document).ready(function(){
                 slidesToShow: 1}}]
     });
   });
+
+  function replace(a,b,x){
+      var a1= document.getElementById("why-active-par").innerHTML;
+      var a2=document.getElementById("why-active-image").attributes[2].value;
+      var a3=document.getElementById("why-active-heading").innerHTML;
+      document.getElementById("why-active-heading").innerHTML=a;
+      document.getElementById("why-active-image").attributes[2].value="assets/img/why/"+b;
+      document.getElementById("why-active-image").attributes[3].value=a;
+      document.getElementById("why-active-par").innerHTML=x.lastChild.lastChild.innerHTML;
+
+    //   Belum bisa swap content
+  }

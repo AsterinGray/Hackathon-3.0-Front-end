@@ -198,10 +198,6 @@ html, body{
     border-radius: 15px;
 }
 
-/* .faq-question:hover{
-    background-position: 0 100%;
-} */
-
 .faq-ans{
     display: none;
     opacity: 0.5;
@@ -243,6 +239,82 @@ html, body{
     transform: rotate(90deg);
 }
 
+.timeline{
+  position: relative;
+  color: #E74C3C;
+}
+
+.timeline-wrapper{
+    width: 80%;
+}
+
+.timeline-icons>div{
+    width:  80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timeline-icons img{
+    display: block;
+    width: 30%;
+}
+
+.timeline-path{
+    color: white;
+    position: absolute;
+    width: 50%;
+    transform: translateY(-250%);
+}
+.timeline-path-line{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+}
+
+.timeline-line{
+    width: 75%;
+    height: 5px;
+    background-color: #3498DB;
+}
+
+.timeline-dot{
+    width: 76%;
+    transform: translateY(-60%);
+}
+
+.timeline-dot>div{
+    content: "";
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: #3498DB;
+}
+
+.timeline-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 3;
+}
+
+#object3{
+  position: absolute;
+  width: 30%;
+  top: -15%;
+  left: 0%;
+}
+
+#object4{
+  position: absolute;
+  width: 80%;
+  bottom: -40%;
+}
+
 @keyframes gradient {
     0% {
       background: radial-gradient(circle at center, #3498DB 0%, #252A41 0%, #252A41 100%);
@@ -260,21 +332,3 @@ html, body{
       background: radial-gradient(circle at center, #252A41 99%, #252A41 100%, #252A41 100%);
     }
   }
-/* 
-  @keyframes gradient {
-    0% {
-      background: radial-gradient(circle at center, white 0%, #252A41 0%, #252A41 100%);
-    }
-    25% {
-      background: radial-gradient(circle at center, white 55%, #252A41 25%, #252A41 100%);
-    }
-    50% {
-      background: radial-gradient(circle at center, #252A41 50%, white 49%, #252A41 100%);
-    }
-    75% {
-      background: radial-gradient(circle at center, #252A41 50%, white 74%, #252A41 100%);
-    }
-    100% {
-      background: radial-gradient(circle at center, #252A41 99%, #252A41 100%, #252A41 100%);
-    }
-  } */

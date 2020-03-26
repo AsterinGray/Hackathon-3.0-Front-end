@@ -68,3 +68,74 @@ $(document).ready(function(){
       $(this).addClass("click-ani");
     }
 })
+
+{
+  const colors = ['#3498DB', '#E74C3C', '#463991'];
+  const bubbles = 30;
+
+  function explode(x, y){
+    let particles = [];
+    let ratio = window.devicePixelRatio;
+    let c = document.createElement('canvas');
+    let ctx = c.getContext('2d');
+
+    c.style.position = 'absolute';
+    c.style.left = x - 100 + 'px';
+    c.style.top = y - 100 + 'px';
+    c.style.pointerEvents = 'none';
+    c.style.width = 200 + 'px';
+    c.style.height = 200 + 'px';
+    c.style.zIndex = 100;
+    c.width = 500 * ratio;
+    c.height = 500 * ratio;
+    document.body.appendChild(c);
+
+    for (var i = 0; i < bubbles; i++) {
+      particles.push({
+        x: c.width / 2,
+        y: c.height / 2,
+        radius: r(20, 30),
+        color: colors[Math.floor(Math.random() * colors.length)],
+        rotation: r(0, 360, true),
+        speed: r(0, 15),
+        friction: 1,
+        opacity: r(0.5, 1, true),
+        yVel: 0,
+        gravity: 0 });
+    }
+
+    render(particles, ctx, c.width, c.height);
+    setTimeout(() => document.body.removeChild(c), 1000);
+  };
+
+  function render(particles, ctx, width, height){
+    requestAnimationFrame(() => render(particles, ctx, width, height));
+    ctx.clearRect(0, 0, width, height);
+
+    particles.forEach((p, i) => {
+      p.x += p.speed * Math.cos(p.rotation * Math.PI / 180);
+      p.y += p.speed * Math.sin(p.rotation * Math.PI / 180);
+
+      p.opacity -= 0.01;
+      p.speed *= p.friction;
+      p.radius *= p.friction;
+      p.yVel += p.gravity;
+      p.y += p.yVel;
+
+      if (p.opacity < 0 || p.radius < 0) return;
+
+      ctx.beginPath();
+      ctx.globalAlpha = p.opacity;
+      ctx.fillStyle = p.color;
+      ctx.arc(p.x, p.y, p.radius, 0, 2 * Math.PI, false);
+      ctx.fill();
+    });
+
+    return ctx;
+  };
+
+  const r = (a, b, c) => parseFloat((Math.random() * ((a ? a : 1) - (b ? b : 0)) + (b ? b : 0)).toFixed(c ? c : 0));
+}
+
+let dot = $('#timeline-dot-active');
+dot.click(e => explode(e.pageX, e.pageY));

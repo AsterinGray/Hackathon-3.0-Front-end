@@ -49,6 +49,7 @@ html, body{
     -moz-background-size: cover;
     -o-background-size: cover;
         background-size: cover;
+    position: relative;
 }
 
 .home-content img{
@@ -176,6 +177,7 @@ html, body{
 }
 
 .faq{
+    position: relative;
     color: #FFFFFF;
 }
 
@@ -216,7 +218,7 @@ html, body{
 .circle{
     background-color: #252A41;
     background-size: 200%;
-    background-image: radial-gradient(#252A41 50%,);
+    background-image: radial-gradient(#252A41 50%);
     width: 2rem;
     height: 2rem;
     border-radius: 50%;

@@ -418,6 +418,7 @@ html, body{
 
 .foot img{
     width: 10rem;
+    margin: 0 2rem;
 }
 
 @keyframes gradient {

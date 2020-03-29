@@ -157,7 +157,7 @@ html, body{
     opacity: 1;
 }
 
-.slick-slide .slick-current img{
+.slick-slide.slick-current img{
     height: 25%;
     width: 120%;
 }
@@ -170,17 +170,6 @@ html, body{
 .slick-track{
     display: flex;
     align-items: center;
-}
-
-.carousel-image{
-    max-width: 100%;
-    padding: 0;
-    margin: 0;
-}
-
-.heading{
-    font-weight: 600;
-    font-size: 2.5rem;
 }
 
 .fontStyle1{
@@ -255,7 +244,7 @@ html, body{
     position: relative;
     height: 90%;
     width: 30%;
-    margin: 1em;
+    justify-content: space-evenly+safe;
     align-items: center;
     background-color: #252A41;
     opacity: 1;
@@ -297,6 +286,10 @@ html, body{
 
 .why-card:hover .why-card-content{
     height: 45%;
+}
+
+.why-card:hover{
+    cursor: pointer;
 }
 
 .why-card-content-par{

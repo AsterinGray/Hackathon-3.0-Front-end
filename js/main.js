@@ -20,7 +20,7 @@ $(document).ready(function(){
         dots: true,
         centerPadding: '65px',
         slidesToShow: 1,
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 500,
         responsive: [{
             breakpoint: 768,
@@ -49,6 +49,4 @@ $(document).ready(function(){
       x.children[0].attributes[1].value=a2;
       x.children[1].children[0].innerHTML=a3;
       x.children[1].children[1].children[0].innerHTML=a1;
-     
-    //   Belum bisa swap content
   }

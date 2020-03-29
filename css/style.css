@@ -3,6 +3,7 @@ html, body{
     padding: 0;
     font-family: 'CircularStd';
     scroll-behavior: smooth;
+    box-sizing: border-box;
     background-color: #1D2134;
 }
 
@@ -11,11 +12,10 @@ html, body{
     src: url("../assets/fonts/CircularStd-Medium.otf");
 }
 
-.head{
-    position: fixed;
-    top: 0;
-    background-color: #1D2134;
-    z-index: 99;
+@font-face{
+    font-family: "CircularStd";
+    font-weight: bold;
+    src: url("../assets/fonts/CircularStd-Bold.otf");
 }
 
 .nav-img{
@@ -42,8 +42,6 @@ html, body{
 #register:hover{
     background-color: #E74C3C;
 }
-
-
 
 .home{
     background: url("../assets/img/home/BG_Home_1920-min.png") no-repeat; 
@@ -108,20 +106,6 @@ html, body{
     
 .about{
     position: relative;
-    overflow: hidden;
-}
-
- #about-heading{
-    font-family : "CircularStd";
-    font-weight: 500;
-    font-size : 2.5rem; 
-    color : #E74C3C;
-}
-
-#about-content{
-    font-family: "CircularStd";
-    font-size: 1rem;
-    color: white;
 }
 
 #about-left{
@@ -134,9 +118,10 @@ html, body{
 
 #object1{
     position: absolute;
-    top: -22%;
+    top: -18%;
     right: 8%;
     width: 40%;
+    z-index: 0;
 }
 
 #object2{
@@ -144,6 +129,7 @@ html, body{
     bottom: -18%;
     left: -0%;
     width: 30%;
+    z-index: 0;
 }
 
 .carousel-content{
@@ -153,6 +139,7 @@ html, body{
 }
 
 .card{
+    border: 0;
     border-radius: 30px;
     overflow: hidden;
     margin:0 5px;
@@ -176,4 +163,28 @@ html, body{
 .slick-track{
     display: flex;
     align-items: center;
+}
+
+.heading{
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+.fontStyle1{
+    color : #e74c3c;
+    font-family : "CircularStd";
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+.fontStyle2{
+    color: white;
+    font-size: 1rem;
+    font-family : "CircularStd";
+    font-weight: normal;
+}
+
+.heading{
+    font-weight: bold;
+    font-size : 2.5rem; 
 }

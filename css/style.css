@@ -450,6 +450,44 @@ html, body{
   position: absolute;
   width: 80%;
   bottom: -40%;
+  z-index: 0;
+}
+
+.sponsor-table{
+    border: 2px solid #E74C3C;
+    border-radius: 30px;
+    padding: 0;
+    margin: 2rem;
+}
+
+.sponsor-table-head{
+    color: #FFFFFF;
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 2px solid #E74C3C;
+    background-color: #1D2134;
+    border-radius: 30px 30px 0 0;
+}
+
+.sponsor-table-subhead{
+    color: #E74C3C;
+    text-align: center;
+    padding: 1rem;
+}
+
+.sponsor-table-content{
+    background-color: #252A41;
+    border-radius: 0 0 30px 30px;
+    padding: 3rem 2rem;
+}
+
+.sponsor-img{
+    display: flex;
+    justify-content: space-around;
+}
+
+.sponsor-img > img{
+    width: 25%;
 }
 
 @keyframes gradient {

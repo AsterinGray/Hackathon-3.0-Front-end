@@ -16,12 +16,14 @@ html, body{
     font-family: "CircularStd";
     font-weight: bold;
     src: url("../assets/fonts/CircularStd-Bold.otf");
-    
+}
+
 .head{
     position: sticky;
     top: 0;
     background-color: #1D2134;
     z-index: 99;
+}
 
 .nav-img{
     width: 5.5rem;
@@ -53,7 +55,7 @@ html, body{
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-        background-size: cover;
+    background-size: cover;
 }
 
 .home-content img{
@@ -111,20 +113,6 @@ html, body{
     
 .about{
     position: relative;
-    /* overflow: hidden; */
-}
-
- #about-heading{
-    font-family : "CircularStd";
-    font-weight: 500;
-    font-size : 2.5rem; 
-    color : #E74C3C;
-}
-
-#about-content{
-    font-family: "CircularStd";
-    font-size: 1rem;
-    color: white;
 }
 
 #about-left{
@@ -184,9 +172,14 @@ html, body{
     align-items: center;
 }
 
+/*.heading{*/
+/*    font-weight: 600;*/
+/*    font-size: 2.5rem;*/
+/*}*/
+
 .heading{
-    font-weight: 600;
-    font-size: 2.5rem;
+    font-weight: bold;
+    font-size : 2.5rem; 
 }
 
 .fontStyle1{
@@ -203,7 +196,103 @@ html, body{
     font-weight: normal;
 }
 
-.heading{
-    font-weight: bold;
-    font-size : 2.5rem; 
+.why-container{
+    margin: 1em;
+
+}
+
+.why-content{
+    height: 20em;
+    margin-top: 2em;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+}
+
+.why-left{
+    background-color: rgba(255,255,255,.1);
+    border-radius: 1em 0px 0px 1em;
+    padding: 2em;
+    height: 100%;
+}
+.why-right{
+    background-color: rgba(255,255,255,.5);
+    border-radius: 0px 1em 1em 0;
+    height: 100%;
+}
+
+.why-heading-container{
+    margin-left: 3em;
+}
+
+.why-left-img{
+    width: 6.67em;
+    height: auto;
+    /* background-color: #e74c3c; */
+    margin-right: 2em;
+}
+
+#why-active-heading{
+    font-size: 24px;
+}
+
+#why-active-par{
+    color: #FFFFFF;
+    font-size: 1.1rem;
+    font-weight: normal;
+}
+
+.why-card{
+    position: relative;
+    height: 90%;
+    width: 30%;
+    justify-content: space-evenly+safe;
+    align-items: center;
+    background-color: #252A41;
+    opacity: 1;
+    top: -4em;
+    overflow: hidden;
+    box-shadow: 5px 10px 15px rgba(0,0,0,.5);
+}
+
+.why-right-img{
+    width: 6.67em;
+    margin-top: 20%;
+}
+
+.why-card-content{
+    background-color: #FFFFFF;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 15.5%;
+    transition: .5s ease;
+    padding: .9em;
+}
+
+.why-card-content-par-container{
+    height: 45%;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.why-card span{
+    color: red;
+    font-size: 0.78em;
+}
+
+.why-card-content-heading{
+    text-align: center;
+    font-size: 1em;
+}
+
+.why-card:hover .why-card-content{
+    height: 45%;
+}
+
+.why-card:hover{
+    cursor: pointer;
+}
+
+.why-card-content-par{
+    font-size: 0.78em;
 }

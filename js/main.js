@@ -11,7 +11,8 @@ $(document).ready(function(){
         centerPadding: '65px',
         slidesToShow: 1,
         autoplay: true,
-        autoplaySpeed: 1500,
+        autoplaySpeed: 500,
+        // autoplaySpeed: 1500,
         responsive: [{
             breakpoint: 768,
             settings: {
@@ -28,3 +29,15 @@ $(document).ready(function(){
                 slidesToShow: 1}}]
     });
   });
+
+  function replace(x){
+      var a1= document.getElementById("why-active-par").innerHTML;
+      var a2=document.getElementById("why-active-image").attributes[2].value;
+      var a3=document.getElementById("why-active-heading").innerHTML;
+      document.getElementById("why-active-heading").innerHTML= x.children[1].children[0].innerHTML
+      document.getElementById("why-active-image").attributes[2].value=x.children[0].attributes[1].value
+      document.getElementById("why-active-par").innerHTML=x.children[1].children[1].children[0].innerHTML;
+      x.children[0].attributes[1].value=a2;
+      x.children[1].children[0].innerHTML=a3;
+      x.children[1].children[1].children[0].innerHTML=a1;
+  }

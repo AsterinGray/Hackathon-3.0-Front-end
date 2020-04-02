@@ -1,13 +1,3 @@
-// $(".nav-link").hover(
-//     function(){
-//     $(".active").removeClass("active");
-//     $(this).addClass("active");
-// },
-// function(){
-//     $(this).removeClass("active");
-//     $(".on").addClass("active")
-// });
-
 $(".nav-link").click(function(){
     $(".active").removeClass("active");
     $(".on").removeClass("on");
@@ -22,6 +12,7 @@ $(document).ready(function(){
         slidesToShow: 1,
         autoplay: true,
         autoplaySpeed: 500,
+        // autoplaySpeed: 1500,
         responsive: [{
             breakpoint: 768,
             settings: {

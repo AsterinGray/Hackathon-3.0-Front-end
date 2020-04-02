@@ -1,13 +1,3 @@
-// $(".nav-link").hover(
-//     function(){
-//     $(".active").removeClass("active");
-//     $(this).addClass("active");
-// },
-// function(){
-//     $(this).removeClass("active");
-//     $(".on").addClass("active")
-// });
-
 $(".nav-link").click(function(){
     $(".active").removeClass("active");
     $(".on").removeClass("on");
@@ -20,8 +10,9 @@ $(document).ready(function(){
         dots: true,
         centerPadding: '65px',
         slidesToShow: 1,
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 500,
+        // autoplaySpeed: 1500,
         responsive: [{
             breakpoint: 768,
             settings: {
@@ -39,6 +30,18 @@ $(document).ready(function(){
     });
   });
 
+  function replace(x){
+      var a1= document.getElementById("why-active-par").innerHTML;
+      var a2=document.getElementById("why-active-image").attributes[2].value;
+      var a3=document.getElementById("why-active-heading").innerHTML;
+      document.getElementById("why-active-heading").innerHTML= x.children[1].children[0].innerHTML
+      document.getElementById("why-active-image").attributes[2].value=x.children[0].attributes[1].value
+      document.getElementById("why-active-par").innerHTML=x.children[1].children[1].children[0].innerHTML;
+      x.children[0].attributes[1].value=a2;
+      x.children[1].children[0].innerHTML=a3;
+      x.children[1].children[1].children[0].innerHTML=a1;
+  }
+  
   //FAQ Animation
   $(".circle").click(function(){
     let q = $(this).parent();

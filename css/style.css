@@ -16,7 +16,12 @@ html, body{
     font-family: "CircularStd";
     font-weight: bold;
     src: url("../assets/fonts/CircularStd-Bold.otf");
-}
+    
+.head{
+    position: sticky;
+    top: 0;
+    background-color: #1D2134;
+    z-index: 99;
 
 .nav-img{
     width: 5.5rem;
@@ -48,7 +53,7 @@ html, body{
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
+        background-size: cover;
 }
 
 .home-content img{
@@ -106,6 +111,20 @@ html, body{
     
 .about{
     position: relative;
+    /* overflow: hidden; */
+}
+
+ #about-heading{
+    font-family : "CircularStd";
+    font-weight: 500;
+    font-size : 2.5rem; 
+    color : #E74C3C;
+}
+
+#about-content{
+    font-family: "CircularStd";
+    font-size: 1rem;
+    color: white;
 }
 
 #about-left{

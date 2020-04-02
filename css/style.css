@@ -490,6 +490,72 @@ html, body{
     width: 25%;
 }
 
+.contact h2{
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.contact map{
+    width: 100%;
+}
+
+.contact-box{
+    padding: 0 1rem;
+}
+
+.contact-box > form{
+    padding: 2rem;
+    background-color: #E8E3E3;
+    border-radius: 30px;
+}
+
+.contact-box input{
+    border: none;
+    background-color: #E8E3E3;
+    border-bottom: 3px solid black;
+    border-radius: 0;
+    margin-top: 2rem;
+}
+
+.form_submit > button{
+    border-radius: 30px;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    width: 100%;
+    background-color: #E74C3C;
+    color: #ffffff;
+    border: none;
+}
+
+.contact-box > .form-control::placeholder{
+    color: black;
+}
+
+.socmed{
+    padding: 0 3rem;
+    background-color: #484E65;
+}
+
+.socmed-item span{
+    color: #FFFFFF;
+    margin: 0 1rem;
+}
+
+.socmed-item > img{
+    width: 3rem;
+}
+
+.foot{
+    color: #FFFFFF;
+    padding: 1rem 10rem;
+    background-color: #252A41;
+}
+
+.foot img{
+    width: 10rem;
+    margin: 0 2rem;
+}
+
 @keyframes gradient {
     0% {
       background: radial-gradient(circle at center, #3498DB 0%, #252A41 0%, #252A41 100%);

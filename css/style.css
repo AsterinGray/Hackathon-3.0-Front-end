@@ -392,7 +392,7 @@ html, body{
     border: none;
 }
 
-.form-control::placeholder{
+.contact-box > .form-control::placeholder{
     color: black;
 }
 

@@ -3,9 +3,278 @@ html, body{
     padding: 0;
     font-family: 'CircularStd';
     scroll-behavior: smooth;
+    background-color: #1D2134;
 }
 
 @font-face{
     font-family: "CircularStd";
     src: url("../assets/fonts/CircularStd-Medium.otf");
 }
+
+.head{
+    position: fixed;
+    top: 0;
+    background-color: #1D2134;
+    z-index: 99;
+}
+
+.nav-img{
+    width: 5.5rem;
+    height: auto;
+}
+
+.nav-link{
+    font-size: 1.1rem;
+    margin: 0 1rem;
+    border-bottom: 1.5px solid transparent;
+}
+
+.nav-link:hover, .active{
+    border-bottom: 1.5px solid #E74C3C;
+}
+
+#register{
+    padding: .2rem 1rem;
+    border-radius: 50px;
+    border: 2px solid #E74C3C;
+}
+
+#register:hover{
+    background-color: #E74C3C;
+}
+
+.home{
+    background: url("../assets/img/home/BG_Home_1920-min.png") no-repeat; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+        background-size: cover;
+}
+
+.home-content img{
+    width: 100%;
+    height: auto;
+}
+
+#title{
+    color: #E74C3C;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#slogan{
+    color: #3498DB;
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+#date{
+    color: #FFFFFF;
+    font-size: 2.5rem;
+}
+
+.extra{
+    color: #FFFFFF;
+    font-size: 1.5rem;
+}
+
+.guide button{
+    border: none;
+    background-color: #E74C3C;
+    font-size: 1.8rem;
+    padding: .5rem 1.5rem;
+    border-radius: 50px;
+}
+
+.guide > button > a{
+    text-decoration: none;
+    color: white;
+}
+
+.more-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.more-info img{
+    width: 50px;
+}
+    
+.about{
+    position: relative;
+}
+
+ #about-heading{
+    font-family : "CircularStd";
+    font-weight: 500;
+    font-size : 2.5rem; 
+    color : #E74C3C;
+}
+
+#about-content{
+    font-family: "CircularStd";
+    font-size: 1rem;
+    color: white;
+}
+
+#about-left{
+    width: 50%;
+}
+
+.about-width{
+    width: inherit;
+}
+
+#object1{
+    position: absolute;
+    top: -22%;
+    right: 8%;
+    width: 40%;
+}
+
+#object2{
+    position: absolute;
+    bottom: -18%;
+    left: -0%;
+    width: 30%;
+}
+
+.carousel-content{
+    text-align: center;
+    padding: 5px 0;
+    background-color: white;
+}
+
+.card{
+    border-radius: 30px;
+    overflow: hidden;
+    margin:0 5px;
+    opacity: .5;
+}
+
+.slick-current{
+    opacity: 1;
+}
+
+.slick-slide.slick-current img{
+    height: 25%;
+    width: 120%;
+}
+
+.slick-slide img{
+    width: 100%;
+    height: 20%;
+}
+
+.slick-track{
+    display: flex;
+    align-items: center;
+}
+
+.faq{
+    color: #FFFFFF;
+}
+
+.faq > h1{
+
+    color : #E74C3C;
+}
+
+.faq-content{
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.faq-question{
+    display: flex;
+    background-size: 100% 200%;
+    background-image: linear-gradient( #252A41 50%, rgba(37, 42, 65, 0.1) 50%);
+    transition: background-position .5s cubic-bezier(.5, .8, .1, .1);
+    padding: 1em 2em;
+    border-radius: 15px;
+}
+
+/* .faq-question:hover{
+    background-position: 0 100%;
+} */
+
+.faq-ans{
+    display: none;
+    opacity: 0.5;
+    padding: 0 2rem;
+    padding-right: 4rem;
+    border-radius: 0 0 15px 15px;
+    background-size: 100% 200%;
+    background-image: linear-gradient( #252A41 50%, rgba(37, 42, 65, 0.1) 50%);
+    transition: background-position .5s cubic-bezier(.5, .8, .1, .1);
+}
+
+.faq-active{
+    border-radius: 15px 15px 0 0;
+}
+
+.circle{
+    background-color: #252A41;
+    background-size: 200%;
+    background-image: radial-gradient(#252A41 50%,);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    animation-timing-function: ease-in;
+    cursor: pointer;
+}
+
+.click-ani{
+    animation: gradient 300ms;
+}
+
+.horizontal, .vertical{
+    transition: all 0.5s ease-in-out;
+    background-color: white;
+    width: 1rem;
+    height: .1rem;
+}
+
+.vertical{
+    transform: rotate(90deg);
+}
+
+@keyframes gradient {
+    0% {
+      background: radial-gradient(circle at center, #3498DB 0%, #252A41 0%, #252A41 100%);
+    }
+    25% {
+      background: radial-gradient(circle at center, #3498DB 55%, #252A41 25%, #252A41 100%);
+    }
+    50% {
+      background: radial-gradient(circle at center, #252A41 50%, #3498DB 49%, #252A41 100%);
+    }
+    75% {
+      background: radial-gradient(circle at center, #252A41 50%, #3498DB 74%, #252A41 100%);
+    }
+    100% {
+      background: radial-gradient(circle at center, #252A41 99%, #252A41 100%, #252A41 100%);
+    }
+  }
+/* 
+  @keyframes gradient {
+    0% {
+      background: radial-gradient(circle at center, white 0%, #252A41 0%, #252A41 100%);
+    }
+    25% {
+      background: radial-gradient(circle at center, white 55%, #252A41 25%, #252A41 100%);
+    }
+    50% {
+      background: radial-gradient(circle at center, #252A41 50%, white 49%, #252A41 100%);
+    }
+    75% {
+      background: radial-gradient(circle at center, #252A41 50%, white 74%, #252A41 100%);
+    }
+    100% {
+      background: radial-gradient(circle at center, #252A41 99%, #252A41 100%, #252A41 100%);
+    }
+  } */

@@ -16,12 +16,14 @@ html, body{
     font-family: "CircularStd";
     font-weight: bold;
     src: url("../assets/fonts/CircularStd-Bold.otf");
-    
+}
+
 .head{
     position: sticky;
     top: 0;
     background-color: #1D2134;
     z-index: 99;
+}
 
 .nav-img{
     width: 5.5rem;

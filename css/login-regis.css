@@ -30,4 +30,28 @@
   color: grey; }
 
 .regis {
-  background-color: #FFFFFF; }
+  background-color: #FFFFFF;
+  margin: 5rem 0;
+  padding: 3rem 0;
+  border-radius: 50px; }
+  .regis > h1 {
+    color: #E74C3C;
+    font-weight: bolder;
+    font-size: 3rem; }
+  .regis h2 {
+    color: #E74C3C;
+    font-weight: 500;
+    font-size: 2.5rem; }
+  .regis-group {
+    margin: 1rem 0; }
+  .regis > hr {
+    background-color: #E74C3C;
+    display: block;
+    height: 6px;
+    width: 90%; }
+  .regis-team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+    .regis-team-member {
+      margin: 2rem 0; }

@@ -38,4 +38,37 @@
 
 .regis{
     background-color: #FFFFFF;
+    margin: 5rem 0;
+    padding: 3rem 0;
+    border-radius: 50px;
+    &>h1{
+        color: #E74C3C;
+        font-weight: bolder;
+        font-size: 3rem;
+    }
+    & h2{
+        color: #E74C3C;
+        font-weight: 500;
+        font-size: 2.5rem;
+    }
+    &-group{
+        margin: 1rem 0;
+    }
+    &>hr{
+        background-color: #E74C3C;
+        display: block;
+        height: 6px;
+        width: 90%;
+    }
+    &-team{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        &-member{
+            margin: 2rem 0;
+        }
+    }
+    &-submit{
+
+    }
 }

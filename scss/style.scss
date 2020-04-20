@@ -24,7 +24,7 @@ html, body{
         font-size: 1.1rem;
         margin: 0 1rem;
         border-bottom: 1.5px solid transparent;
-        &:hover,.active{
+        &.active, :hover{
             border-bottom: 1.5px solid #E74C3C;
         }
     }
@@ -172,12 +172,12 @@ html, body{
     color : #e74c3c;
     font-family : "CircularStd";
     font-weight: normal;
-    font-size: 1rem;
+    font-size: 2rem;
 }
 
 .fontStyle2{
     color: white;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-family : "CircularStd";
     font-weight: normal;
 }
@@ -234,6 +234,10 @@ html, body{
             height: 15.5%;
             transition: .5s ease;
             padding: .9em;
+            &:hover{
+                cursor: pointer;
+                height: 45%;
+            }
             &-heading{
                 text-align: center;
                 font-size: 1em;
@@ -250,12 +254,6 @@ html, body{
        & span{
             color: red;
             font-size: 0.78em;
-       } 
-       &:hover{
-           cursor: pointer;
-           &.why-card-content{
-            height: 45%;
-            }
        }
     }
 }

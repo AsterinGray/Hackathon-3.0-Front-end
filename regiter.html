@@ -52,8 +52,8 @@
             <div class="regis-group col-4 d-flex flex-column align-items-center">
                 <h2>Group</h2>
                 <input type="text" class="form-control my-2" placeholder="Group Name" required>
-                <input type="password" class="form-control my-2" placeholder="Password" required minlength="8">
-                <input type="password" class="form-control my-2" placeholder="Confirm Password" required minlength="8">
+                <input type="password" id="password" class="form-control my-2" placeholder="Password" required minlength="8">
+                <input type="password" id="confirm-password" class="form-control my-2" placeholder="Confirm Password" required minlength="8">
             </div>
             <hr>
             <div class="regis-team col-12">
@@ -65,11 +65,9 @@
                     <input type="text" class="form-control my-2" placeholder="LINE ID" required>
                     <input type="text" class="form-control my-2" placeholder="Github/Gitlab ID" required>
                     <input type="text" class="form-control my-2" placeholder="Birth Place" required>
-                    <input type="text" class="form-control my-2" placeholder="DD/MM/YYYY" required>
-                    <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="validatedCustomFile" required>
-                        <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
-                    </div>
+                    <input type="date" class="form-control my-2 inp-date" placeholder="DD/MM/YYYY" required>
+                    <label for="idcard-leader" class="form-control inp-file">Upload ID Card</label>
+                    <input type="file" id="idcard-leader" onchange="changeFile(this)">
                 </div>
                 <div class="regis-team-member col-lg-5 col-md-10">
                     <h2>Member 1</h2>
@@ -79,11 +77,9 @@
                     <input type="text" class="form-control my-2" placeholder="LINE ID">
                     <input type="text" class="form-control my-2" placeholder="Github/Gitlab ID">
                     <input type="text" class="form-control my-2" placeholder="Birth Place">
-                    <input type="text" class="form-control my-2" placeholder="DD/MM/YYYY">
-                    <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="validatedCustomFile" required>
-                        <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
-                    </div>
+                    <input type="date" class="form-control my-2 inp-date" placeholder="DD/MM/YYYY">
+                    <label for="idcard-member1" class="form-control inp-file">Upload ID Card</label>
+                    <input type="file" id="idcard-member1" onchange="changeFile(this)">
                 </div>
                 <div class="regis-team-member col-lg-5 col-md-10">
                     <h2>Member 2</h2>
@@ -93,11 +89,9 @@
                     <input type="text" class="form-control my-2" placeholder="LINE ID">
                     <input type="text" class="form-control my-2" placeholder="Github/Gitlab ID">
                     <input type="text" class="form-control my-2" placeholder="Birth Place">
-                    <input type="text" class="form-control my-2" placeholder="DD/MM/YYYY">
-                    <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="validatedCustomFile" required>
-                        <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
-                    </div>
+                    <input type="date" class="form-control my-2 inp-date" placeholder="DD/MM/YYYY">
+                    <label for="idcard-member2" class="form-control inp-file">Upload ID Card</label>
+                    <input type="file" id="idcard-member2" onchange="changeFile(this)">
                 </div>
                 <div class="regis-team-member col-lg-5 col-md-10">
                     <h2>Member 3</h2>
@@ -107,11 +101,9 @@
                     <input type="text" class="form-control my-2" placeholder="LINE ID">
                     <input type="text" class="form-control my-2" placeholder="Github/Gitlab ID">
                     <input type="text" class="form-control my-2" placeholder="Birth Place">
-                    <input type="text" class="form-control my-2" placeholder="DD/MM/YYYY">
-                    <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="validatedCustomFile" required>
-                        <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
-                    </div>
+                    <input type="date" class="form-control my-2 inp-date" placeholder="DD/MM/YYYY">
+                    <label for="idcard-member3" class="form-control inp-file">Upload ID Card</label>
+                    <input type="file" id="idcard-member3" onchange="changeFile(this)">
                 </div>
             </div>
             <div class="regis-submit">
@@ -119,5 +111,8 @@
             </div>
         </form>
     </section>
+    <script src="assets/lib/jquery.js"></script>
+    <script src="assets/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/regis.js"></script>
 </body>
 </html>

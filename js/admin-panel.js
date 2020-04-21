@@ -1,13 +1,15 @@
 function view(a){
     var b=document.getElementById("display-image");
     b.setAttribute("src",a);
-    document.getElementById("display-c").style="display:block; opacity:1";
+    document.getElementById("display-c").style="display:block;";
     document.getElementById("barrier").style="display:block; opacity:.5";
 }
-function disappear(a){
-    a.style="display:none";
-    document.getElementById("display-c").style="display:none";
-}
+let a=$("#barrier");
+if(a.is(':visible')){
+    $("#barrier").click(function(){
+        $(this).css({"display":"none"});
+        $("#display-c").css({"display":"none"});
+})}
 function switchToggle(current,a){
     document.getElementsByClassName("active")[0].classList.remove("active");
     document.getElementsByClassName("on")[0].classList.remove("on");

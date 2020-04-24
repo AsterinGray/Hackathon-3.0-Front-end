@@ -1,0 +1,329 @@
+body {
+  box-sizing: border-box;
+  background-color: #1D2134;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden; }
+
+#container {
+  width: 100%;
+  height: 100%;
+  background-color: #1D2134;
+  color: white;
+  position: relative;
+  padding: 25px 15px;
+  display: flex;
+  flex-direction: row;
+  font-family: "CircularStd"; }
+
+@font-face {
+  font-family: "CircularStd";
+  src: url("../assets/fonts/CircularStd-Medium.otf"); }
+
+@font-face {
+  font-family: "CircularStd Book";
+  src: url("../assets/fonts/CircularStd-Book.otf"); }
+
+#navbar {
+  display: flex;
+  flex-direction: column;
+  background-color: #252A41;
+  border-radius: 20px;
+  height: 93%;
+  flex: content;
+  flex-wrap: nowrap;
+  box-sizing: content-box;
+  padding: 20px;
+  align-content: center;
+  white-space: nowrap;
+  overflow: hidden;
+  justify-content: flex-start;
+  transition: flex 1s ease-in; }
+
+.navbar-content {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  height: 75px;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  transition: transform .3s;
+  padding: 0 .5rem; }
+
+.navbar-content:hover {
+  cursor: pointer;
+  background-color: #343b5c;
+  border-radius: 28px;
+  box-sizing: content-box;
+  color: #E74C3C;
+  transition: background-color .2s linear;
+  transform: translateY(-2px); }
+
+.navbar-header {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  margin: 7px 0;
+  color: white;
+  align-items: center;
+  justify-content: center; }
+
+.navbar-icon {
+  width: 45px; }
+
+.navbar-icon-c {
+  display: flex;
+  justify-content: flex-start; }
+
+.navbar-caption {
+  display: none;
+  text-transform: uppercase;
+  font-size: 1em;
+  width: 60%;
+  margin-left: 20px;
+  text-align: left; }
+
+#content {
+  width: 85%;
+  margin: 0px 30px; }
+
+hr {
+  width: 100%;
+  border-top: solid 1px gray; }
+
+.hr2 {
+  border-top: solid 3px white;
+  width: 280px;
+  margin-top: 0; }
+
+.payment-content {
+  display: flex;
+  flex-direction: column; }
+
+.payment-cluster {
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px; }
+
+.payment-col {
+  width: 350px;
+  background-color: #252A41;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-right: 20px;
+  padding: 15px;
+  border-radius: 15px; }
+
+.payment-col-button {
+  display: flex;
+  width: inherit;
+  justify-content: center;
+  flex-direction: row;
+  margin: 10px 0px; }
+
+.payment-col-content {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.payment-insider {
+  display: flex;
+  flex-direction: row;
+  width: inherit;
+  font-size: 1.1rem; }
+
+.payment-insider-left {
+  width: 60px;
+  text-align: left;
+  margin: 0px 5px; }
+
+.payment-insider-right {
+  width: 130px;
+  text-align: left;
+  font-stretch: ultra-expanded;
+  margin: 0px 5px; }
+
+.payment-verify {
+  background-color: #E74C3C;
+  width: 100px;
+  border-radius: 15px;
+  border: none;
+  color: white;
+  margin: 0 5px; }
+
+.payment-view {
+  border: solid 3px #E74C3C;
+  background: none;
+  width: 100px;
+  border-radius: 15px;
+  color: white;
+  margin: 0 5px; }
+
+h1 {
+  font-size: 2.0rem;
+  margin-top: 30px; }
+
+#display-c {
+  position: fixed;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: #2C3044;
+  z-index: 100;
+  display: none; }
+
+#display-image {
+  width: 25vw; }
+
+#barrier {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 50;
+  margin: 0;
+  left: 0;
+  top: 0;
+  padding: 0; }
+
+.active {
+  background-color: #1D2134;
+  border-radius: 28px;
+  box-sizing: content-box;
+  color: #E74C3C;
+  transition: background-color .2s linear; }
+
+.participant-content {
+  display: flex;
+  flex-direction: column; }
+
+.participant-cluster {
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px; }
+
+.participant-col {
+  width: 350px;
+  height: 200px;
+  background-color: #252A41;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-right: 20px;
+  padding: 15px;
+  border-radius: 15px; }
+
+.participant-col-content {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .participant-col-content h4 {
+    font-size: 1.5rem; }
+
+.participant-edit {
+  background-color: #E74C3C;
+  width: 150px;
+  border-radius: 15px;
+  border: none;
+  color: white;
+  margin: 0 20px; }
+
+.editgroup-name {
+  text-align: center; }
+
+.editgroup-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.editgroup-col {
+  display: flex;
+  margin: 15px 0;
+  width: 50%;
+  flex-direction: column;
+  background-color: #252A41;
+  border-radius: 18px;
+  padding: 20px; }
+  .editgroup-col header {
+    font-size: 2rem; }
+
+.editgroup-info {
+  display: flex;
+  flex-direction: row;
+  height: fit-content; }
+  .editgroup-info-c {
+    margin: 10px 0px; }
+  .editgroup-info-input {
+    background-color: #1D2134;
+    border: none;
+    border-radius: 8px;
+    width: 90%;
+    color: white;
+    font-family: "CircularStd Book";
+    font-size: 0.75rem;
+    padding: 5px 8px;
+    height: auto;
+    display: flexbox; }
+  .editgroup-info-left {
+    width: 50%;
+    height: max-content; }
+  .editgroup-info-right {
+    width: 50%;
+    height: max-content; }
+
+.editgroup-cv-c {
+  display: flex;
+  flex-direction: row; }
+
+.editgroup-cv-left {
+  display: flex;
+  flex-direction: row;
+  font-family: "CircularStd Book";
+  width: 45%;
+  background-color: #1D2134;
+  padding: 5px 8px;
+  margin-right: 5%;
+  border-radius: 8px;
+  font-size: 0.75rem; }
+  .editgroup-cv-left img {
+    height: 13px; }
+  .editgroup-cv-left span {
+    color: #E74C3C;
+    margin: 0 10px; }
+
+.editgroup-view {
+  background-color: #E74C3C;
+  width: 100px;
+  font-size: 0.75rem;
+  border-radius: 15px;
+  border: none;
+  color: white; }
+
+.hr3 {
+  border-top: solid 1px #E74C3C; }
+
+#header {
+  text-align: center;
+  width: 100%;
+  font-size: 3rem;
+  margin-top: -6px; }
+
+#payment, #participant, #editgroup {
+  display: none;
+  opacity: 0;
+  transition: opacity 1s ease-in-out; }
+
+.on {
+  display: contents !important;
+  opacity: 1 !important; }

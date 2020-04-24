@@ -9,6 +9,7 @@ body{
     position: relative;
     padding: 0;
     margin: 0;
+    overflow-x: hidden;
 }
 #container{
     width: 100%;
@@ -55,9 +56,15 @@ body{
         align-items: center;
         justify-content: center;
         transition: transform .3s;
+        padding: 0 .5rem;
     }
     &-content:hover{
         cursor: pointer;
+        background-color: #343b5c;
+        border-radius: 28px;
+        box-sizing: content-box;
+        color: #E74C3C;
+        transition: background-color .2s linear;
         transform: translateY(-2px);
     }
     &-header{
@@ -193,7 +200,6 @@ h1{
     left: 0;
     top: 0;
     padding: 0;
-    opacity: 0;
 }
 .active{
     background-color: #1D2134;

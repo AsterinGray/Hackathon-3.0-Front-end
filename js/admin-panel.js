@@ -1,3 +1,5 @@
+window.alamat='payment';
+window.alamatIndex=0;
 function view(a){
     var b=document.getElementById("display-image");
     b.setAttribute("src",a);
@@ -15,10 +17,30 @@ function switchToggle(current,a){
     document.getElementsByClassName("on")[0].classList.remove("on");
     document.getElementById(a).classList.add("on")
     current.classList.add("active");
+}   
+
+function defaultToggle(){
+    $("#"+alamat).addClass("on");
+    console.log(alamat);
+    document.getElementsByClassName("navbar-content")[alamatIndex].classList.add("active");
 }
+
+function switchToggle2(a){
+    window.alamat=a;
+    console.log(a);
+    if (a=="payment")
+        alamatIndex=0;
+    else
+        alamatIndex=1;
+    window.location.href="admin-panel.html";
+
+}
+
 function editGroup(){
-    document.getElementById("participant").classList.remove("on");
-    document.getElementById("editgroup").classList.add("on");
+    window.location.href="admin-panel-edit.html"
+}
+function viewGroup(){
+    window.location.href="admin-panel-view.html"
 }
 $("#navbar").mouseenter(function(){
     $(".navbar-caption").css({"display":"flex"});    

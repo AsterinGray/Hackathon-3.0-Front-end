@@ -54,17 +54,17 @@ body {
   color: white;
   align-items: center;
   justify-content: center;
+  border-radius: 50px;
   transition: transform .3s;
   padding: 0 .5rem; }
 
 .navbar-content:hover {
   cursor: pointer;
   background-color: #343b5c;
-  border-radius: 28px;
+  border-radius: 30px;
   box-sizing: content-box;
   color: #E74C3C;
-  transition: background-color .2s linear;
-  transform: translateY(-2px); }
+  transition: background-color .2s linear; }
 
 .navbar-header {
   display: flex;
@@ -105,12 +105,8 @@ hr {
 
 .payment-content {
   display: flex;
-  flex-direction: column; }
-
-.payment-cluster {
-  display: flex;
-  flex-direction: row;
-  margin-top: 15px; }
+  flex-wrap: wrap;
+  flex-direction: row; }
 
 .payment-col {
   width: 350px;
@@ -119,6 +115,7 @@ hr {
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin-top: 15px;
   margin-right: 20px;
   padding: 15px;
   border-radius: 15px; }
@@ -148,7 +145,7 @@ hr {
   margin: 0px 5px; }
 
 .payment-insider-right {
-  width: 130px;
+  width: 85px;
   text-align: left;
   font-stretch: ultra-expanded;
   margin: 0px 5px; }
@@ -204,30 +201,31 @@ h1 {
 
 .participant-content {
   display: flex;
-  flex-direction: column; }
-
-.participant-cluster {
-  display: flex;
-  flex-direction: row;
-  margin-top: 15px; }
+  flex-wrap: wrap;
+  flex-direction: row; }
 
 .participant-col {
   width: 350px;
   height: 200px;
   background-color: #252A41;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   margin-right: 20px;
   padding: 15px;
+  margin-top: 15px;
   border-radius: 15px; }
 
 .participant-col-content {
   text-align: left;
   display: flex;
+  width: 100%;
+  height: 100%;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  justify-content: c; }
   .participant-col-content h4 {
     font-size: 1.5rem; }
 
@@ -237,7 +235,32 @@ h1 {
   border-radius: 15px;
   border: none;
   color: white;
-  margin: 0 20px; }
+  margin: 2.5px 20px; }
+
+.participant-view {
+  border: solid 3px #E74C3C;
+  background: none;
+  width: 150px;
+  border-radius: 15px;
+  color: white;
+  margin: 2.5px 20px; }
+
+.participant-delete {
+  color: #E74C3C;
+  font-size: 1.5em;
+  text-align: right;
+  align-self: flex-end;
+  position: relative;
+  top: -15px; }
+
+.participant-delete:hover {
+  cursor: pointer; }
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
 
 .editgroup-name {
   text-align: center; }
@@ -272,9 +295,7 @@ h1 {
     color: white;
     font-family: "CircularStd Book";
     font-size: 0.75rem;
-    padding: 5px 8px;
-    height: auto;
-    display: flexbox; }
+    padding: 5px 8px; }
   .editgroup-info-left {
     width: 50%;
     height: max-content; }
@@ -310,6 +331,16 @@ h1 {
   border: none;
   color: white; }
 
+.editgroup-submit {
+  border: solid 3px #E74C3C;
+  background: none;
+  width: 50%;
+  padding: 10px;
+  border-radius: 50px;
+  color: white;
+  margin: 30px 5px;
+  font-size: 1.5rem; }
+
 .hr3 {
   border-top: solid 1px #E74C3C; }
 
@@ -319,11 +350,11 @@ h1 {
   font-size: 3rem;
   margin-top: -6px; }
 
-#payment, #participant, #editgroup {
+#payment, #participant {
   display: none;
   opacity: 0;
   transition: opacity 1s ease-in-out; }
 
 .on {
-  display: contents !important;
+  display: block !important;
   opacity: 1 !important; }

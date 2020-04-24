@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="assets/lib/bootstrap/css/slick-theme.css">
     <link rel="stylesheet" href="css/admin-panel.css">
 </head>
-<body>
+<body onload="defaultToggle()">
     <div id="display-c" style="display:none">
         <img id="display-image" src="assets/img/admin-panel/Receipt-CROP.jpg">
     </div>
@@ -26,7 +26,7 @@
                 </div>
             </div>
             <hr>
-            <div class="navbar-content active" onclick="switchToggle(this,'payment')">
+            <div class="navbar-content" onclick="switchToggle(this,'payment')">
                 <div class=navbar-icon-c>
                     <img class=navbar-icon src="assets/img/admin-panel/Payment.png">
                 </div>
@@ -56,33 +56,30 @@
                 Dashboard
             </div>
             <hr>
-            <div id="payment" class="on">
+            <div id="payment">
                 <h1>
                     Payment Confirmation
                 </h1>
                <div class="payment-content">
-                <div class="payment-cluster" class="flexcol">
-                    <div class="payment-col">
-                        <div class="payment-col-content">
-                            <h4 class=group-name>Group Name A</h4>
-                            <hr class="hr2">
-                            <div class="payment-file payment-insider">
-                                <div class="payment-insider-left">File</div>
-                                <div>:</div>
-                                <div class="payment-file-content payment-insider-right">file_name.format</div>
-                            </div>
-                            <div class="payment-status payment-insider">
-                                <div class="payment-insider-left">Status </div>
-                                <div>:</div>
-                                <div class="payment-status-content payment-insider-right">Unverified</div>
-                            </div>
-                            <div class="payment-col-button">
-                                <button class="payment-verify">Verify</button>
-                                <button class="payment-view"  onclick="view('assets/img/admin-panel/Receipt-CROP.jpg')">View</button>
-                            </div>
+                <div class="payment-col">
+                    <div class="payment-col-content">
+                        <h4 class=group-name>Group Name A</h4>
+                        <hr class="hr2">
+                        <div class="payment-date payment-insider">
+                            <div class="payment-insider-left">Date</div>
+                            <div>:</div>
+                            <div class="payment-date-content payment-insider-right">xx/yy/zz</div>
+                        </div>
+                        <div class="payment-status payment-insider">
+                            <div class="payment-insider-left">Status </div>
+                            <div>:</div>
+                            <div class="payment-status-content payment-insider-right">Unverified</div>
+                        </div>
+                        <div class="payment-col-button">
+                            <button class="payment-verify">Verify</button>
+                            <button class="payment-view"  onclick="view('assets/img/admin-panel/Receipt-CROP.jpg')">View</button>
                         </div>
                     </div>
-                   
                 </div>
                </div>
     
@@ -92,176 +89,16 @@
                     Participant Data
                 </h1>
                 <div class="participant-content">
-                     <div class="participant-cluster" class="flexcol">
                     <div class="participant-col">
                         <div class="participant-col-content">
+                            <div class="participant-delete">x</div>
                             <h4 class=group-name>Group Name A</h4>
+                            <button class="participant-view" onclick="viewGroup()">View Data</button>
                             <button class="participant-edit" onclick="editGroup()">Edit Data</button>
                         </div>
                     </div>
-                   
-                </div>
-                </div>
-            </div>
-            <div id=editgroup>
-                <h1 class="editgroup-name">Group Name A</h1>
-                <div class="editgroup-content">
-                    <div class="editgroup-col">
-                        <header>Leader</header>
-                        <hr class="hr3">
-                        <div class="editgroup-info">
-                            <div class="editgroup-info-left">
-                                <div class="editgroup-info-c">
-                                    <div>Name</div>
-                                    <div class="editgroup-info-input" id="editgroup-info-name">Leader_Name</div>
-                                </div>
-                                <div class="editgroup-info-c">
-                                    <div>Address</div>
-                                    <div class="editgroup-info-input" id="editgroup-info-address">Jalan Palmerah Barat 10 RT 02/RW 05, Palmerah, Kemanggisan, Jakarta Barat</div>
-                                </div>
-                                <div class="editgroup-info-c">
-                                    <div>Email</div>
-                                    <div class="editgroup-info-input" id="editgroup-info-email">email@gmail.com</div>
-                                </div>
-                                <div class="editgroup-info-c">
-                                    <div>Birth Place</div>
-                                    <div class="editgroup-info-input" id="editgroup-info-birthplace">email@gmail.com</div>
-                                </div>
-                            </div>
-                            <div class="editgroup-info-right">
-                                <div class="editgroup-info-c">
-                                    <div>Whatsapp Number</div>
-                                    <div class="editgroup-info-input" id="editgroup-info-number">0812 3423 7878</div>
-                                </div>
-                                <div class="editgroup-info-c">
-                                    <div>Line_ID</div>
-                                    <div class="editgroup-info-input" id="editgroup-info-line">Line_id</div>
-                                </div>
-                                <div class="editgroup-info-c">
-                                    <div>GitLab_ID</div>
-                                    <div class="editgroup-info-input" id="editgroup-info-gitlab">GitLab ID</div>
-                                </div>
-                                <div class="editgroup-info-c">
-                                    <div>Birth Date</div>
-                                    <div class="editgroup-info-input" id="editgroup-info-birthdate">11 Juli 2001</div>
-                                </div>
-                            </div>
-        
-                        </div>
-                        <hr class="hr3">
-                        <div class="editgroup-cv-c">
-                            <div class="editgroup-cv-left">
-                                <img src="assets/img/admin-panel/folder_red.png">
-                                <span>|</span>
-                                <div class="editgroup-cv">Your CV</div>
-                            </div>
-                            <button class="editgroup-view" onclick="view('assets/img/admin-panel/CV-CROP.jpg')">View CV</button>
-                        </div>
-                    </div>
-                    <div class="editgroup-col">
-                        <header>Member 1</header>
-                        <hr class="hr3">
-                        <div class="editgroup-info">
-                            <div class="editgroup-info-left">
-                                <div class="editgroup-info-c">
-                                    <div>Name</div>
-                                    <div class="editgroup-info-input" id="editgroup-info-name">Member1_Name</div>
-                                </div>
-                                <div class="editgroup-info-c">
-                                    <div>Address</div>
-                                    <div class="editgroup-info-input" id="editgroup-info-address">Jalan Palmerah Barat 10 RT 02/RW 05, Palmerah, Kemanggisan, Jakarta Barat</div>
-                                </div>
-                                <div class="editgroup-info-c">
-                                    <div>Email</div>
-                                    <div class="editgroup-info-input" id="editgroup-info-email">email@gmail.com</div>
-                                </div>
-                                <div class="editgroup-info-c">
-                                    <div>Birth Place</div>
-                                    <div class="editgroup-info-input" id="editgroup-info-birthplace">email@gmail.com</div>
-                                </div>
-                            </div>
-                            <div class="editgroup-info-right">
-                                <div class="editgroup-info-c">
-                                    <div>Whatsapp Number</div>
-                                    <div class="editgroup-info-input" id="editgroup-info-number">0812 3423 7878</div>
-                                </div>
-                                <div class="editgroup-info-c">
-                                    <div>Line_ID</div>
-                                    <div class="editgroup-info-input" id="editgroup-info-line">Line_id</div>
-                                </div>
-                                <div class="editgroup-info-c">
-                                    <div>GitLab_ID</div>
-                                    <div class="editgroup-info-input" id="editgroup-info-gitlab">GitLab ID</div>
-                                </div>
-                                <div class="editgroup-info-c">
-                                    <div>Birth Date</div>
-                                    <div class="editgroup-info-input" id="editgroup-info-birthdate">11 Juli 2001</div>
-                                </div>
-                            </div>
-        
-                        </div>
-                        <hr class="hr3">
-                        <div class="editgroup-cv-c">
-                            <div class="editgroup-cv-left">
-                                <img src="assets/img/admin-panel/folder_red.png">
-                                <span>|</span>
-                                <div class="editgroup-cv">Your CV</div>
-                            </div>
-                            <button class="editgroup-view" onclick="view('assets/img/admin-panel/CV-CROP.jpg')">View CV</button>
-                        </div>
-                    </div>
-                    <div class="editgroup-col">
-                        <header>Member 2</header>
-                        <hr class="hr3">
-                        <div class="editgroup-info">
-                            <div class="editgroup-info-left">
-                                <div class="editgroup-info-c">
-                                    <div>Name</div>
-                                    <div class="editgroup-info-input" id="editgroup-info-name">Member2_Name</div>
-                                </div>
-                                <div class="editgroup-info-c">
-                                    <div>Address</div>
-                                    <div class="editgroup-info-input" id="editgroup-info-address">Jalan Palmerah Barat 10 RT 02/RW 05, Palmerah, Kemanggisan, Jakarta Barat</div>
-                                </div>
-                                <div class="editgroup-info-c">
-                                    <div>Email</div>
-                                    <div class="editgroup-info-input" id="editgroup-info-email">email@gmail.com</div>
-                                </div>
-                                <div class="editgroup-info-c">
-                                    <div>Birth Place</div>
-                                    <div class="editgroup-info-input" id="editgroup-info-birthplace">email@gmail.com</div>
-                                </div>
-                            </div>
-                            <div class="editgroup-info-right">
-                                <div class="editgroup-info-c">
-                                    <div>Whatsapp Number</div>
-                                    <div class="editgroup-info-input" id="editgroup-info-number">0812 3423 7878</div>
-                                </div>
-                                <div class="editgroup-info-c">
-                                    <div>Line_ID</div>
-                                    <div class="editgroup-info-input" id="editgroup-info-line">Line_id</div>
-                                </div>
-                                <div class="editgroup-info-c">
-                                    <div>GitLab_ID</div>
-                                    <div class="editgroup-info-input" id="editgroup-info-gitlab">GitLab ID</div>
-                                </div>
-                                <div class="editgroup-info-c">
-                                    <div>Birth Date</div>
-                                    <div class="editgroup-info-input" id="editgroup-info-birthdate">11 Juli 2001</div>
-                                </div>
-                            </div>
-        
-                        </div>
-                        <hr class="hr3">
-                        <div class="editgroup-cv-c">
-                            <div class="editgroup-cv-left">
-                                <img src="assets/img/admin-panel/folder_red.png">
-                                <span>|</span>
-                                <div class="editgroup-cv">Your CV</div>
-                            </div>
-                            <button class="editgroup-view" onclick="view('assets/img/admin-panel/CV-CROP.jpg')">View CV</button>
-                        </div>
-                    </div>
+                    
+
                 </div>
             </div>
         </section>

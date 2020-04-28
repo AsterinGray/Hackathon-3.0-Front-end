@@ -75,7 +75,7 @@ body {
   width: 0;
   overflow: hidden;
   visibility: hidden;
-  transition: margin 0.15s, visibility 0.15s, width 0.15s linear;
+  transition: margin 0.3s, visibility 0.3s, width 0.3s linear;
   text-align: left; }
   .navbar-caption-special {
     display: flex;
@@ -84,12 +84,12 @@ body {
     width: 0;
     overflow: hidden;
     visibility: hidden;
-    transition: margin 0.15s, visibility 0.15s, width 0.15s linear; }
+    transition: margin 0.3s, visibility 0.3s, width 0.3s linear; }
   .navbar-caption-2 {
     width: 0;
     overflow: hidden;
     visibility: hidden;
-    transition: margin 0.15s, visibility 0.15s, width 0.15s linear; }
+    transition: margin 0.3s, visibility 0.3s, width 0.3s linear; }
 
 .navbar-footer {
   position: absolute;
@@ -194,7 +194,8 @@ hr {
 
 #content {
   width: 85%;
-  margin: 0px 30px; }
+  margin: 0px 30px;
+  margin-left: 10%; }
 
 #header {
   text-align: center;

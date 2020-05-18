@@ -359,7 +359,7 @@ html, body {
   justify-content: center;
   padding: 6rem 5rem; }
   .contact-box {
-    padding: 0 1rem; }
+    padding: 0 5rem; }
     .contact-box input {
       border: none;
       background-color: #E8E3E3;
@@ -375,8 +375,6 @@ html, body {
   .contact h2 {
     color: #FFFFFF;
     text-align: center; }
-  .contact map {
-    width: 100%; }
 
 .form_submit > button {
   border-radius: 30px;
@@ -415,3 +413,26 @@ html, body {
     background: radial-gradient(circle at center, #252A41 50%, #3498DB 74%, #252A41 100%); }
   100% {
     background: radial-gradient(circle at center, #252A41 99%, #252A41 100%, #252A41 100%); } }
+
+@media only screen and (max-width: 768px) {
+  .nav {
+    padding: 0 1rem; }
+  .home {
+    padding: 5rem 1rem; }
+    .home img {
+      display: none; }
+  .about {
+    padding: 0 1rem; }
+  .why {
+    padding: 3rem 1rem; }
+  .faq {
+    padding: 8rem 1rem; }
+  .timeline {
+    padding: 1rem; }
+  .sponsor {
+    padding: 5rem 1rem; }
+  .contact {
+    padding: 6rem 1rem;
+    flex-direction: column; }
+  .foot {
+    padding: 1rem 1rem; } }

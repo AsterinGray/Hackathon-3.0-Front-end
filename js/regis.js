@@ -3,7 +3,10 @@ function changeFile(e) {
     $('label[for="'+ e.id +'"]').html(fileName);
 }
 
-// $('#password, #confirm-password').on('keyup', function () {
-//     if ($('#password').val() != $('#confirm-password').val())
-//         return false;
-//   });
+function validate(){
+    if($("#password").val() == $("#confirm-password").val()){
+        $("#confirm-password")[0].setCustomValidity('');
+    }else{
+        $("#confirm-password")[0].setCustomValidity('Passowrd must match');
+    }
+}

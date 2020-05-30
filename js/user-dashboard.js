@@ -175,17 +175,28 @@ $("#navbar-c").mouseleave(function(){
 })
 
 $(".payment-cross").click(function(){
+  // getElementsByClassName("payment-cross").setAttribute("aria-expanded","false");
   let vertical = $(this).children(".vertical");
   if($(this).hasClass('expand')){
     $(this).removeClass("click-ani");
     vertical.css({"transform":"rotate(90deg)"});
     $(this).addClass("click-ani");
     $(this).removeClass("expand");
+    $(this).removeAttr("id");
   }else{
-    console.log("aaaa");
+    let a=$("#pay-expand").parent().next();
+    $("#pay-expand").children('.vertical').css({"transform":"rotate(90deg)"});
+    a.removeClass("show");
+    $("#pay-expand").attr("aria-expanded","false");
+    $("#pay-expand").removeClass("expand");
+    $("#pay-expand").addClass("collapsed");
+    $("#pay-expand").removeAttr("id");
     $(this).removeClass("click-ani");
+
+
     vertical.css({"transform":"rotate(-0deg)"});
     $(this).addClass("click-ani");
     $(this).addClass("expand");
+    $(this).attr("id","pay-expand");
   }
 })

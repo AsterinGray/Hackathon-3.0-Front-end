@@ -32,6 +32,7 @@ body{
     flex-wrap: nowrap;
     box-sizing: content-box;
     padding: 20px;
+    z-index: 1000 !important;
     white-space: nowrap;
     // overflow: hidden;
     justify-content: flex-start;
@@ -48,6 +49,7 @@ body{
         width: 100%;
         flex-direction: row;
         height: auto;
+        z-index: 1000;
         margin: 10px 0px;
         align-items: center;
         justify-content: center;
@@ -206,7 +208,7 @@ hr{
       justify-content: center;
       align-items: center;
       color: white;
-      z-index: 3; }
+    }
 
 #content{
     width: 85%;

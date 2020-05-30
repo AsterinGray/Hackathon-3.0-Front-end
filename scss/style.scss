@@ -3,8 +3,12 @@ html, body{
     padding: 0;
     font-family: 'CircularStd';
     scroll-behavior: smooth;
-    box-sizing: border-box;
     background-color: #1D2134;
+}
+
+@mixin flexcc{
+    display: flex;
+    justify-content: center;
 }
 
 @font-face{
@@ -17,6 +21,7 @@ html, body{
     top: 0;
     background-color: #1D2134;
     z-index: 3;
+    padding: 0 10rem;
     &-img{
         width: 5.5rem;
     }
@@ -43,34 +48,39 @@ html, body{
     background: url("../assets/img/home/BG_Home_1920-min.png") no-repeat;
     background-size: cover;
     position: relative;
-    &-content img{
-        width: 100%;
-        height: auto;
-    }
-    &-left{
-        &-extra{
+    @include flexcc();
+    flex-direction: column;
+    padding: 5rem 10rem;
+    &-text{
+        @include flexcc();
+        flex-direction: column;
+        padding-left: 2rem;
+        & p{
+            margin: 0;
             color: #FFFFFF;
             font-size: 1.5rem;
         }
-        &-title{
+        &>h3{
             color: #E74C3C;
             font-size: 2rem;
             font-weight: bold;
         }
-        &-slogan{
+        &>h1{
             color: #3498DB;
             font-size: 4rem;
             font-weight: bold;
         }
-        &-date{
+        &>p:nth-child(4){
             color: #FFFFFF;
-            font-size: 2.5rem;
+            font-size: 2rem;
         }
         &-guide{
+            margin-top: 1.5rem;
             &>button{
                 border: none;
+                margin-top: 1rem;
                 background-color: #E74C3C;
-                font-size: 1.8rem;
+                font-size: 1.5rem;
                 padding: .5rem 1.5rem;
                 border-radius: 50px;
                 &>a{
@@ -80,11 +90,12 @@ html, body{
             }
         }
     }
+
     &-more-info{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        @include flexcc();
         align-items: center;
+        flex-direction: column;
+        width: 100%;
         color: white;
         font-size: 1.5rem;
         & img{
@@ -95,39 +106,12 @@ html, body{
 
 .about{
     position: relative;
-    &-width{
-        width: inherit;
+    padding: 10rem 5rem;
+    &-right{
+        padding-left: 3rem;
     }
 }
 
-#object{
-    &1{
-        position: absolute;
-        top: -18%;
-        right: 8%;
-        width: 40%;
-        z-index: 0;
-    }
-    &2{
-        position: absolute;
-        bottom: -18%;
-        left: -0%;
-        width: 30%;
-        z-index: 0;
-    }
-    &3{
-        position: absolute;
-        width: 30%;
-        top: -15%;
-        left: 0%;
-    }
-    &4{
-        position: absolute;
-        width: 80%;
-        bottom: -40%;
-        z-index: 0;
-    }
-}
 
 .carousel-content{
     text-align: center;
@@ -163,43 +147,61 @@ html, body{
     }
 }
 
+#object{
+    &1{
+        position: absolute;
+        top: -18%;
+        right: 8%;
+        width: 40%;
+        z-index: 0;
+    }
+    &2{
+        position: absolute;
+        bottom: -18%;
+        left: -0%;
+        width: 30%;
+        z-index: 0;
+    }
+    &3{
+        position: absolute;
+        width: 30%;
+        top: -15%;
+        left: 0%;
+    }
+    &4{
+        position: absolute;
+        width: 80%;
+        bottom: -80%;
+        z-index: 0;
+    }
+}
+
 .heading{
     font-weight: bold;
-    font-size : 2.5rem; 
+    font-size : 2.5rem;
+    color: #E74C3C; 
 }
 
-.fontStyle1{
-    color : #e74c3c;
-    font-family : "CircularStd";
-    font-weight: normal;
-    font-size: 2rem;
-}
-
-.fontStyle2{
+.paragraf{
     color: white;
-    font-size: 1.2rem;
-    font-family : "CircularStd";
-    font-weight: normal;
+    font: 1.2rem CircularStd;
 }
 
 .why{
-    &-container{
-        margin: 1em;
-    }
+    padding: 3rem 5rem;
     &-content{
+        @include flexcc();
         height: 20em;
-        margin-top: 2em;
-        margin-left: 1.5em;
-        margin-right: 1.5em;
+        margin: 2rem 0;
+        padding: 0;
     }
     &-left{
         background-color: rgba(255,255,255,.1);
         border-radius: 1em 0px 0px 1em;
         padding: 2em;
         height: 100%;
-        &-img{
-            width: 6.67em;
-            height: auto;
+        & img{
+            width: 8rem;
             margin-right: 2em;
         }
     }
@@ -240,7 +242,7 @@ html, body{
             }
             &-heading{
                 text-align: center;
-                font-size: 1em;
+                font-size: 1.3rem;
             }
             &-par-container{
                 height: 45%;
@@ -260,27 +262,30 @@ html, body{
 
 #why-active{
     &-heading{
-        font-size: 24px;
+        color : #e74c3c;
+        font: 2rem CircularStd;
     }
     &-par{
         color: #FFFFFF;
-        font-size: 1.1rem;
-        font-weight: normal;
+        font-size: 1.3rem;
     }
 }
 
 .faq{
+    @include flexcc();
+    flex-direction: column;
     position: relative;
     color: #FFFFFF;
-    &>h1{
-        color: #E74C3C;
-    }
+    text-align: center;
+    padding: 8rem 5rem;
     &-content{
         width: 100%;
         margin: 1rem 0;
     }
     &-question{
         display: flex;
+        text-align: left;
+        font: 1.3rem CircularStd;
         background-size: 100% 200%;
         background-image: linear-gradient( #252A41 50%, rgba(37, 42, 65, 0.1) 50%);
         transition: background-position .5s cubic-bezier(.5, .8, .1, .1);
@@ -289,8 +294,10 @@ html, body{
     }
     &-ans{
         display: none;
+        text-align: left;
+        font: 1.2rem CircularStd;
         opacity: 0.5;
-        padding: 0 2rem;
+        padding: 0 3rem;
         padding-right: 4rem;
         border-radius: 0 0 15px 15px;
         background-size: 100% 200%;
@@ -329,10 +336,14 @@ html, body{
 }
 
 .timeline{
+    @include flexcc();
+    align-items: center;
+    padding: 5rem;
+    flex-direction: column;
     position: relative;
     color: #E74C3C;
     &-wrapper{
-        width: 80%;
+        width: 100%;
     }
     &-icons{
         &>div{
@@ -381,16 +392,19 @@ html, body{
         justify-content: center;
         align-items: center;
         color: white;
+        font: 1.5rem CircularStd;
         z-index: 3;
     }
 }
 
 .sponsor{
+    padding: 5rem 10rem;
+    padding-bottom: 0;
     &-table{
         border: 2px solid #E74C3C;
         border-radius: 30px;
         padding: 0;
-        margin: 2rem;
+        margin: 5rem 0;
         &-head{
             color: #FFFFFF;
             text-align: center;
@@ -420,8 +434,10 @@ html, body{
 }
 
 .contact{
+    @include flexcc();
+    padding: 6rem 5rem;
     &-box{
-        padding: 0 1rem;
+        padding: 0 5rem;
         & input{
             border: none;
             background-color: #E8E3E3;
@@ -442,10 +458,6 @@ html, body{
     & h2{
         color: #FFFFFF;
         text-align: center;
-    }
-    
-    & map{
-        width: 100%;
     }
 }
 
@@ -498,5 +510,39 @@ html, body{
     }
     100% {
       background: radial-gradient(circle at center, #252A41 99%, #252A41 100%, #252A41 100%);
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .nav{
+        padding: 0 1rem;
+    }
+    .home{
+        padding: 5rem 1rem;
+        & img{
+            display: none;
+        }
+    }
+    .about{
+        padding: 0 1rem;
+    }	
+    .why{
+        padding: 3rem 1rem;
+    }
+    .faq{
+        padding: 8rem 1rem;
+    }
+    .timeline{
+        padding: 1rem;
+    }
+    .sponsor{
+        padding: 5rem 1rem;
+    }
+    .contact{
+        padding: 6rem 1rem;
+        flex-direction: column;
+    }
+    .foot{
+        padding: 1rem 1rem;
     }
 }

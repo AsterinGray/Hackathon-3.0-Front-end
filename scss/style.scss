@@ -290,7 +290,7 @@ body {
   position: relative;
   color: #ffffff;
   text-align: center;
-  padding: 8rem 5rem;
+  padding: 3rem 5rem;
   &-content {
     width: 100%;
     margin: 1rem 0;
@@ -352,7 +352,7 @@ body {
 .timeline {
   @include flexcc();
   align-items: center;
-  padding: 5rem;
+  padding: 3rem 5rem;
   flex-direction: column;
   position: relative;
   color: #e74c3c;
@@ -440,9 +440,16 @@ body {
   }
   &-img {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2rem;
+    flex-wrap: wrap;
+    &.platinum {
+      justify-content: center;
+    }
     & > img {
-      width: 25%;
+      width: 20rem;
+      padding: 1rem;
     }
   }
 }
@@ -451,7 +458,7 @@ body {
   @include flexcc();
   padding: 6rem 5rem;
   &-box {
-    padding: 0 5rem;
+    padding: 0 1rem;
     & input {
       border: none;
       background-color: #e8e3e3;
@@ -487,6 +494,9 @@ body {
 .socmed {
   padding: 0 3rem;
   background-color: #484e65;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   &-item {
     & span {
       color: #ffffff;
@@ -500,12 +510,21 @@ body {
 
 .foot {
   color: #ffffff;
-  padding: 1rem 10rem;
+  padding: 1rem 5rem;
   background-color: #252a41;
+  &-item {
+    display: flex;
+    align-items: center;
+  }
   & img {
     width: 10rem;
-    margin: 0 2rem;
+    margin: 0 1rem;
   }
+}
+
+.copyright {
+  display: none;
+  color: white;
 }
 
 @keyframes gradient {
@@ -611,25 +630,95 @@ body {
     display: none;
   }
   .faq {
-    padding: 8rem 1rem;
+    padding: 3rem 1rem;
     &-question {
       padding: 1.2rem 1rem;
       font-size: 1.2rem;
     }
   }
   .timeline {
-    display: none;
+    display: flex;
+    overflow-x: auto;
     padding: 1rem;
   }
   .sponsor {
-    padding: 5rem 1rem;
+    padding: 0 1rem;
+    &-table {
+      border: none;
+      &-head {
+        border: none;
+        padding: 0;
+      }
+      &-subhead {
+        margin-top: 2rem;
+        padding: 0;
+      }
+      &-content {
+        padding: 0;
+        background-color: #1d2134;
+      }
+    }
+    &-img {
+      &.platinum > img {
+        width: 15rem;
+      }
+      &.gold > img {
+        width: 7.5rem;
+      }
+      & > img {
+        width: 7rem;
+      }
+    }
   }
   .contact {
-    padding: 6rem 1rem;
+    padding: 0 1rem;
     flex-direction: column;
+    &-box {
+      padding: 1rem;
+    }
   }
-  .footer {
-    padding: 1rem 1rem;
-    display: none;
+
+  .location {
+    padding: 0;
+    padding-bottom: 3rem;
+    & > iframe {
+      width: 100%;
+    }
+  }
+  .socmed {
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    & img {
+      width: 2rem;
+    }
+    & > a {
+      padding: 0.5rem 0;
+    }
+  }
+  .foot {
+    padding: 3rem 1rem;
+    &-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      & img {
+        margin: 0;
+      }
+    }
+    &-copyright {
+      display: none;
+    }
+  }
+  #bncc-logo {
+    padding-top: 2rem;
+  }
+
+  .copyright {
+    display: flex;
+    font: 0.8rem CircularStd;
+    justify-content: center;
+    padding: 2rem 0;
   }
 }

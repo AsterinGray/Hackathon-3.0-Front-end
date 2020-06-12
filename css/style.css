@@ -237,7 +237,7 @@ body {
   position: relative;
   color: #ffffff;
   text-align: center;
-  padding: 8rem 5rem; }
+  padding: 3rem 5rem; }
   .faq-content {
     width: 100%;
     margin: 1rem 0; }
@@ -291,7 +291,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5rem;
+  padding: 3rem 5rem;
   flex-direction: column;
   position: relative;
   color: #e74c3c; }
@@ -363,16 +363,22 @@ body {
       padding: 3rem 2rem; }
   .sponsor-img {
     display: flex;
-    justify-content: space-around; }
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2rem;
+    flex-wrap: wrap; }
+    .sponsor-img.platinum {
+      justify-content: center; }
     .sponsor-img > img {
-      width: 25%; }
+      width: 20rem;
+      padding: 1rem; }
 
 .contact {
   display: flex;
   justify-content: center;
   padding: 6rem 5rem; }
   .contact-box {
-    padding: 0 5rem; }
+    padding: 0 1rem; }
     .contact-box input {
       border: none;
       background-color: #e8e3e3;
@@ -400,7 +406,10 @@ body {
 
 .socmed {
   padding: 0 3rem;
-  background-color: #484e65; }
+  background-color: #484e65;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
   .socmed-item span {
     color: #ffffff;
     margin: 0 1rem; }
@@ -409,11 +418,18 @@ body {
 
 .foot {
   color: #ffffff;
-  padding: 1rem 10rem;
+  padding: 1rem 5rem;
   background-color: #252a41; }
+  .foot-item {
+    display: flex;
+    align-items: center; }
   .foot img {
     width: 10rem;
-    margin: 0 2rem; }
+    margin: 0 1rem; }
+
+.copyright {
+  display: none;
+  color: white; }
 
 @keyframes gradient {
   0% {
@@ -462,18 +478,66 @@ body {
     padding: 3rem 1rem;
     display: none; }
   .faq {
-    padding: 8rem 1rem; }
+    padding: 3rem 1rem; }
     .faq-question {
       padding: 1.2rem 1rem;
       font-size: 1.2rem; }
   .timeline {
-    display: none;
+    display: flex;
+    overflow-x: auto;
     padding: 1rem; }
   .sponsor {
-    padding: 5rem 1rem; }
+    padding: 0 1rem; }
+    .sponsor-table {
+      border: none; }
+      .sponsor-table-head {
+        border: none;
+        padding: 0; }
+      .sponsor-table-subhead {
+        margin-top: 2rem;
+        padding: 0; }
+      .sponsor-table-content {
+        padding: 0;
+        background-color: #1d2134; }
+    .sponsor-img.platinum > img {
+      width: 15rem; }
+    .sponsor-img.gold > img {
+      width: 7.5rem; }
+    .sponsor-img > img {
+      width: 7rem; }
   .contact {
-    padding: 6rem 1rem;
+    padding: 0 1rem;
     flex-direction: column; }
-  .footer {
-    padding: 1rem 1rem;
-    display: none; } }
+    .contact-box {
+      padding: 1rem; }
+  .location {
+    padding: 0;
+    padding-bottom: 3rem; }
+    .location > iframe {
+      width: 100%; }
+  .socmed {
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start; }
+    .socmed img {
+      width: 2rem; }
+    .socmed > a {
+      padding: 0.5rem 0; }
+  .foot {
+    padding: 3rem 1rem; }
+    .foot-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .foot-item img {
+        margin: 0; }
+    .foot-copyright {
+      display: none; }
+  #bncc-logo {
+    padding-top: 2rem; }
+  .copyright {
+    display: flex;
+    font: 0.8rem CircularStd;
+    justify-content: center;
+    padding: 2rem 0; } }

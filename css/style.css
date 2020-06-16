@@ -488,8 +488,11 @@ body {
       font-size: 1.2rem; }
   .timeline {
     display: flex;
-    overflow-x: auto;
-    padding: 1rem; }
+    padding: 1rem;
+    overflow-x: auto; }
+    .timeline > h1 {
+      position: sticky;
+      left: 1.4rem; }
   .sponsor {
     padding: 0 1rem; }
     .sponsor-table {

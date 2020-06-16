@@ -645,9 +645,12 @@ body {
   }
   .timeline {
     display: flex;
-    // overflow-y: auto;
-    overflow-x: auto;
     padding: 1rem;
+    overflow-x: auto;
+    & > h1 {
+      position: sticky;
+      left: 1.4rem;
+    }
   }
   .sponsor {
     padding: 0 1rem;

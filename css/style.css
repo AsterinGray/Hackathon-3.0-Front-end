@@ -290,25 +290,29 @@ body {
 .timeline {
   display: flex;
   justify-content: center;
-  align-items: center;
   padding: 3rem 5rem;
   flex-direction: column;
   position: relative;
   color: #e74c3c; }
+  .timeline::-webkit-scrollbar {
+    display: none; }
+  .timeline > h1 {
+    text-align: center; }
   .timeline-wrapper {
-    width: 100%; }
+    width: 100rem;
+    justify-content: flex-start; }
   .timeline-icons > div {
-    width: 80%;
+    width: 100rem;
     display: flex;
     justify-content: center;
     align-items: center; }
   .timeline-icons img {
     display: block;
-    width: 30%; }
+    width: 5rem; }
   .timeline-path {
     color: white;
     position: absolute;
-    width: 50%;
+    width: 65rem;
     transform: translateY(-250%); }
     .timeline-path-line {
       display: flex;

@@ -351,30 +351,37 @@ body {
 
 .timeline {
   @include flexcc();
-  align-items: center;
+  // align-items: center;
   padding: 3rem 5rem;
   flex-direction: column;
   position: relative;
   color: #e74c3c;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  & > h1 {
+    text-align: center;
+  }
   &-wrapper {
-    width: 100%;
+    width: 100rem;
+    justify-content: flex-start;
   }
   &-icons {
     & > div {
-      width: 80%;
+      width: 100rem;
       display: flex;
       justify-content: center;
       align-items: center;
     }
     & img {
       display: block;
-      width: 30%;
+      width: 5rem;
     }
   }
   &-path {
     color: white;
     position: absolute;
-    width: 50%;
+    width: 65rem;
     transform: translateY(-250%);
     &-line {
       display: flex;
@@ -638,6 +645,7 @@ body {
   }
   .timeline {
     display: flex;
+    // overflow-y: auto;
     overflow-x: auto;
     padding: 1rem;
   }

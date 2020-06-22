@@ -447,7 +447,8 @@ body {
   }
   &-img {
     display: flex;
-    justify-content: space-between;
+    width: 100%;
+    justify-content: space-around;
     align-items: center;
     padding-bottom: 2rem;
     flex-wrap: wrap;
@@ -577,6 +578,92 @@ body {
   }
 }
 
+@media only screen and (max-width: 1024px) {
+  .nav,
+  .home,
+  .about,
+  .timeline,
+  .faq,
+  .sponsor,
+  .contact {
+    padding: 1rem 3rem;
+  }
+
+  .timeline {
+    display: flex;
+    overflow-x: auto;
+    & > h1 {
+      position: sticky;
+      left: 1.4rem;
+    }
+  }
+  .sponsor {
+    &-table {
+      border: none;
+      &-head {
+        border: none;
+        padding: 0;
+      }
+      &-subhead {
+        margin-top: 2rem;
+        padding: 0;
+      }
+      &-content {
+        padding: 0;
+        background-color: #1d2134;
+      }
+    }
+    &-img {
+      & img {
+        width: 18rem;
+      }
+    }
+  }
+
+  .why {
+    display: none;
+  }
+
+  .contact {
+    padding-bottom: 3rem;
+  }
+
+  .socmed {
+    padding: 0 1rem;
+  }
+
+  .foot {
+    &-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      & img {
+        margin: 0;
+      }
+    }
+    &-copyright {
+      display: none;
+    }
+  }
+
+  .copyright {
+    display: flex;
+    font: 0.8rem CircularStd;
+    justify-content: center;
+    padding: 2rem 0;
+  }
+
+  #object {
+    &1,
+    &2,
+    &3,
+    &4 {
+      display: none;
+    }
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .nav {
     padding: 1rem;
@@ -586,15 +673,6 @@ body {
   .navbar {
     &-brand img {
       width: 0;
-    }
-  }
-
-  #object {
-    &1,
-    &2,
-    &3,
-    &4 {
-      display: none;
     }
   }
 
@@ -643,41 +721,12 @@ body {
       font-size: 1.2rem;
     }
   }
-  .timeline {
-    display: flex;
-    padding: 1rem;
-    overflow-x: auto;
-    & > h1 {
-      position: sticky;
-      left: 1.4rem;
-    }
-  }
   .sponsor {
     padding: 0 1rem;
-    &-table {
-      border: none;
-      &-head {
-        border: none;
-        padding: 0;
-      }
-      &-subhead {
-        margin-top: 2rem;
-        padding: 0;
-      }
-      &-content {
-        padding: 0;
-        background-color: #1d2134;
-      }
-    }
+
     &-img {
-      &.platinum > img {
+      & img {
         width: 15rem;
-      }
-      &.gold > img {
-        width: 7.5rem;
-      }
-      & > img {
-        width: 7rem;
       }
     }
   }
@@ -696,6 +745,7 @@ body {
       width: 100%;
     }
   }
+
   .socmed {
     flex-direction: column;
     justify-content: start;
@@ -707,29 +757,15 @@ body {
       padding: 0.5rem 0;
     }
   }
+
   .foot {
     padding: 3rem 1rem;
-    &-item {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      & img {
-        margin: 0;
-      }
-    }
     &-copyright {
       display: none;
     }
   }
+
   #bncc-logo {
     padding-top: 2rem;
-  }
-
-  .copyright {
-    display: flex;
-    font: 0.8rem CircularStd;
-    justify-content: center;
-    padding: 2rem 0;
   }
 }

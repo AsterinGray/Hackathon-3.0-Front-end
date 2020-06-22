@@ -367,7 +367,8 @@ body {
       padding: 3rem 2rem; }
   .sponsor-img {
     display: flex;
-    justify-content: space-between;
+    width: 100%;
+    justify-content: space-around;
     align-items: center;
     padding-bottom: 2rem;
     flex-wrap: wrap; }
@@ -447,14 +448,63 @@ body {
   100% {
     background: radial-gradient(circle at center, #252a41 99%, #252a41 100%, #252a41 100%); } }
 
+@media only screen and (max-width: 1024px) {
+  .nav,
+  .home,
+  .about,
+  .timeline,
+  .faq,
+  .sponsor,
+  .contact {
+    padding: 1rem 3rem; }
+  .timeline {
+    display: flex;
+    overflow-x: auto; }
+    .timeline > h1 {
+      position: sticky;
+      left: 1.4rem; }
+  .sponsor-table {
+    border: none; }
+    .sponsor-table-head {
+      border: none;
+      padding: 0; }
+    .sponsor-table-subhead {
+      margin-top: 2rem;
+      padding: 0; }
+    .sponsor-table-content {
+      padding: 0;
+      background-color: #1d2134; }
+  .sponsor-img img {
+    width: 18rem; }
+  .why {
+    display: none; }
+  .contact {
+    padding-bottom: 3rem; }
+  .socmed {
+    padding: 0 1rem; }
+  .foot-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .foot-item img {
+      margin: 0; }
+  .foot-copyright {
+    display: none; }
+  .copyright {
+    display: flex;
+    font: 0.8rem CircularStd;
+    justify-content: center;
+    padding: 2rem 0; }
+  #object1, #object2, #object3, #object4 {
+    display: none; } }
+
 @media only screen and (max-width: 768px) {
   .nav {
     padding: 1rem;
     position: relative; }
   .navbar-brand img {
     width: 0; }
-  #object1, #object2, #object3, #object4 {
-    display: none; }
   .home {
     padding: 1rem; }
     .home-content img {
@@ -486,32 +536,10 @@ body {
     .faq-question {
       padding: 1.2rem 1rem;
       font-size: 1.2rem; }
-  .timeline {
-    display: flex;
-    padding: 1rem;
-    overflow-x: auto; }
-    .timeline > h1 {
-      position: sticky;
-      left: 1.4rem; }
   .sponsor {
     padding: 0 1rem; }
-    .sponsor-table {
-      border: none; }
-      .sponsor-table-head {
-        border: none;
-        padding: 0; }
-      .sponsor-table-subhead {
-        margin-top: 2rem;
-        padding: 0; }
-      .sponsor-table-content {
-        padding: 0;
-        background-color: #1d2134; }
-    .sponsor-img.platinum > img {
+    .sponsor-img img {
       width: 15rem; }
-    .sponsor-img.gold > img {
-      width: 7.5rem; }
-    .sponsor-img > img {
-      width: 7rem; }
   .contact {
     padding: 0 1rem;
     flex-direction: column; }
@@ -532,19 +560,7 @@ body {
       padding: 0.5rem 0; }
   .foot {
     padding: 3rem 1rem; }
-    .foot-item {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center; }
-      .foot-item img {
-        margin: 0; }
     .foot-copyright {
       display: none; }
   #bncc-logo {
-    padding-top: 2rem; }
-  .copyright {
-    display: flex;
-    font: 0.8rem CircularStd;
-    justify-content: center;
-    padding: 2rem 0; } }
+    padding-top: 2rem; } }

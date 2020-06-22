@@ -67,14 +67,16 @@
                             <div class="navbar-caption-2">Timeline</div>
                         </div>
                     </a>
-                    <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-logout" role="tab" aria-controls="v-pills-logout" aria-selected="false">
-                        <div class="navbar-content">
-                            <div class=navbar-icon-c-2>
-                                <img class=navbar-icon src="assets/img/admin-panel/logout.png">
+                    <!-- <a class="nav-link" data-toggle="pill" href="#v-pills-logout" role="tab" aria-controls="v-pills-logout" aria-selected="false"> -->
+                        <button class="inherit nav-link" id="v-pills-settings-tab" data-toggle="pill" role="tab" aria-controls="v-pills-logout" aria-selected="false">
+                            <div class="navbar-content">
+                                <div class=navbar-icon-c-2>
+                                    <img class=navbar-icon src="assets/img/admin-panel/logout.png">
+                                </div>
+                                <div class="navbar-caption-2">Logout</div>
                             </div>
-                            <div class="navbar-caption-2">Logout</div>
-                        </div>
-                    </a>
+                        </button>
+                    <!-- </a> -->
                 </div>
                 <div class="navbar-footer">2020 Bina Nusantara Computer Club</div>
             </nav>
@@ -338,8 +340,8 @@
                                 <h4>Upload Payment Receipt</h4>
                                 <div class="flex-col d-flex ">
                                     <img class="payment-time" src="assets/img/user-dashboard/time-left.png">
-                                    <div class="payment-time-content">
-                                        <time style="margin-right: 5px;">23:59:45</time> left
+                                    <div class="payment-time-content" id="countdown">
+                                        23:59:45 left
                                     </div>
                                 </div>
                             </div>

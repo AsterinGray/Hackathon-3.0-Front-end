@@ -25,16 +25,18 @@ body {
   flex-direction: column;
   background-color: #252A41;
   border-radius: 20px;
-  height: 100%;
+  height: 90%;
   flex: contents;
   flex-wrap: nowrap;
   box-sizing: content-box;
   padding: 20px;
+  z-index: 600 !important;
   white-space: nowrap;
   justify-content: flex-start; }
   #navbar-c {
+    display: flex;
     padding-left: 15px;
-    height: 93%;
+    height: 90%;
     position: sticky; }
 
 .navbar-content {
@@ -87,6 +89,7 @@ body {
     transition: margin 0.3s, visibility 0.3s, width 0.3s linear; }
   .navbar-caption-2 {
     width: 0;
+    text-align: left;
     overflow: hidden;
     visibility: hidden;
     transition: margin 0.3s, visibility 0.3s, width 0.3s linear; }
@@ -189,8 +192,7 @@ hr {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
-  z-index: 3; }
+  color: white; }
 
 #content {
   width: 85%;
@@ -454,6 +456,11 @@ h1 {
 
 .vertical {
   transform: rotate(90deg); }
+
+.inherit{
+  background-color: inherit;
+  border: none;
+}
 
 @keyframes showExpand {
   0% {

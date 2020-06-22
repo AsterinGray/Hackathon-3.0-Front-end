@@ -166,6 +166,11 @@ hr {
   color: white;
   margin: 0 5px; }
 
+button{
+  background: none;
+  border: none;
+}  
+
 h1 {
   font-size: 2.0rem;
   margin-top: 30px; }

@@ -31,6 +31,28 @@ body {
     .nav-link.active,
     .nav-link :hover {
       border-bottom: 1.5px solid #e74c3c; }
+  .nav > button:focus {
+    outline: none; }
+
+.navbar-nav.main {
+  margin-right: auto; }
+
+.navbar-collapse.nav-a.collapse.show {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .navbar-collapse.nav-a.collapse.show > .navbar-nav.main {
+    margin: 0; }
+  .navbar-collapse.nav-a.collapse.show .nav-link {
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 1.5rem; }
+    .navbar-collapse.nav-a.collapse.show .nav-link.active,
+    .navbar-collapse.nav-a.collapse.show .nav-link :hover {
+      border: none;
+      color: #e74c3c; }
 
 #register {
   padding: 0.2rem 1rem;
@@ -179,7 +201,7 @@ body {
       width: 8rem;
       margin-right: 2em; }
   .why-right {
-    background-color: #e74c3c;
+    background-color: #556e88;
     border-radius: 0px 1em 1em 0;
     height: 100%; }
     .why-right-img {
@@ -237,7 +259,8 @@ body {
   position: relative;
   color: #ffffff;
   text-align: center;
-  padding: 3rem 5rem; }
+  padding: 3rem 5rem;
+  padding-top: 8rem; }
   .faq-content {
     width: 100%;
     margin: 1rem 0; }
@@ -290,7 +313,7 @@ body {
 .timeline {
   display: flex;
   justify-content: center;
-  padding: 3rem 5rem;
+  padding: 3rem 3rem;
   flex-direction: column;
   position: relative;
   color: #e74c3c; }
@@ -300,7 +323,8 @@ body {
     text-align: center; }
   .timeline-wrapper {
     width: 100rem;
-    justify-content: flex-start; }
+    justify-content: flex-start;
+    z-index: 2; }
   .timeline-icons > div {
     width: 100rem;
     display: flex;
@@ -457,6 +481,14 @@ body {
   .sponsor,
   .contact {
     padding: 1rem 3rem; }
+  .home-content img {
+    display: none; }
+  .home-text {
+    text-align: center; }
+  #hackathon-logo {
+    display: flex;
+    align-self: center;
+    width: 50%; }
   .timeline {
     display: flex;
     overflow-x: auto; }
@@ -475,9 +507,21 @@ body {
       padding: 0;
       background-color: #1d2134; }
   .sponsor-img img {
-    width: 18rem; }
-  .why {
-    display: none; }
+    width: 15rem; }
+  .why > h1 {
+    text-align: center;
+    padding: 2rem 0; }
+  .why-content {
+    padding: 3rem 0;
+    flex-direction: column; }
+  .why-left {
+    border-radius: 15px;
+    margin: 2rem 0; }
+    .why-left > div {
+      flex-direction: column; }
+  .why-right {
+    background-color: #1d2134;
+    flex-direction: column; }
   .contact {
     padding-bottom: 3rem; }
   .socmed {
@@ -496,6 +540,19 @@ body {
     font: 0.8rem CircularStd;
     justify-content: center;
     padding: 2rem 0; }
+  .contact {
+    padding: 0 1rem;
+    flex-direction: column; }
+    .contact-box {
+      padding: 1rem; }
+  .socmed {
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start; }
+    .socmed img {
+      width: 2rem; }
+    .socmed > a {
+      padding: 0.5rem 0; }
   #object1, #object2, #object3, #object4 {
     display: none; } }
 
@@ -507,18 +564,11 @@ body {
     width: 0; }
   .home {
     padding: 1rem; }
-    .home-content img {
-      display: none; }
-    .home-text {
-      text-align: center; }
-      .home-text > h1 {
-        font-size: 2.5rem;
-        margin-bottom: 2rem; }
-      .home-text p:nth-child(5) {
-        font-size: 2rem; }
-  #hackathon-logo {
-    display: flex;
-    width: 100%; }
+    .home-text > h1 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem; }
+    .home-text p:nth-child(5) {
+      font-size: 2rem; }
   .about {
     padding: 0 1rem;
     margin: 0; }
@@ -540,24 +590,11 @@ body {
     padding: 0 1rem; }
     .sponsor-img img {
       width: 15rem; }
-  .contact {
-    padding: 0 1rem;
-    flex-direction: column; }
-    .contact-box {
-      padding: 1rem; }
   .location {
     padding: 0;
     padding-bottom: 3rem; }
     .location > iframe {
       width: 100%; }
-  .socmed {
-    flex-direction: column;
-    justify-content: start;
-    align-items: flex-start; }
-    .socmed img {
-      width: 2rem; }
-    .socmed > a {
-      padding: 0.5rem 0; }
   .foot {
     padding: 3rem 1rem; }
     .foot-copyright {

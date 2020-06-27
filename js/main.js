@@ -3,6 +3,7 @@ $(".nav-link").click(function () {
   $(".active").removeClass("active");
   $(".on").removeClass("on");
   $(this).addClass("active on");
+  $(".navbar-collapse.show").removeClass("show");
 });
 
 //Carousel

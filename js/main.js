@@ -100,11 +100,11 @@ $(".circle").click(function () {
     let ctx = c.getContext("2d");
 
     c.style.position = "absolute";
-    c.style.left = x - 100 + "px";
-    c.style.top = y - 100 + "px";
+    c.style.left = x - 150 + "px";
+    c.style.top = y - 150 + "px";
     c.style.pointerEvents = "none";
-    c.style.width = 200 + "px";
-    c.style.height = 200 + "px";
+    c.style.width = 300 + "px";
+    c.style.height = 300 + "px";
     c.style.zIndex = 100;
     c.width = 500 * ratio;
     c.height = 500 * ratio;
@@ -163,12 +163,18 @@ $(".circle").click(function () {
     );
 }
 
-let dot = $("#dot-active");
-let target = dot.offset().top - 200;
+let flag = 0;
 $(window).scroll(function () {
-  if ($(window).scrollTop() > target) {
-    dot.one().trigger((e) => explode(e.pageX, e.pageY));
+  const dot = $("#dot-active");
+  const offset = dot.offset();
+
+  const scrollTop = $(this).scrollTop();
+  const windowHeight = $(window).height();
+  const outerHeight = $(dot).outerHeight();
+  const offsetTop = $(dot).offset().top;
+  const target = offsetTop + outerHeight - windowHeight;
+
+  if (scrollTop > target) {
+    explode(offset.left, offset.top);
   }
 });
-
-dot.click((e) => explode(e.pageX, e.pageY));

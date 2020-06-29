@@ -89,6 +89,7 @@ $(".circle").click(function () {
 });
 
 //Timeline Animation
+let flag = 0;
 {
   const colors = ["#3498DB", "#E74C3C", "#463991"];
   const bubbles = 30;
@@ -126,7 +127,7 @@ $(".circle").click(function () {
     }
 
     render(particles, ctx, c.width, c.height);
-    setTimeout(() => document.body.removeChild(c), 1000);
+    setTimeout(() => document.body.removeChild(c), 1000).then((flag = 1));
   }
 
   function render(particles, ctx, width, height) {
@@ -163,8 +164,7 @@ $(".circle").click(function () {
     );
 }
 
-let flag = 0;
-$(window).scroll(function () {
+$(window).scroll(() => {
   const dot = $("#dot-active");
   const offset = dot.offset();
 
@@ -174,7 +174,7 @@ $(window).scroll(function () {
   const offsetTop = $(dot).offset().top;
   const target = offsetTop + outerHeight - windowHeight;
 
-  if (scrollTop > target) {
+  if (scrollTop > target && flag == 0) {
     explode(offset.left, offset.top);
   }
 });

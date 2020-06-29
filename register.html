@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="css/login-regis.css" />
   </head>
   <body>
-    <nav class="nav navbar navbar-expand-lg navbar-light w-100">
+    <!-- <nav class="nav navbar navbar-expand-lg navbar-light w-100">
       <a class="navbar-brand" href="#home">
         <img
-          class="nav-img"
+          class="nav-img mr-auto"
           src="assets/img/Hackathon-logo.png"
           alt="Hackathon-logo"
         />
@@ -27,77 +27,139 @@
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon" id="hamburger"></span>
       </button>
 
       <div class="collapse navbar-collapse nav-a" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="text-light nav-link active" href="index.html#home"
-              >Home</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="text-light nav-link" href="index.html#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="text-light nav-link" href="index.html#faq">FAQ</a>
-          </li>
-          <li class="nav-item">
-            <a class="text-light nav-link" href="index.html#sponsor">Sponsor</a>
-          </li>
-          <li class="nav-item">
-            <a class="text-light nav-link" href="index.html#contact">Contact</a>
-          </li>
-        </ul>
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="text-light nav-link" id="register" href="register.html"
-              >Register</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="text-light nav-link" href="login.html">Login</a>
-          </li>
-        </ul>
+        <div class="nav-main d-flex">
+          <ul class="navbar-nav main">
+            <li class="nav-item">
+              <a class="text-light nav-link active" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="text-light nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="text-light nav-link" href="#faq">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="text-light nav-link" href="#sponsor">Sponsor</a>
+            </li>
+            <li class="nav-item">
+              <a class="text-light nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav nav-right">
+            @if (Route::has('login')) @auth
+            <li class="nav-item">
+              <a class="text-light nav-link" id="register" href="/home"
+                >Dashboard</a
+              >
+            </li>
+            @else
+            <li class="nav-item">
+              <a class="text-light nav-link" href="/login">Login</a>
+            </li>
+            @if (Route::has('register'))
+            <li class="nav-item">
+              <a class="text-light nav-link" id="register" href="/register"
+                >Register</a
+              >
+            </li>
+            @endif @endauth @endif
+          </ul>
+        </div>
+      </div>
+    </nav> -->
+    <nav class="nav navbar navbar-expand-lg navbar-light w-100">
+      <a class="navbar-brand" href="#home">
+        <img
+          class="nav-img mr-auto"
+          src="assets/img/Hackathon-logo.png"
+          alt="Hackathon-logo"
+        />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon" id="hamburger"></span>
+      </button>
+
+      <div class="collapse navbar-collapse nav-a" id="navbarSupportedContent">
+        <div class="nav-main d-flex">
+          <ul class="navbar-nav main">
+            <li class="nav-item">
+              <a class="text-light nav-link active" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="text-light nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="text-light nav-link" href="#faq">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="text-light nav-link" href="#sponsor">Sponsor</a>
+            </li>
+            <li class="nav-item">
+              <a class="text-light nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav nav-right">
+            <li class="nav-item">
+              <a class="text-light nav-link" id="register" href="register.html"
+                >Register</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="text-light nav-link" href="login.html">Login</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
     <section
       class="home container-fluid min-vh-100 d-flex flex-column justify-content-center align-items-center py-5"
       id="home"
     >
-      <form
-        class="regis col-lg-10 col-md-10 d-flex justify-content-center align-items-center flex-column"
-      >
+      <form class="regis col-10">
         <h1>REGISTER</h1>
-        <div
-          class="regis-group col-lg-4 col-md-10 d-flex flex-column align-items-center"
-        >
+        <div class="regis-group col-lg-5 col-md-10">
           <h2>Group</h2>
           <input
+            id="groupName"
             type="text"
             class="form-control my-2"
             placeholder="Group Name"
+            onchange="validateName(this)"
             required
           />
+          <p class="invalid"></p>
           <input
             type="password"
             id="password"
             class="form-control my-2"
             placeholder="Password"
+            onchange="validatePass()"
             required
             minlength="8"
           />
+          <p class="invalid" id="pass-feedback"></p>
           <input
             type="password"
             id="confirm-password"
             class="form-control my-2"
             placeholder="Confirm Password"
-            onchange="validate()"
+            onchange="validateConfirmPass()"
             required
             minlength="8"
           />
-          <label for="confirm-password"></label>
+          <p class="invalid" id="confirm-feedback"></p>
         </div>
         <hr />
         <div class="regis-team col-12">
@@ -113,14 +175,18 @@
               type="email"
               class="form-control my-2"
               placeholder="Email"
+              onchange="validateEmail(this)"
               required
             />
+            <p class="invalid"></p>
             <input
               type="number"
               class="form-control my-2"
               placeholder="Whatsapp Number"
+              onchange="validatePhone(this)"
               required
             />
+            <p class="invalid"></p>
             <input
               type="text"
               class="form-control my-2"
@@ -157,12 +223,21 @@
               class="form-control my-2"
               placeholder="Full Name"
             />
-            <input type="email" class="form-control my-2" placeholder="Email" />
+            <input
+              type="email"
+              id="email"
+              class="form-control my-2"
+              placeholder="Email"
+              onchange="validateEmail(this)"
+            />
+            <p class="invalid"></p>
             <input
               type="number"
               class="form-control my-2"
               placeholder="Whatsapp Number"
+              onchange="validatePhone(this)"
             />
+            <p class="invalid"></p>
             <input
               type="text"
               class="form-control my-2"
@@ -199,12 +274,20 @@
               class="form-control my-2"
               placeholder="Full Name"
             />
-            <input type="email" class="form-control my-2" placeholder="Email" />
+            <input
+              type="email"
+              class="form-control my-2"
+              placeholder="Email"
+              onchange="validateEmail(this)"
+            />
+            <p class="invalid"></p>
             <input
               type="number"
               class="form-control my-2"
+              onchange="validatePhone(this)"
               placeholder="Whatsapp Number"
             />
+            <p class="invalid"></p>
             <input
               type="text"
               class="form-control my-2"
@@ -241,12 +324,20 @@
               class="form-control my-2"
               placeholder="Full Name"
             />
-            <input type="email" class="form-control my-2" placeholder="Email" />
+            <input
+              type="email"
+              class="form-control my-2"
+              placeholder="Email"
+              onchange="validateEmail(this)"
+            />
+            <p class="invalid"></p>
             <input
               type="number"
               class="form-control my-2"
+              onchange="validatePhone(this)"
               placeholder="Whatsapp Number"
             />
+            <p class="invalid"></p>
             <input
               type="text"
               class="form-control my-2"

@@ -14,15 +14,14 @@ $(document).ready(function () {
     centerPadding: "65px",
     slidesToShow: 1,
     autoplay: true,
-    autoplaySpeed: 500,
-    // autoplaySpeed: 1500,
+    autoplaySpeed: 1500,
     responsive: [
       {
         breakpoint: 768,
         settings: {
           arrows: false,
           centerMode: true,
-          centerPadding: "40px",
+          centerPadding: "0px",
           slidesToShow: 1,
         },
       },
@@ -31,7 +30,7 @@ $(document).ready(function () {
         settings: {
           arrows: false,
           centerMode: true,
-          centerPadding: "40px",
+          centerPadding: "0px",
           slidesToShow: 1,
         },
       },

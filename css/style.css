@@ -31,12 +31,28 @@ body {
     .nav-link.active,
     .nav-link :hover {
       border-bottom: 1.5px solid #e74c3c; }
-  .nav-main {
-    width: 100%; }
-  .nav-right {
-    margin-left: auto; }
   .nav > button:focus {
     outline: none; }
+
+.navbar-nav.main {
+  margin-right: auto; }
+
+.navbar-collapse.nav-a.collapse.show {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .navbar-collapse.nav-a.collapse.show > .navbar-nav.main {
+    margin: 0; }
+  .navbar-collapse.nav-a.collapse.show .nav-link {
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 1.5rem; }
+    .navbar-collapse.nav-a.collapse.show .nav-link.active,
+    .navbar-collapse.nav-a.collapse.show .nav-link :hover {
+      border: none;
+      color: #e74c3c; }
 
 #register {
   padding: 0.2rem 1rem;
@@ -180,14 +196,16 @@ body {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 1em 0px 0px 1em;
     padding: 2em;
-    height: 100%; }
+    height: 100%;
+    width: 40%; }
     .why-left img {
       width: 8rem;
       margin-right: 2em; }
   .why-right {
     background-color: #556e88;
     border-radius: 0px 1em 1em 0;
-    height: 100%; }
+    height: 100%;
+    width: 60%; }
     .why-right-img {
       width: 6.67em;
       margin-top: 20%; }
@@ -465,10 +483,16 @@ body {
   .sponsor,
   .contact {
     padding: 1rem 3rem; }
+  .home-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
   .home-content img {
     display: none; }
   .home-text {
     text-align: center; }
+  .about-right {
+    padding-top: 2rem; }
   #hackathon-logo {
     display: flex;
     align-self: center;
@@ -492,22 +516,76 @@ body {
       background-color: #1d2134; }
   .sponsor-img img {
     width: 15rem; }
-  .why > h1 {
-    text-align: center;
-    padding: 2rem 0; }
-  .why-content {
-    padding: 3rem 0;
-    flex-direction: column; }
-  .why-left {
-    border-radius: 15px;
-    margin: 2rem 0; }
-    .why-left > div {
-      flex-direction: column; }
-  .why-right {
-    background-color: #1d2134;
-    flex-direction: column; }
+  .why {
+    flex-direction: column;
+    width: 100%; }
+    .why > h1 {
+      text-align: center;
+      padding: 2rem 0 0 0; }
+    .why-content {
+      margin-top: 0;
+      width: inherit;
+      padding: 2rem;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: auto; }
+    .why-left {
+      text-align: center;
+      display: flex;
+      align-self: unset;
+      border-radius: 15px;
+      width: 100%;
+      height: fit-content;
+      display: block;
+      margin: 0 0 2rem 0;
+      border-radius: 25px;
+      box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3); }
+      .why-left > div {
+        flex-direction: column;
+        justify-content: space-between;
+        height: fit-content;
+        width: 100%; }
+    .why-right {
+      background-color: #1d2134;
+      flex-direction: column;
+      width: 100%;
+      display: flex;
+      padding: 0;
+      height: fit-content; }
+      .why-right-img {
+        display: none; }
+    .why-card {
+      width: 100%;
+      position: relative;
+      height: fit-content;
+      top: 0;
+      text-align: center;
+      box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
+      margin-bottom: 2rem; }
+      .why-card-content {
+        position: initial;
+        background-color: unset; }
+        .why-card-content-heading {
+          color: #ffffff;
+          font-size: 2rem;
+          padding: 0;
+          margin: 0; }
+        .why-card-content-par-container {
+          height: 0; }
+        .why-card-content > span {
+          color: #e74c3c;
+          font-size: 1rem; }
+  #why-active-image {
+    margin: 1rem 0; }
   .contact {
-    padding-bottom: 3rem; }
+    padding-bottom: 3rem;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    flex-direction: row; }
+    .contact-box {
+      padding: 1rem; }
   .socmed {
     padding: 0 1rem; }
   .foot-item {
@@ -524,11 +602,6 @@ body {
     font: 0.8rem CircularStd;
     justify-content: center;
     padding: 2rem 0; }
-  .contact {
-    padding: 0 1rem;
-    flex-direction: column; }
-    .contact-box {
-      padding: 1rem; }
   .socmed {
     flex-direction: column;
     justify-content: start;
@@ -544,22 +617,6 @@ body {
   .nav {
     padding: 1rem;
     position: relative; }
-    .nav-main {
-      flex-direction: column;
-      height: 90vh;
-      justify-content: center;
-      align-items: center; }
-    .nav-right {
-      margin: 0; }
-    .nav-link {
-      font-size: 2rem;
-      text-align: center;
-      margin: 1rem 0; }
-      .nav-link.active,
-      .nav-link :hover {
-        border: none; }
-  #register {
-    background-color: #e74c3c; }
   .navbar-brand img {
     width: 0; }
   .home {
@@ -578,18 +635,74 @@ body {
       text-align: center; }
     .about-right {
       padding: 0.5rem; }
-  .why-left {
-    height: 100%; }
-  .why-card {
-    margin: 1rem 0;
+  .why {
+    flex-direction: column;
+    width: 100%;
+    padding: 3rem 1rem; }
+    .why > h1 {
+      text-align: center;
+      padding: 2rem 0 0 0; }
+    .why-content {
+      margin-top: 0;
+      width: inherit;
+      padding: 2rem;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: auto; }
+    .why-left {
+      text-align: center;
+      display: flex;
+      align-self: unset;
+      border-radius: 15px;
+      width: 100%;
+      height: fit-content;
+      display: block;
+      margin: 0 0 2rem 0;
+      border-radius: 25px;
+      box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3); }
+      .why-left > div {
+        flex-direction: column;
+        justify-content: space-between;
+        height: fit-content;
+        width: 100%; }
+    .why-right {
+      background-color: #1d2134;
+      flex-direction: column;
+      width: 100%;
+      display: flex;
+      padding: 0;
+      height: fit-content; }
+      .why-right-img {
+        display: none; }
+    .why-card {
+      width: 100%;
+      position: relative;
+      height: fit-content;
+      top: 0;
+      text-align: center;
+      box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
+      margin-bottom: 2rem; }
+      .why-card-content {
+        position: initial;
+        background-color: unset; }
+        .why-card-content-heading {
+          color: #ffffff;
+          font-size: 2rem;
+          padding: 0;
+          margin: 0; }
+        .why-card-content-par-container {
+          height: 0; }
+        .why-card-content > span {
+          color: #e74c3c;
+          font-size: 1rem; }
+  #why-active-image {
+    margin: 1rem 0; }
+  -card {
+    width: 100%;
+    height: 200px;
     top: 0;
-    width: 100%; }
-    .why-card-content {
-      height: 100%; }
-      .why-card-content p {
-        display: none; }
-      .why-card-content > img {
-        display: none; }
+    margin-bottom: rem; }
   .faq {
     padding: 3rem 1rem; }
     .faq-question {

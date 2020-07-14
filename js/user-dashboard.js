@@ -143,53 +143,6 @@ $(".circle").click(function(){
 let dot = $('#timeline-dot-active');
 dot.click(e => explode(e.pageX, e.pageY));
 
-$("#navbar-c").mouseenter(function(){
-    $(".navbar-caption").css({
-      "visibility":"visible",
-      "overflow":"visible",
-      "width":"55%",
-      "margin":"0px 20px"
-    });
-    $(".navbar-caption-special").css({
-      "visibility":"visible",
-      "overflow":"visible",
-      "width":"55%"
-    });    
-    $(".navbar-caption-2").css({
-      "visibility":"visible",
-      "overflow":"visible",
-      "width":"55%",
-      "margin-left":"40px"
-    });
-    $(".navbar-footer").css({
-      "visibility":"visible",
-      "width":"100%",
-    });     
-})
-$("#navbar-c").mouseleave(function(){
-    $(".navbar-caption").css({
-      "visibility":"hidden",
-      "overflow":"hidden",
-      "width":"0",
-      "margin":"0"
-    });
-    $(".navbar-caption-special").css({
-      "visibility":"hidden",
-      "overflow":"hidden",
-      "width":"0",
-      "margin":"0"
-    });    
-    $(".navbar-caption-2").css({
-      "visibility":"hidden",
-      "overflow":"hidden",
-      "width":"0",
-      "margin":"0"
-    });   
-    $(".navbar-footer").css({
-      "visibility":"hidden",
-      "width":"0%",
-    });     
-})
 
 $(".payment-cross").click(function(){
   // getElementsByClassName("payment-cross").setAttribute("aria-expanded","false");
@@ -217,3 +170,174 @@ $(".payment-cross").click(function(){
     $(this).attr("id","pay-expand");
   }
 })
+$(window).resize(function(){
+    
+});
+
+
+
+$("#hamburger").click(function(){
+  if ( window.matchMedia("(max-width: 1024px)").matches || window.matchMedia("(max-width: 768px)").matches){
+    if ($(this).attr("aria-expanded")=="false"){
+        $(this).attr("aria-expanded","true");
+        $("#navbar").css({
+          "min-height":"100vh",
+          "height" : "auto",
+          "flex" : "contents",
+          "padding" : "2rem",
+          "width" : "auto"}
+        );
+        $(".nav").css({
+          "height":"auto",
+          "flex-direction":"column"
+        });
+        $("#navbar-hackathon-logo").css({
+          "width":"75px"
+        });
+        $(".navbar-header").css({
+          "visibility":"visible",
+          "height":"auto",
+          "width" : "100%"
+        });
+        $(".navbar-header-special").css({
+          "visibility":"visible",
+          "overflow":"visible",
+          "margin-top" : "4rem"
+        });
+        $(".navbar-caption").css({
+          "visibility":"visible",
+          "overflow":"visible"
+        });
+        $(".navbar-caption-special").css({
+          "visibility":"visible",
+          "overflow":"visible",
+          "margin-bottom":".75rem",
+          "height":"auto"
+        });    
+        $(".navbar-caption-2").css({
+          "visibility":"visible",
+          "overflow":"visible",
+          "width":"52.5%",
+          "padding-left":"2rem"
+        });
+        $(".navbar-icon-c-2").css({
+          "width":"47.5%"
+        })
+        $(".navbar-footer").css({
+          "visibility":"visible",
+          "width":"100%",
+        });     
+    }
+    else{
+      $(this).attr("aria-expanded","false");
+      $(this).css({
+        "visibility":"visible",
+      })
+      $("#navbar").css({
+        "min-height":"unset",
+        "height":"auto",
+        "margin":"0"
+      });
+      $(".nav").css({
+        "height":"0",
+        "margin":"0"
+      });
+      $("#navbar-hackathon-logo").css({
+        "width":"0"
+      });
+      $(".navbar-header-special").css({
+        "visibility":"hidden",
+        "overflow":"hidden",
+        "width":"0",
+        "height":"0",
+        "margin":"0",
+        "padding":"0"
+      });
+      $(".navbar-caption").css({
+        "visibility":"hidden",
+        "overflow":"hidden",
+        "width":"0"
+      });
+      $(".navbar-caption-special").css({
+        "visibility":"hidden",
+        "overflow":"hidden",
+        "width":"0",
+        "height":"0"
+      });    
+      $(".navbar-caption-2").css({
+        "visibility":"hidden",
+        "overflow":"hidden",
+        "width":"0"
+      });   
+      $(".navbar-footer").css({
+        "visibility":"hidden",
+        "width":"0"
+      });   
+    }
+  } else{
+    if ($(this).attr("aria-expanded")=="false"){
+      $(this).attr("aria-expanded","true");
+        $(".navbar-caption").css({
+          "visibility":"visible",
+          "overflow":"visible",
+          "width":"55%",
+          "margin":"0px 20px"
+        });
+        $(".navbar-caption-special").css({
+          "visibility":"visible",
+          "overflow":"visible",
+          "width":"55%",
+          "margin-left":"1rem"
+        });    
+        $(".navbar-caption-2").css({
+          "visibility":"visible",
+          "overflow":"visible",
+          "width":"55%",
+          "padding-left":"1rem"
+        });
+        $(".navbar-footer").css({
+          "visibility":"visible",
+          "width":"100%",
+        });     
+    }
+    else{
+      $(this).attr("aria-expanded","false");
+      $(".navbar-caption").css({
+        "visibility":"hidden",
+        "overflow":"hidden",
+        "width":"0",
+        "margin":"0"
+      });
+      $(".navbar-caption-special").css({
+        "visibility":"hidden",
+        "overflow":"hidden",
+        "width":"0",
+        "margin":"0"
+      });    
+      $(".navbar-caption-2").css({
+        "visibility":"hidden",
+        "overflow":"hidden",
+        "width":"0",
+        "margin":"0"
+      });   
+      $(".navbar-footer").css({
+        "visibility":"hidden",
+        "width":"0%",
+      });    
+    }
+  }
+  });
+
+    const changeFile = (e) => {
+      var fileName = e.files[0].name;
+      $("#file-name").text(fileName);
+      $("#file-status").text("Pending");
+      if(fileName.includes(".jpg") || fileName.includes(".png")){
+      setTimeout(function(){$("#payment-form").submit()}, 500)
+      $(e).next("p").text("");
+      }else{
+      console.log($(e).find("p"));
+      $(e).next("p").text("File extension must be png or jpg");
+      }
+      }
+  

@@ -482,6 +482,10 @@ h1 {
 .vertical {
   transform: rotate(90deg); }
 
+#img-barbar {
+  position: absolute;
+  display: none; }
+
 @keyframes showExpand {
   0% {
     display: none; }
@@ -518,13 +522,17 @@ h1 {
     margin: 1rem; }
   hr {
     margin: .5rem; }
+  #img-barbar {
+    width: 35px;
+    display: flex;
+    left: 2rem; }
   #navbar {
     position: sticky;
     flex-direction: column;
     height: auto;
     box-sizing: border-box;
     width: 100%;
-    padding: 1rem;
+    padding: 1rem 2rem;
     border-radius: 0;
     align-items: center;
     transition: margin 0.3s, visibility 0.3s, width 0.3s linear; }
@@ -540,7 +548,7 @@ h1 {
   #hamburger {
     text-align: right;
     display: flex;
-    align-self: flex-end; }
+    justify-content: flex-end; }
   .nav {
     height: 0;
     padding: 0;
@@ -668,7 +676,7 @@ h1 {
     height: auto;
     box-sizing: border-box;
     width: 100%;
-    padding: 1rem;
+    padding: 1rem 2rem;
     border-radius: 0;
     align-items: center;
     transition: margin 0.3s, visibility 0.3s, width 0.3s linear; }
@@ -684,7 +692,7 @@ h1 {
   #hamburger {
     text-align: right;
     display: flex;
-    align-self: flex-end; }
+    justify-content: flex-end; }
   .nav {
     height: 0;
     padding: 0;

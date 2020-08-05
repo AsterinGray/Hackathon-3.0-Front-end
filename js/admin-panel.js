@@ -46,3 +46,7 @@ $("#navbar").mouseenter(function(){
 $("#navbar").mouseleave(function(){
     $(".navbar-caption").css({"display":"none"});
 })
+
+$('#staticBackdrop').on('shown.bs.modal', function () {
+    $('#myInput').trigger('focus');
+  })

@@ -58,6 +58,8 @@ body{
         border-radius: 50px;
         transition: transform .3s;
         padding: 0 .5rem;
+        background-color: initial;
+        border: initial;
     }
     &-content:hover{
         cursor: pointer;
@@ -380,4 +382,31 @@ form{
     display: block !important;
     opacity: 1 !important;
     // transition: opacity 1s ease-in-out;
+}
+.modal{
+    &-content{
+        background-color: #252A41;
+        color: #ffffff;
+    }
+    &-title{
+        color: #E74C3C;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+}
+.close span{
+    color: #ffffff;
+}
+.btn{
+    &-primary{
+        background-color: #E74C3C;
+        border: none;
+        &:hover{
+            background-color: #C52A1A;
+        }
+    }
+    &-secondary{
+        background-color: initial;
+        border: solid 1px gray;
+    }
 }

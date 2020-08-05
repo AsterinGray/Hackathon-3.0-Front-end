@@ -586,13 +586,14 @@ h1{
 hr{
     margin: .5rem;
 }
+
 #navbar{
      position: sticky;
      flex-direction: column;
      height: auto;
      box-sizing: border-box;
      width: 100%;
-     padding: 1rem;
+     padding: 1rem 2rem;
      border-radius: 0;
      align-items: center;
      transition: margin 0.3s, visibility 0.3s, width 0.3s linear;
@@ -613,7 +614,7 @@ hr{
  #hamburger{
      text-align: right;
      display: flex;
-     align-self: flex-end;
+     justify-content: flex-end;
  }
  .nav{
     height: 0;
@@ -660,7 +661,7 @@ hr{
  }
  #content{
      box-sizing: border-box;
-     padding: 1rem 2rem;
+     padding: 2rem;
      width: 100%;
      align-items: center;
      margin-left: 0;
@@ -796,7 +797,7 @@ hr{
          height: auto;
          box-sizing: border-box;
          width: 100%;
-         padding: 1rem;
+         padding: 1rem 2rem;
          border-radius: 0;
          align-items: center;
          transition: margin 0.3s, visibility 0.3s, width 0.3s linear;
@@ -817,7 +818,7 @@ hr{
      #hamburger{
          text-align: right;
          display: flex;
-         align-self: flex-end;
+         justify-content: flex-end;
      }
      .nav{
         height: 0;
@@ -864,7 +865,7 @@ hr{
      }
      #content{
          box-sizing: border-box;
-         padding: 1rem 2rem;
+         padding: 2rem;
          width: 100%;
          align-items: center;
          margin-left: 0;

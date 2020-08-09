@@ -11,10 +11,30 @@
     <link rel="stylesheet" href="css/admin-panel.css">
 </head>
 <body onload="defaultToggle()">
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Verify Payment</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                <p>Verify payment for <span id=groupName>group A</span></p>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Approve</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Reject</button>
+                </div>
+            </div>
+            </div>
+        </div>
     <div id="display-c" style="display:none">
         <img id="display-image" src="assets/img/admin-panel/Receipt-CROP.jpg">
     </div>
     <div id="barrier" style="display:none"></div>
+    
     <div id="container">
         <section id=navbar class="navbar">
             <div class="navbar-header">
@@ -76,7 +96,7 @@
                             <div class="payment-status-content payment-insider-right">Unverified</div>
                         </div>
                         <div class="payment-col-button">
-                            <button class="payment-verify">Verify</button>
+                            <button class="payment-verify" type="button" data-toggle="modal" data-target="#staticBackdrop">Verify</button>
                             <button class="payment-view"  onclick="view('assets/img/admin-panel/Receipt-CROP.jpg')">View</button>
                         </div>
                     </div>
@@ -104,6 +124,7 @@
         </section>
     </div>
     <script src="assets/lib/jquery.js"></script>
+    <script src="assets/lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="js/admin-panel.js"></script>
 </body>
 </html>

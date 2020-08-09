@@ -56,7 +56,9 @@ body {
   justify-content: center;
   border-radius: 50px;
   transition: transform .3s;
-  padding: 0 .5rem; }
+  padding: 0 .5rem;
+  background-color: initial;
+  border: initial; }
 
 .navbar-content:hover {
   cursor: pointer;
@@ -165,11 +167,6 @@ hr {
   border-radius: 15px;
   color: white;
   margin: 0 5px; }
-
-button{
-  background: none;
-  border: none;
-}  
 
 h1 {
   font-size: 2.0rem;
@@ -363,3 +360,25 @@ form {
 .on {
   display: block !important;
   opacity: 1 !important; }
+
+.modal-content {
+  background-color: #252A41;
+  color: #ffffff; }
+
+.modal-title {
+  color: #E74C3C;
+  font-size: 1.5rem;
+  font-weight: bold; }
+
+.close span {
+  color: #ffffff; }
+
+.btn-primary {
+  background-color: #E74C3C;
+  border: none; }
+  .btn-primary:hover {
+    background-color: #C52A1A; }
+
+.btn-secondary {
+  background-color: initial;
+  border: solid 1px gray; }

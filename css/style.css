@@ -31,28 +31,17 @@ body {
     .nav-link.active,
     .nav-link :hover {
       border-bottom: 1.5px solid #e74c3c; }
+  .nav-hamburger {
+    width: 2.5rem;
+    height: .3rem;
+    background-color: #e74c3c;
+    margin: .4rem 0;
+    transition: .5s ease-in-out; }
   .nav > button:focus {
     outline: none; }
-
-.navbar-nav.main {
-  margin-right: auto; }
-
-.navbar-collapse.nav-a.collapse.show {
-  height: 90vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-  .navbar-collapse.nav-a.collapse.show > .navbar-nav.main {
-    margin: 0; }
-  .navbar-collapse.nav-a.collapse.show .nav-link {
-    text-align: center;
-    padding: 1.5rem;
-    font-size: 1.5rem; }
-    .navbar-collapse.nav-a.collapse.show .nav-link.active,
-    .navbar-collapse.nav-a.collapse.show .nav-link :hover {
-      border: none;
-      color: #e74c3c; }
+  .nav-main {
+    display: flex;
+    justify-content: space-between; }
 
 #register {
   padding: 0.2rem 1rem;
@@ -72,7 +61,8 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 5rem 10rem; }
+  padding: 0 10rem;
+  padding-top: 15vh; }
   .home-text {
     display: flex;
     justify-content: center;
@@ -119,6 +109,8 @@ body {
 .about {
   position: relative;
   padding: 10rem 5rem; }
+  .about-left {
+    z-index: 3; }
   .about-right {
     padding-left: 3rem; }
 
@@ -315,7 +307,7 @@ body {
 .timeline {
   display: flex;
   justify-content: center;
-  padding: 3rem 3rem;
+  padding: 3rem 0rem;
   flex-direction: column;
   position: relative;
   color: #e74c3c; }
@@ -324,8 +316,7 @@ body {
   .timeline > h1 {
     text-align: center; }
   .timeline-wrapper {
-    width: 100rem;
-    justify-content: flex-start;
+    width: 100%;
     z-index: 2; }
   .timeline-icons > div {
     width: 100rem;
@@ -338,8 +329,9 @@ body {
   .timeline-path {
     color: white;
     position: absolute;
-    width: 65rem;
-    transform: translateY(-250%); }
+    width: 65%;
+    transform: translateY(-8rem);
+    margin: 10rem; }
     .timeline-path-line {
       display: flex;
       justify-content: center;
@@ -474,7 +466,7 @@ body {
   100% {
     background: radial-gradient(circle at center, #252a41 99%, #252a41 100%, #252a41 100%); } }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 992px) {
   .nav,
   .home,
   .about,
@@ -483,6 +475,25 @@ body {
   .sponsor,
   .contact {
     padding: 1rem 3rem; }
+  .nav {
+    padding: 1rem;
+    position: relative; }
+    .nav-main {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 90vh; }
+      .nav-main #register {
+        background-color: #e74c3c;
+        padding: 0 2rem; }
+    .nav-link {
+      text-align: center;
+      font-size: 2rem;
+      margin: .5rem; }
+      .nav-link.active {
+        border: none; }
+  .navbar-brand img {
+    width: 0; }
   .home-content {
     flex-direction: column;
     justify-content: center;
@@ -578,6 +589,10 @@ body {
           font-size: 1rem; }
   #why-active-image {
     margin: 1rem 0; }
+  .timeline-wrapper {
+    width: 100rem; }
+  .timeline-path {
+    width: 65rem; }
   .contact {
     padding-bottom: 3rem;
     justify-content: center;
@@ -602,6 +617,8 @@ body {
     font: 0.8rem CircularStd;
     justify-content: center;
     padding: 2rem 0; }
+  .contact {
+    flex-direction: column; }
   .socmed {
     flex-direction: column;
     justify-content: start;
@@ -614,11 +631,6 @@ body {
     display: none; } }
 
 @media only screen and (max-width: 768px) {
-  .nav {
-    padding: 1rem;
-    position: relative; }
-  .navbar-brand img {
-    width: 0; }
   .home {
     padding: 1rem; }
     .home-text > h1 {

@@ -6,6 +6,34 @@ $(".nav-link").click(function () {
   $(".navbar-collapse.show").removeClass("show");
 });
 
+//Navbar Hidden on Scroll
+let prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+    let currentScrollPos = window.pageYOffset;
+    if (prevScrollpos >= currentScrollPos) {
+        document.querySelector(".nav").style.top = "0";
+    } 
+    else {
+        document.querySelector(".nav").style.top = "-100px";
+    }
+    prevScrollpos = currentScrollPos;
+}
+
+//Hamburger
+const hamburger = (e) => {
+  const navbarCollapse = $(e).next(".navbar-collapse");
+  console.log(navbarCollapse.hasClass("show"))
+  if(!navbarCollapse.hasClass("show")){
+    $('#ham1').css({"position":"absolute", "transform":"rotate(45deg)"})
+    $('#ham2').css({"position":"absolute", "transform":"rotate(-45deg)"})
+    $('#ham3').css({"background-color":"#1d2134"})
+  }else{
+    $('#ham1').css({"position":"relative", "transform":"rotate(0)"})
+    $('#ham2').css({"position":"relative", "transform":"rotate(0)"})
+    $('#ham3').css({"background-color":"#e74c3c"})
+  }
+}
+
 //Carousel
 $(document).ready(function () {
   $(".center").slick({

@@ -28,8 +28,9 @@ body {
   position: fixed;
   top: 0;
   background-color: #1d2134;
-  z-index: 3;
-  padding: 0 10rem;
+  z-index: 5;
+  padding: 0 10vw;
+  transition: ease 1s;
   &-img {
     width: 5.5rem;
   }

@@ -80,7 +80,7 @@ body {
   @include flexcc();
   flex-direction: column;
   padding: 0 10rem;
-  padding-top: 15vh;
+  padding-top: 10vh;
   &-text {
     @include flexcc();
     flex-direction: column;
@@ -137,11 +137,19 @@ body {
 .about {
   position: relative;
   padding: 10rem 5rem;
+  display: flex;
+  align-items: center;
   &-left{
     z-index: 3;
   }
   &-right {
     padding-left: 3rem;
+    text-align: center;
+    &>p{
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+    }
   }
 }
 
@@ -153,7 +161,7 @@ body {
 
 .card {
   border: 0;
-  border-radius: 30px;
+  border-radius: 15px;
   overflow: hidden;
   margin: 0 5px;
   opacity: 0.5;
@@ -221,6 +229,10 @@ body {
 
 .why {
   padding: 3rem 5rem;
+  &>h1{
+    text-align: center;
+    margin-bottom: 5rem;
+  }
   &-content {
     @include flexcc();
     height: 20em;
@@ -232,7 +244,7 @@ body {
     border-radius: 1em 0px 0px 1em;
     padding: 2em;
     height: 100%;
-    width: 40%;
+    width: 50%;
     & img {
       width: 8rem;
       margin-right: 2em;
@@ -242,7 +254,8 @@ body {
     background-color: #556e88;
     border-radius: 0px 1em 1em 0;
     height: 100%;
-    width: 60%;
+    width: 40%;
+    padding: 0 1rem;
     &-img {
       width: 6.67em;
       margin-top: 20%;
@@ -253,11 +266,10 @@ body {
   }
   &-card {
     position: relative;
-    height: 90%;
-    width: 30%;
+    width: 42%;
     justify-content: space-evenly + safe;
     align-items: center;
-    background-color: #252a41;
+    background-color: hsl(229, 27%, 20%);
     opacity: 1;
     top: -4em;
     overflow: hidden;
@@ -267,9 +279,12 @@ body {
       position: absolute;
       width: 100%;
       bottom: 0;
-      height: 15.5%;
+      height: 20%;
       transition: 0.5s ease;
-      padding: 0.9em;
+      padding: 1rem;
+      &>h5{
+        margin: .6rem 0;
+      }
       &:hover {
         cursor: pointer;
         height: 45%;
@@ -713,7 +728,6 @@ body {
       text-align: center;
       display: flex;
       align-self: unset;
-      border-radius: 15px;
       width: 100%;
       height: fit-content;
       display: block;

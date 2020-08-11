@@ -119,7 +119,7 @@ $(".circle").click(function () {
 let flag = 0;
 {
   const colors = ["#3498DB", "#E74C3C", "#463991"];
-  const bubbles = 30;
+  const bubbles = 100;
 
   function explode(x, y) {
     let particles = [];

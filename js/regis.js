@@ -78,7 +78,6 @@ changeFile = (e) => {
   var fileName = e.files[0].name;
   $('label[for="' + e.id + '"]').html(fileName);
 
-  console.log(e);
   if (fileName.includes(".jpg") || fileName.includes(".jpeg") || fileName.includes(".pdf") || fileName.includes(".png")) {
     $(e).prev("p").text("");
     $(e)[0].setCustomValidity("");

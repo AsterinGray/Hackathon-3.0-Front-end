@@ -29,7 +29,7 @@ var x = setInterval(function() {
 
 
 $(function () {
-$('#myTab li:last-child a').tab('show')
+  $('#myTab li:last-child a').tab('show')
 })
 
 $('#myTab a').on('click', function (e) {
@@ -219,7 +219,7 @@ $(window).resize(function(){
             "align-items" : "center"
           });
           $("#navbar").css({
-            "height":"85vh",
+            "height":"95vh",
             "padding":"20px"
           });
           $(".nav").css({
@@ -252,7 +252,7 @@ $(window).resize(function(){
       }
       else{
         $("#navbar").css({
-          "height":"85vh",
+          "height":"95vh",
           "padding":"20px"
         });
         $(".nav").css({
@@ -441,7 +441,7 @@ $("#hamburger").click(function(){
     else{
       $(this).attr("aria-expanded","false");
       $("#navbar").css({
-        "height":"85vh"
+        "height":"95vh"
       });
       $(".nav").css({
         "flex-direction":"column"
@@ -480,16 +480,26 @@ $("#hamburger").click(function(){
   }
   });
 
-    const changeFile = (e) => {
-      var fileName = e.files[0].name;
-      $("#file-name").text(fileName);
-      $("#file-status").text("Pending");
-      if(fileName.includes(".jpg") || fileName.includes(".png")){
-      setTimeout(function(){$("#payment-form").submit()}, 500)
-      $(e).next("p").text("");
-      }else{
-      console.log($(e).find("p"));
-      $(e).next("p").text("File extension must be png or jpg");
-      }
-      }
+    // const changeFile = (e) => {
+    //   var fileName = e.files[0].name;
+    //   $("#file-name").text(fileName);
+    //   $("#file-status").text("Pending");
+    //   if(fileName.includes(".jpg") || fileName.includes(".png")){
+    //   setTimeout(function(){$("#payment-form").submit()}, 500)
+    //   $(e).next("p").text("");
+    //   }else{
+    //   console.log($(e).find("p"));
+    //   $(e).next("p").text("File extension must be png or jpg");
+    //   }
+    //   }
   
+const expandForm = (e) => {
+  const addMember = $(e).closest(".add-member");
+  if(addMember.height() == 40){
+    $(e).children(".plus").css({ "transform": "rotate(0deg)" });
+    addMember.css({ "height": "100%", "background-color": "#2C3044" })
+  } else {
+    addMember.css({ "height": "5rem", "background-color": "#E74C3C" })
+    $(e).children(".plus").css({ "transform": "rotate(90deg)" });
+  }
+}

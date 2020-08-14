@@ -420,12 +420,14 @@ body {
     width: 65%;
     transform: translateY(-8rem);
     margin: 10rem;
+    display: none;
     &-line {
       display: flex;
       justify-content: center;
       flex-direction: column;
       align-items: center;
       width: 20%;
+      display: none;
     }
   }
   &-line {
@@ -619,8 +621,19 @@ body {
 }
 
 @media only screen and (max-width: 1024px){
-  .home, .about, .why, .faq, .contact, .foot, .socmed{
+  .about, .why, .faq, .contact, .foot, .socmed{
     padding: 3rem 1rem;
+  }
+
+  .home{
+    padding: 0;
+    &-text{
+      padding: 0;
+    }
+  }
+
+  .nav{
+    padding: 0 1rem;
   }
 
   .socmed {
@@ -632,6 +645,80 @@ body {
     }
     & > a {
       padding: 0.5rem 0;
+    }
+  }
+
+  .why {
+    flex-direction: column;
+    width: 100%;
+    & > h1 {
+      text-align: center;
+      padding: 2rem 0 0 0;
+    }
+    &-content {
+      margin-top: 0;
+      width: inherit;
+      padding: 2rem;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: auto;
+    }
+    &-left {
+      text-align: center;
+      display: flex;
+      align-self: unset;
+      width: 100%;
+      height: fit-content;
+      display: block;
+      margin: 0 0 2rem 0;
+      border-radius: 25px;
+      box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
+      & > div {
+        flex-direction: column;
+        justify-content: space-between;
+        height: fit-content;
+        width: 100%;
+      }
+    }
+    &-right {
+      background-color: #1d2134;
+      flex-direction: column;
+      width: 100%;
+      display: flex;
+      padding: 0;
+      height: fit-content;
+
+      &-img {
+        display: none;
+      }
+    }
+    &-card {
+      width: 100%;
+      position: relative;
+      height: fit-content;
+      top: 0;
+      text-align: center;
+      box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
+      margin-bottom: 2rem;
+
+      &-content{
+        position: initial;
+        background-color: unset;
+        &-heading{
+          color: #ffffff;
+          font-size: 2rem;
+          padding: 0;
+          margin: 0;
+        }
+        &-par-container{
+          height: 0;
+        }
+        & > span{
+          color: #e74c3c;
+          font-size: 1rem;
+        }
+      }
     }
   }
 
@@ -739,80 +826,6 @@ body {
     &-img {
       & img {
         width: 15rem;
-      }
-    }
-  }
-
-  .why {
-    flex-direction: column;
-    width: 100%;
-    & > h1 {
-      text-align: center;
-      padding: 2rem 0 0 0;
-    }
-    &-content {
-      margin-top: 0;
-      width: inherit;
-      padding: 2rem;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      height: auto;
-    }
-    &-left {
-      text-align: center;
-      display: flex;
-      align-self: unset;
-      width: 100%;
-      height: fit-content;
-      display: block;
-      margin: 0 0 2rem 0;
-      border-radius: 25px;
-      box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
-      & > div {
-        flex-direction: column;
-        justify-content: space-between;
-        height: fit-content;
-        width: 100%;
-      }
-    }
-    &-right {
-      background-color: #1d2134;
-      flex-direction: column;
-      width: 100%;
-      display: flex;
-      padding: 0;
-      height: fit-content;
-
-      &-img {
-        display: none;
-      }
-    }
-    &-card {
-      width: 100%;
-      position: relative;
-      height: fit-content;
-      top: 0;
-      text-align: center;
-      box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
-      margin-bottom: 2rem;
-
-      &-content{
-        position: initial;
-        background-color: unset;
-        &-heading{
-          color: #ffffff;
-          font-size: 2rem;
-          padding: 0;
-          margin: 0;
-        }
-        &-par-container{
-          height: 0;
-        }
-        & > span{
-          color: #e74c3c;
-          font-size: 1rem;
-        }
       }
     }
   }

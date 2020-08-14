@@ -19,21 +19,6 @@ window.onscroll = function() {
     prevScrollpos = currentScrollPos;
 }
 
-//Hamburger
-const hamburger = (e) => {
-  const navbarCollapse = $(e).next(".navbar-collapse");
-  console.log(navbarCollapse.hasClass("show"))
-  if(!navbarCollapse.hasClass("show")){
-    $('#ham1').css({"position":"absolute", "transform":"rotate(45deg)"})
-    $('#ham2').css({"position":"absolute", "transform":"rotate(-45deg)"})
-    $('#ham3').css({"background-color":"#1d2134"})
-  }else{
-    $('#ham1').css({"position":"relative", "transform":"rotate(0)"})
-    $('#ham2').css({"position":"relative", "transform":"rotate(0)"})
-    $('#ham3').css({"background-color":"#e74c3c"})
-  }
-}
-
 //Carousel
 $(document).ready(function () {
   $(".center").slick({
@@ -154,7 +139,8 @@ let flag = 0;
     }
 
     render(particles, ctx, c.width, c.height);
-    setTimeout(() => document.body.removeChild(c), 1000).then((flag = 1));
+    setTimeout = () => { document.body.removeChild(c) }, 1000;
+    setTimeout = () => { flag = 0 }, 1500;
   }
 
   function render(particles, ctx, width, height) {

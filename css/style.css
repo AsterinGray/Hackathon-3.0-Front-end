@@ -344,13 +344,15 @@ body {
     position: absolute;
     width: 65%;
     transform: translateY(-8rem);
-    margin: 10rem; }
+    margin: 10rem;
+    display: none; }
     .timeline-path-line {
       display: flex;
       justify-content: center;
       flex-direction: column;
       align-items: center;
-      width: 20%; }
+      width: 20%;
+      display: none; }
   .timeline-line {
     width: 75%;
     height: 5px;
@@ -446,7 +448,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center; }
-  .socmed-item a {
+  .socmed > a {
     text-decoration: none; }
   .socmed-item span {
     color: #ffffff;
@@ -482,8 +484,14 @@ body {
     background: radial-gradient(circle at center, #252a41 99%, #252a41 100%, #252a41 100%); } }
 
 @media only screen and (max-width: 1024px) {
-  .home, .about, .why, .faq, .contact, .foot, .socmed {
+  .about, .why, .faq, .contact, .foot, .socmed {
     padding: 3rem 1rem; }
+  .home {
+    padding: 0; }
+    .home-text {
+      padding: 0; }
+  .nav {
+    padding: 0 1rem; }
   .socmed {
     flex-direction: column;
     justify-content: start;
@@ -492,6 +500,65 @@ body {
       width: 2rem; }
     .socmed > a {
       padding: 0.5rem 0; }
+  .why {
+    flex-direction: column;
+    width: 100%; }
+    .why > h1 {
+      text-align: center;
+      padding: 2rem 0 0 0; }
+    .why-content {
+      margin-top: 0;
+      width: inherit;
+      padding: 2rem;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: auto; }
+    .why-left {
+      text-align: center;
+      display: flex;
+      align-self: unset;
+      width: 100%;
+      height: fit-content;
+      display: block;
+      margin: 0 0 2rem 0;
+      border-radius: 25px;
+      box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3); }
+      .why-left > div {
+        flex-direction: column;
+        justify-content: space-between;
+        height: fit-content;
+        width: 100%; }
+    .why-right {
+      background-color: #1d2134;
+      flex-direction: column;
+      width: 100%;
+      display: flex;
+      padding: 0;
+      height: fit-content; }
+      .why-right-img {
+        display: none; }
+    .why-card {
+      width: 100%;
+      position: relative;
+      height: fit-content;
+      top: 0;
+      text-align: center;
+      box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
+      margin-bottom: 2rem; }
+      .why-card-content {
+        position: initial;
+        background-color: unset; }
+        .why-card-content-heading {
+          color: #ffffff;
+          font-size: 2rem;
+          padding: 0;
+          margin: 0; }
+        .why-card-content-par-container {
+          height: 0; }
+        .why-card-content > span {
+          color: #e74c3c;
+          font-size: 1rem; }
   .copyright {
     display: flex;
     font: 0.8rem CircularStd;
@@ -563,65 +630,6 @@ body {
       background-color: #1d2134; }
   .sponsor-img img {
     width: 15rem; }
-  .why {
-    flex-direction: column;
-    width: 100%; }
-    .why > h1 {
-      text-align: center;
-      padding: 2rem 0 0 0; }
-    .why-content {
-      margin-top: 0;
-      width: inherit;
-      padding: 2rem;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      height: auto; }
-    .why-left {
-      text-align: center;
-      display: flex;
-      align-self: unset;
-      width: 100%;
-      height: fit-content;
-      display: block;
-      margin: 0 0 2rem 0;
-      border-radius: 25px;
-      box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3); }
-      .why-left > div {
-        flex-direction: column;
-        justify-content: space-between;
-        height: fit-content;
-        width: 100%; }
-    .why-right {
-      background-color: #1d2134;
-      flex-direction: column;
-      width: 100%;
-      display: flex;
-      padding: 0;
-      height: fit-content; }
-      .why-right-img {
-        display: none; }
-    .why-card {
-      width: 100%;
-      position: relative;
-      height: fit-content;
-      top: 0;
-      text-align: center;
-      box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
-      margin-bottom: 2rem; }
-      .why-card-content {
-        position: initial;
-        background-color: unset; }
-        .why-card-content-heading {
-          color: #ffffff;
-          font-size: 2rem;
-          padding: 0;
-          margin: 0; }
-        .why-card-content-par-container {
-          height: 0; }
-        .why-card-content > span {
-          color: #e74c3c;
-          font-size: 1rem; }
   #why-active-image {
     margin: 1rem 0; }
   .timeline-wrapper {

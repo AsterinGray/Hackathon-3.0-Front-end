@@ -542,6 +542,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  &>a{
+    text-decoration: none;
+  }
   &-item {
     & span {
       color: #ffffff;
@@ -612,6 +615,38 @@ body {
       #252a41 100%,
       #252a41 100%
     );
+  }
+}
+
+@media only screen and (max-width: 1024px){
+  .home, .about, .why, .faq, .contact, .foot, .socmed{
+    padding: 3rem 1rem;
+  }
+
+  .socmed {
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    & img {
+      width: 2rem;
+    }
+    & > a {
+      padding: 0.5rem 0;
+    }
+  }
+
+  .copyright {
+    display: flex;
+    font: 0.8rem CircularStd;
+    justify-content: center;
+    padding: 2rem 0;
+  }
+
+  .foot {
+    padding: 3rem 1rem;
+    &-copyright {
+      display: none;
+    }
   }
 }
 
@@ -820,32 +855,10 @@ body {
         margin: 0;
       }
     }
-    &-copyright {
-      display: none;
-    }
-  }
-
-  .copyright {
-    display: flex;
-    font: 0.8rem CircularStd;
-    justify-content: center;
-    padding: 2rem 0;
   }
 
   .contact{
     flex-direction: column;
-  }
-
-  .socmed {
-    flex-direction: column;
-    justify-content: start;
-    align-items: flex-start;
-    & img {
-      width: 2rem;
-    }
-    & > a {
-      padding: 0.5rem 0;
-    }
   }
 
   #object {
@@ -993,13 +1006,6 @@ body {
     padding-bottom: 3rem;
     & > iframe {
       width: 100%;
-    }
-  }
-
-  .foot {
-    padding: 3rem 1rem;
-    &-copyright {
-      display: none;
     }
   }
 

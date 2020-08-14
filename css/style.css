@@ -446,6 +446,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  .socmed-item a {
+    text-decoration: none; }
   .socmed-item span {
     color: #ffffff;
     margin: 0 1rem; }
@@ -478,6 +480,27 @@ body {
     background: radial-gradient(circle at center, #252a41 50%, #3498db 74%, #252a41 100%); }
   100% {
     background: radial-gradient(circle at center, #252a41 99%, #252a41 100%, #252a41 100%); } }
+
+@media only screen and (max-width: 1024px) {
+  .home, .about, .why, .faq, .contact, .foot, .socmed {
+    padding: 3rem 1rem; }
+  .socmed {
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start; }
+    .socmed img {
+      width: 2rem; }
+    .socmed > a {
+      padding: 0.5rem 0; }
+  .copyright {
+    display: flex;
+    font: 0.8rem CircularStd;
+    justify-content: center;
+    padding: 2rem 0; }
+  .foot {
+    padding: 3rem 1rem; }
+    .foot-copyright {
+      display: none; } }
 
 @media only screen and (max-width: 992px) {
   .nav,
@@ -622,23 +645,8 @@ body {
     align-items: center; }
     .foot-item img {
       margin: 0; }
-  .foot-copyright {
-    display: none; }
-  .copyright {
-    display: flex;
-    font: 0.8rem CircularStd;
-    justify-content: center;
-    padding: 2rem 0; }
   .contact {
     flex-direction: column; }
-  .socmed {
-    flex-direction: column;
-    justify-content: start;
-    align-items: flex-start; }
-    .socmed img {
-      width: 2rem; }
-    .socmed > a {
-      padding: 0.5rem 0; }
   #object1, #object2, #object3, #object4 {
     display: none; } }
 
@@ -741,9 +749,5 @@ body {
     padding-bottom: 3rem; }
     .location > iframe {
       width: 100%; }
-  .foot {
-    padding: 3rem 1rem; }
-    .foot-copyright {
-      display: none; }
   #bncc-logo {
     padding-top: 2rem; } }

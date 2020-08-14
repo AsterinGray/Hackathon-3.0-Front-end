@@ -1,8 +1,13 @@
-function changeFile(e) {
-  var fileName = e.files[0].name;
-  $('label[for="' + e.id + '"]').html(fileName);
+//Binusian & Non-Binusian Checker
+const binusChecker = (e) => {
+  if($(e).attr("id") == "binusian"){
+    $("label[for='idcard-leader'").text("Upload Flazz Card")
+  } else {
+    $("label[for='idcard-leader'").text("Upload ID Card")
+  }
 }
 
+//Group Name Validator
 const validateName = (e) => {
   const len = $(e).val().length;
   if (len < 5 || len > 12) {
@@ -14,6 +19,7 @@ const validateName = (e) => {
   }
 };
 
+//Password Confirmation Validator
 const validateConfirmPass = () => {
   if ($("#password").val() === $("#confirm-password").val()) {
     $("#confirm-password")[0].setCustomValidity("");
@@ -24,10 +30,13 @@ const validateConfirmPass = () => {
   }
 };
 
+//Password Validator
 const validatePass = () => {
   const regex = new RegExp(
-    "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*d)[a-zA-Z0-9d]{8,}$"
+    "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})"
   );
+
+  console.log($("#password").val())
   if (!$("#password").val().match(regex)) {
     $("#password")[0].setCustomValidity(
       "Password must contain at least 8 characters, including uppercase, lowercase and number"
@@ -41,6 +50,7 @@ const validatePass = () => {
   }
 };
 
+//Email Validator
 const validateEmail = (email) => {
   const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   if (email.value.match(regex)) {
@@ -52,6 +62,7 @@ const validateEmail = (email) => {
   }
 };
 
+//Phone Number Validator
 const validatePhone = (e) => {
   const len = $(e).val().length;
   if (len < 10) {
@@ -62,3 +73,17 @@ const validatePhone = (e) => {
     $(e).next("p").text("");
   }
 };
+
+changeFile = (e) => {
+  var fileName = e.files[0].name;
+  $('label[for="' + e.id + '"]').html(fileName);
+
+  console.log(e);
+  if (fileName.includes(".jpg") || fileName.includes(".jpeg") || fileName.includes(".pdf") || fileName.includes(".png")) {
+    $(e).prev("p").text("");
+    $(e)[0].setCustomValidity("");
+  } else {
+    $(e).prev("p").text("Invalid File Extension");
+    $(e)[0].setCustomValidity("Invalid File Extension");
+  }
+}

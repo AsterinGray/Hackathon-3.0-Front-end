@@ -1,5 +1,5 @@
 .login {
-  background-color: #ffffff;
+  background-color: #2C3044;
   border-radius: 30px;
   color: #e74c3c;
   padding: 1rem;
@@ -17,6 +17,11 @@
         text-decoration: none;
         color: #e74c3c;
       }
+    }
+
+    & input{
+      background-color: #2C3044;
+      border: white;
     }
   }
 }
@@ -37,10 +42,29 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #ffffff;
+  background-color: #2C3044;
   margin: 5rem 0;
   padding: 3rem 0;
   border-radius: 50px;
+  color: white;
+  & input{
+    background-color: #2C3044;
+    border-color:white;
+    color: white;
+    &::placeholder{
+      color: white;
+    }
+    &:focus{
+      background-color: #2C3044;
+      border-color: white;
+      color: white;
+    }
+  }
+
+  & label{
+    color: white;
+  }
+
   & > h1 {
     color: #e74c3c;
     font-weight: bolder;

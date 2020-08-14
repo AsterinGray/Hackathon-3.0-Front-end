@@ -10,119 +10,6 @@
     <link rel="stylesheet" href="css/login-regis.css" />
   </head>
   <body>
-    <!-- <nav class="nav navbar navbar-expand-lg navbar-light w-100">
-      <a class="navbar-brand" href="#home">
-        <img
-          class="nav-img mr-auto"
-          src="assets/img/Hackathon-logo.png"
-          alt="Hackathon-logo"
-        />
-      </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon" id="hamburger"></span>
-      </button>
-
-      <div class="collapse navbar-collapse nav-a" id="navbarSupportedContent">
-        <div class="nav-main d-flex">
-          <ul class="navbar-nav main">
-            <li class="nav-item">
-              <a class="text-light nav-link active" href="#home">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="text-light nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="text-light nav-link" href="#faq">FAQ</a>
-            </li>
-            <li class="nav-item">
-              <a class="text-light nav-link" href="#sponsor">Sponsor</a>
-            </li>
-            <li class="nav-item">
-              <a class="text-light nav-link" href="#contact">Contact</a>
-            </li>
-          </ul>
-          <ul class="navbar-nav nav-right">
-            @if (Route::has('login')) @auth
-            <li class="nav-item">
-              <a class="text-light nav-link" id="register" href="/home"
-                >Dashboard</a
-              >
-            </li>
-            @else
-            <li class="nav-item">
-              <a class="text-light nav-link" href="/login">Login</a>
-            </li>
-            @if (Route::has('register'))
-            <li class="nav-item">
-              <a class="text-light nav-link" id="register" href="/register"
-                >Register</a
-              >
-            </li>
-            @endif @endauth @endif
-          </ul>
-        </div>
-      </div>
-    </nav> -->
-    <nav class="nav navbar navbar-expand-lg navbar-light w-100">
-      <a class="navbar-brand" href="#home">
-        <img
-          class="nav-img mr-auto"
-          src="assets/img/Hackathon-logo.png"
-          alt="Hackathon-logo"
-        />
-      </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon" id="hamburger"></span>
-      </button>
-
-      <div class="collapse navbar-collapse nav-a" id="navbarSupportedContent">
-        <div class="nav-main d-flex">
-          <ul class="navbar-nav main">
-            <li class="nav-item">
-              <a class="text-light nav-link active" href="#home">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="text-light nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="text-light nav-link" href="#faq">FAQ</a>
-            </li>
-            <li class="nav-item">
-              <a class="text-light nav-link" href="#sponsor">Sponsor</a>
-            </li>
-            <li class="nav-item">
-              <a class="text-light nav-link" href="#contact">Contact</a>
-            </li>
-          </ul>
-          <ul class="navbar-nav nav-right">
-            <li class="nav-item">
-              <a class="text-light nav-link" id="register" href="register.html"
-                >Register</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="text-light nav-link" href="login.html">Login</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
     <section
       class="home container-fluid min-vh-100 d-flex flex-column justify-content-center align-items-center py-5"
       id="home"
@@ -160,6 +47,17 @@
             minlength="8"
           />
           <p class="invalid" id="confirm-feedback"></p>
+
+          <div class="d-flex align-items-center justify-content-between px-5 mt-4">
+              <span>
+                <input type="radio" name="status" id="binusian" onchange="binusChecker()" checked>
+                Non-Binusian
+              </span>
+              <span>
+                <input type="radio" name="status" id="non_binusian" onchange="binusChecker()">
+                Binusian
+              </span>
+          </div>
         </div>
         <hr />
         <div class="regis-team col-12">

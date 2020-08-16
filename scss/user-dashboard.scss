@@ -671,6 +671,19 @@ h1{
     }
 }
 
+::-webkit-scrollbar{
+    width: 7px;
+  }
+  
+  ::-webkit-scrollbar-thumb{
+    background-color: #e74c3c;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-track{
+    background-color: #252a41;
+  }
+
 @keyframes gradient {
     0% {
       background: radial-gradient(circle at center, #2C3044 0%, #E74C3C 0%, #E74C3C 100%); }

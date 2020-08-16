@@ -6,6 +6,16 @@ body {
   scroll-behavior: smooth;
   background-color: #1d2134; }
 
+::-webkit-scrollbar {
+  width: 10px; }
+
+::-webkit-scrollbar-thumb {
+  background-color: #e74c3c;
+  border-radius: 10px; }
+
+::-webkit-scrollbar-track {
+  background-color: #252a41; }
+
 @font-face {
   font-family: "CircularStd";
   src: url("../assets/fonts/CircularStd-Medium.otf"); }
@@ -22,7 +32,7 @@ body {
   background-color: #1d2134;
   z-index: 5;
   padding: 0 10vw;
-  transition: ease 1s; }
+  transition: top 1s; }
   .nav-img {
     width: 5.5rem; }
   .nav-link {
@@ -62,8 +72,10 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 0 10rem;
+  padding: 0 10vw;
   padding-top: 10vh; }
+  .home img {
+    width: 50%; }
   .home-text {
     display: flex;
     justify-content: center;
@@ -490,6 +502,14 @@ body {
     padding: 0; }
     .home-text {
       padding: 0; }
+  .home-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .home-content img {
+    display: none; }
+  .home-text {
+    text-align: center; }
   .nav {
     padding: 0 1rem; }
   .socmed {
@@ -559,6 +579,10 @@ body {
         .why-card-content > span {
           color: #e74c3c;
           font-size: 1rem; }
+  #hackathon-logo {
+    display: flex;
+    align-self: center;
+    width: 50%; }
   .copyright {
     display: flex;
     font: 0.8rem CircularStd;
@@ -597,20 +621,8 @@ body {
         border: none; }
   .navbar-brand img {
     width: 0; }
-  .home-content {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; }
-  .home-content img {
-    display: none; }
-  .home-text {
-    text-align: center; }
   .about-right {
     padding-top: 2rem; }
-  #hackathon-logo {
-    display: flex;
-    align-self: center;
-    width: 50%; }
   .timeline {
     display: flex;
     overflow-x: auto; }

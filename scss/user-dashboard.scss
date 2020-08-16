@@ -51,7 +51,6 @@ body{
         width: 100%;
         flex-direction: row;
         height: auto;
-        z-index: 1000;
         margin: 10px 0px;
         align-items: center;
         justify-content: center;
@@ -193,7 +192,6 @@ hr{
   }
   &-wrapper {
     width: 100%;
-    z-index: 2;
   }
   &-icons {
     & > div {
@@ -207,26 +205,13 @@ hr{
       width: 5rem;
     }
   }
-  &-path {
-    color: white;
-    position: absolute;
-    width: 65%;
-    transform: translateY(-8rem);
-    margin: 10rem;
-    &-line {
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      align-items: center;
-      width: 20%;
-    }
-  }
   &-line {
     width: 75%;
     height: 5px;
     background-color: #3498db;
   }
   &-dot {
+    // z-index: -1;
     width: 76%;
     transform: translateY(-60%);
     & > div {
@@ -244,7 +229,6 @@ hr{
     align-items: center;
     color: white;
     font: 1.5rem CircularStd;
-    z-index: 3;
   }
 }
 

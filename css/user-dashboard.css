@@ -45,7 +45,6 @@ body {
   width: 100%;
   flex-direction: row;
   height: auto;
-  z-index: 1000;
   margin: 10px 0px;
   align-items: center;
   justify-content: center;
@@ -165,8 +164,7 @@ hr {
   .timeline > h1 {
     text-align: center; }
   .timeline-wrapper {
-    width: 100%;
-    z-index: 2; }
+    width: 100%; }
   .timeline-icons > div {
     width: 100rem;
     display: flex;
@@ -175,18 +173,6 @@ hr {
   .timeline-icons img {
     display: block;
     width: 5rem; }
-  .timeline-path {
-    color: white;
-    position: absolute;
-    width: 65%;
-    transform: translateY(-8rem);
-    margin: 10rem; }
-    .timeline-path-line {
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      align-items: center;
-      width: 20%; }
   .timeline-line {
     width: 75%;
     height: 5px;
@@ -206,8 +192,7 @@ hr {
     justify-content: center;
     align-items: center;
     color: white;
-    font: 1.5rem CircularStd;
-    z-index: 3; }
+    font: 1.5rem CircularStd; }
 
 #content {
   width: 85%;

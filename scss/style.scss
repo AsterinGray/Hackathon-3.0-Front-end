@@ -7,6 +7,19 @@ body {
   background-color: #1d2134;
 }
 
+::-webkit-scrollbar{
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #e74c3c;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track{
+  background-color: #252a41;
+}
+
 @mixin flexcc {
   display: flex;
   justify-content: center;
@@ -30,7 +43,7 @@ body {
   background-color: #1d2134;
   z-index: 5;
   padding: 0 10vw;
-  transition: ease 1s;
+  transition: top 1s;
   &-img {
     width: 5.5rem;
   }
@@ -79,8 +92,11 @@ body {
   position: relative;
   @include flexcc();
   flex-direction: column;
-  padding: 0 10rem;
+  padding: 0 10vw;
   padding-top: 10vh;
+  & img{
+    width: 50%;
+  }
   &-text {
     @include flexcc();
     flex-direction: column;
@@ -632,6 +648,20 @@ body {
     }
   }
 
+  .home {
+    &-content{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &-content img {
+      display: none;
+    }
+    &-text {
+      text-align: center;
+    }
+  }
+
   .nav{
     padding: 0 1rem;
   }
@@ -721,6 +751,12 @@ body {
       }
     }
   }
+  
+  #hackathon-logo {
+    display: flex;
+    align-self: center;
+    width: 50%;
+  }
 
   .copyright {
     display: flex;
@@ -777,26 +813,8 @@ body {
     }
   }
 
-  .home {
-    &-content{
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    &-content img {
-      display: none;
-    }
-    &-text {
-      text-align: center;
-    }
-  }
   .about-right{
     padding-top: 2rem;
-  }
-  #hackathon-logo {
-    display: flex;
-    align-self: center;
-    width: 50%;
   }
 
   .timeline {

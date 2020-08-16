@@ -17,7 +17,13 @@
         color: #e74c3c; }
     .login > form input {
       background-color: #2C3044;
-      border: white; }
+      border-color: white; }
+      .login > form input::placeholder {
+        color: gainsboro; }
+      .login > form input:focus {
+        background-color: #2C3044;
+        border-color: white;
+        color: white; }
 
 .invalid {
   text-align: left;
@@ -43,7 +49,7 @@
     border-color: white;
     color: white; }
     .regis input::placeholder {
-      color: white; }
+      color: gainsboro; }
     .regis input:focus {
       background-color: #2C3044;
       border-color: white;
@@ -61,6 +67,8 @@
     text-align: center; }
   .regis-group {
     margin: 1rem 0; }
+    .regis-group > div {
+      padding: 0 2rem; }
   .regis > hr {
     background-color: #e74c3c;
     display: block;
@@ -111,3 +119,9 @@ label {
 
 input[type="file"] {
   display: none; }
+
+@media only screen and (max-width: 1024px) {
+  .regis {
+    padding: 3rem 0; }
+    .regis-group > div {
+      padding: 0; } }

@@ -524,7 +524,7 @@ form {
     .editgroup-info-c {
       width: 100%;
       display: flex;
-      align-items: center; }
+      align-items: flex-start; }
     .editgroup-info-c > label {
       align-self: flex-start; }
     .editgroup-info-input {

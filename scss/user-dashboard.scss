@@ -653,31 +653,6 @@ h1{
     input[type="file"] {
         display: none;
     }
-
-    .inp {
-        &-date {
-            &::-webkit-calendar-picker-indicator {
-                color: rgba(0, 0, 0, 0);
-                opacity: 1;
-                display: block;
-                background: url(../assets/img/regis/ic_date_range_24px_2.svg) no-repeat
-                    center;
-                cursor: pointer;
-            }
-            &::-webkit-inner-spin-button {
-                display: none;
-            }
-        }
-        &-file {
-            background: url(../assets/img/regis/ic_perm_media_24px.svg) no-repeat right;
-            background-origin: content-box;
-            color: white;
-            background-color: #2C3044;
-            border-color: white;
-            cursor: pointer;
-            margin-bottom: 0 !important;
-        }
-    }
     .cir{
         display: flex;
         justify-content: center;
@@ -712,6 +687,34 @@ h1{
         font-weight: 800;
         align-self: center;
     }
+}
+
+
+.inp{
+  &-date {
+    &::-webkit-calendar-picker-indicator {
+      color: rgba(0, 0, 0, 0);
+      opacity: 1;
+      display: block;
+      background: url(../assets/img/regis/ic_date_range_24px.svg) no-repeat
+        center;
+      cursor: pointer;
+    }
+    &::-webkit-inner-spin-button {
+      display: none;
+    }
+  }
+  &-file {
+    // width: 95%;
+    background: url(../assets/img/regis/ic_perm_media_24px.svg) no-repeat right;
+    // border: 1px gray solid;
+    // border-radius: 5px;
+    // padding: 0.5rem;
+  }
+}
+
+input[type="file"] {
+  display: none;
 }
 
 @keyframes showExpand{

@@ -549,22 +549,6 @@ h1 {
       border-color: white; }
   .add-member input[type="file"] {
     display: none; }
-  .add-member .inp-date::-webkit-calendar-picker-indicator {
-    color: rgba(0, 0, 0, 0);
-    opacity: 1;
-    display: block;
-    background: url(../assets/img/regis/ic_date_range_24px_2.svg) no-repeat center;
-    cursor: pointer; }
-  .add-member .inp-date::-webkit-inner-spin-button {
-    display: none; }
-  .add-member .inp-file {
-    background: url(../assets/img/regis/ic_perm_media_24px.svg) no-repeat right;
-    background-origin: content-box;
-    color: white;
-    background-color: #2C3044;
-    border-color: white;
-    cursor: pointer;
-    margin-bottom: 0 !important; }
   .add-member .cir {
     display: flex;
     justify-content: center;
@@ -593,6 +577,22 @@ h1 {
     font-size: 1.2rem;
     font-weight: 800;
     align-self: center; }
+
+.inp-date::-webkit-calendar-picker-indicator {
+  color: rgba(0, 0, 0, 0);
+  opacity: 1;
+  display: block;
+  background: url(../assets/img/regis/ic_date_range_24px.svg) no-repeat center;
+  cursor: pointer; }
+
+.inp-date::-webkit-inner-spin-button {
+  display: none; }
+
+.inp-file {
+  background: url(../assets/img/regis/ic_perm_media_24px.svg) no-repeat right; }
+
+input[type="file"] {
+  display: none; }
 
 @keyframes showExpand {
   0% {

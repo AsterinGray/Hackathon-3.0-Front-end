@@ -39,6 +39,7 @@ body{
         padding-left: 15px;
         height: 93%;
         position: sticky;
+        z-index: 10;
     }
     &-hackathon-logo{
         width: 50px;
@@ -315,6 +316,7 @@ h1{
         display: flex;
         flex-direction: row;
         height: fit-content;
+        width: 100%;
 
         & div{
             color: white;
@@ -334,6 +336,18 @@ h1{
             padding: 5px 8px;
             height: auto;
             display: flexbox;
+            &-max{
+                background-color: #2C3044;
+                border: solid 1px #7a7a7a;
+                border-radius: 8px;
+                width: 90%;
+                color: white;
+                font-family: "CircularStd Book";
+                font-size: 0.75rem;
+                padding: 5px 8px;
+                height: auto;
+                display: flexbox;
+            }
         }
         &-left{
             width: 50%;
@@ -531,7 +545,7 @@ h1{
         }
         span{
             font-size: .75rem;
-            color: #1d2134;
+            color: white;
         }
     }
     &-time{
@@ -541,6 +555,7 @@ h1{
             margin: 0 5px;
             font-size: .75em;
             display: flex;
+            color: white;
             align-items: center;
         }
     }
@@ -564,6 +579,41 @@ h1{
 
 .vertical {
     transform: rotate(90deg); }
+
+.submit{
+    border:     none;
+    background-color: #E74C3C;
+    border-radius: 20px;
+    padding: 5px 6px;
+    width: 100%;
+    margin: auto;
+    color:white;
+}    
+
+.form{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 12px;
+
+    &-control{
+        font-weight: normal;
+        padding: 2px 8px;
+    }
+    & input:active{
+        border: solid 1px red;
+    }
+
+} 
+
+#memberform{
+    display: flexbox;
+    height: 0;
+    margin: unset;
+    padding: unset;
+    overflow: hidden;
+    transition: all 1s ease;
+
+}
 
 .add-member{
     background-color: #E74C3C;
@@ -610,7 +660,7 @@ h1{
                 color: rgba(0, 0, 0, 0);
                 opacity: 1;
                 display: block;
-                background: url(../assets/img/regis/ic_date_range_24px.svg) no-repeat
+                background: url(../assets/img/regis/ic_date_range_24px_2.svg) no-repeat
                     center;
                 cursor: pointer;
             }
@@ -624,6 +674,8 @@ h1{
             color: white;
             background-color: #2C3044;
             border-color: white;
+            cursor: pointer;
+            margin-bottom: 0 !important;
         }
     }
     .cir{
@@ -846,6 +898,8 @@ hr{
      }
      &-info{
          flex-direction: row;
+         width: 100%;
+
          &-left,&-right{
              width: 100%;
              margin: 0 .5rem;

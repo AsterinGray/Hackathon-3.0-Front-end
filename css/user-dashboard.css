@@ -36,7 +36,8 @@ body {
   #navbar-c {
     padding-left: 15px;
     height: 93%;
-    position: sticky; }
+    position: sticky;
+    z-index: 10; }
   #navbar-hackathon-logo {
     width: 50px; }
 
@@ -265,7 +266,8 @@ h1 {
 .editgroup-info {
   display: flex;
   flex-direction: row;
-  height: fit-content; }
+  height: fit-content;
+  width: 100%; }
   .editgroup-info div {
     color: white; }
   .editgroup-info-c {
@@ -282,6 +284,17 @@ h1 {
     padding: 5px 8px;
     height: auto;
     display: flexbox; }
+    .editgroup-info-input-max {
+      background-color: #2C3044;
+      border: solid 1px #7a7a7a;
+      border-radius: 8px;
+      width: 90%;
+      color: white;
+      font-family: "CircularStd Book";
+      font-size: 0.75rem;
+      padding: 5px 8px;
+      height: auto;
+      display: flexbox; }
   .editgroup-info-left {
     width: 50%;
     height: max-content; }
@@ -452,7 +465,7 @@ h1 {
       display: none; }
     .payment-right span {
       font-size: .75rem;
-      color: #1d2134; }
+      color: white; }
   .payment-time {
     width: 15px;
     margin: 5px 5px; }
@@ -460,6 +473,7 @@ h1 {
       margin: 0 5px;
       font-size: .75em;
       display: flex;
+      color: white;
       align-items: center; }
 
 .invalid {
@@ -479,6 +493,33 @@ h1 {
 
 .vertical {
   transform: rotate(90deg); }
+
+.submit {
+  border: none;
+  background-color: #E74C3C;
+  border-radius: 20px;
+  padding: 5px 6px;
+  width: 100%;
+  margin: auto;
+  color: white; }
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 12px; }
+  .form-control {
+    font-weight: normal;
+    padding: 2px 8px; }
+  .form input:active {
+    border: solid 1px red; }
+
+#memberform {
+  display: flexbox;
+  height: 0;
+  margin: unset;
+  padding: unset;
+  overflow: hidden;
+  transition: all 1s ease; }
 
 .add-member {
   background-color: #E74C3C;
@@ -512,7 +553,7 @@ h1 {
     color: rgba(0, 0, 0, 0);
     opacity: 1;
     display: block;
-    background: url(../assets/img/regis/ic_date_range_24px.svg) no-repeat center;
+    background: url(../assets/img/regis/ic_date_range_24px_2.svg) no-repeat center;
     cursor: pointer; }
   .add-member .inp-date::-webkit-inner-spin-button {
     display: none; }
@@ -521,7 +562,9 @@ h1 {
     background-origin: content-box;
     color: white;
     background-color: #2C3044;
-    border-color: white; }
+    border-color: white;
+    cursor: pointer;
+    margin-bottom: 0 !important; }
   .add-member .cir {
     display: flex;
     justify-content: center;
@@ -686,7 +729,8 @@ h1 {
   .editgroup-content, .editgroup-col {
     width: 100%; }
   .editgroup-info {
-    flex-direction: row; }
+    flex-direction: row;
+    width: 100%; }
     .editgroup-info-left, .editgroup-info-right {
       width: 100%;
       margin: 0 .5rem;

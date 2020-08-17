@@ -18,14 +18,14 @@
     <div id="container">
         <section id=navbar class="navbar">
             <div class="navbar-header">
-                <div class=navbar-icon-c>
+                <div class=navbar-icon-c id=hamburger aria-expanded="false">
                     <img class=navbar-icon src="assets/img/admin-panel/Group 990.png">
                 </div>
-                <div class="navbar-caption">
+                <div class="navbar-caption-2 display-none">
                     admin panel
                 </div>
             </div>
-            <hr>
+            <hr class=hr-navbar>
             <div class="navbar-content" onclick="switchToggle2('payment')">
                 <div class=navbar-icon-c>
                     <img class=navbar-icon src="assets/img/admin-panel/Payment.png">
@@ -43,12 +43,12 @@
                 </div>
             </div>
             <button class="navbar-content">
-                <div class=navbar-icon-c>
-                    <img class=navbar-icon src="assets/img/admin-panel/logout.png">
-                </div>
-                <div class="navbar-caption">
-                    logout
-                </div>
+                    <div class=navbar-icon-c>
+                        <img class=navbar-icon src="assets/img/admin-panel/logout.png">
+                    </div>
+                    <div class="navbar-caption">
+                        logout
+                    </div>
             </button>
         </section>
         <section id=content>
@@ -111,7 +111,11 @@
                             </div>
                             <button class="editgroup-view" onclick="view('assets/img/admin-panel/CV-CROP.jpg')" type="button">View CV</button>
                         </div>
+                        <hr class="hr3">
+                        <button class="editgroup-submit" type="submit">Submit</button>
                         </div>
+                    </form>
+                    <form>
                         <div class="editgroup-col">
                             <header>Member 1</header>
                             <hr class="hr3">
@@ -163,7 +167,11 @@
                                 </div>
                                 <button class="editgroup-view" onclick="view('assets/img/admin-panel/CV-CROP.jpg')"  type="button">View CV</button>
                             </div>
+                            <hr class="hr3">
+                            <button class="editgroup-submit" type="submit">Submit</button>
                         </div>
+                    </form>
+                    <form>
                         <div class="editgroup-col">
                             <header>Member 2</header>
                             <hr class="hr3">
@@ -204,7 +212,6 @@
                                         <input class="editgroup-info-input" name="member2-birthdate" id="member2-birthdate">
                                     </div>
                                 </div>
-            
                             </div>
                             <hr class="hr3">
                             <div class="editgroup-cv-c">
@@ -215,8 +222,9 @@
                                 </div>
                                 <button class="editgroup-view" onclick="view('assets/img/admin-panel/CV-CROP.jpg')" type="button">View CV</button>
                             </div>
+                            <hr class="hr3">
+                            <button class="editgroup-submit" type="submit">Submit</button>
                         </div>
-                        <button class="editgroup-submit" type="submit">Submit</button>
                     </form>
                     
                 </div>

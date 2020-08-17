@@ -12,11 +12,11 @@ body{
     overflow-x: hidden;
 }
 #container{
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background-color: #1D2134;
     color: white;
-    position: relative;
+    position: absolute;
     padding: 25px 15px;
     display: flex;
     flex-direction:row;
@@ -92,7 +92,16 @@ body{
         width: 60%;
         margin-left: 20px;
         text-align: left;
+        &-2{
+            display: none;
+            text-transform: uppercase;
+            font-size: 1em;
+            width: 60%;
+            margin-left: 20px;
+            text-align: left;
+        }
     }
+
 }
 #content{
     width: 85%;
@@ -203,7 +212,7 @@ h1{
 .active{
     background-color: #1D2134;
     border-radius: 28px;
-    box-sizing: content-box;
+    box-sizing: border-box;
     color: #E74C3C;
     transition: background-color .2s linear;
 }
@@ -239,6 +248,12 @@ h1{
             font-size: 1.5rem;
         }
     }
+    &-colrow{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
     &-edit{
         background-color: #E74C3C;
         width: 150px;
@@ -257,11 +272,14 @@ h1{
     }
     &-delete{
         color: #E74C3C;
+        border-radius: 10px;
+        border: none;
         font-size: 1.5em;
         text-align: right;
         align-self: flex-end;
         position: relative;
         top: -15px;
+        background: none;
     }
     &-delete:hover{
         cursor: pointer;
@@ -286,6 +304,8 @@ form{
         display: flex;
         margin: 15px 0;
         width: 50%;
+        justify-content: center;
+        align-items: center;
         flex-direction: column;
         background-color: #252A41;
         border-radius: 18px;
@@ -296,9 +316,12 @@ form{
     }
     &-info{
         display: flex;
+        width: 100%;
         flex-direction: row;
         height: fit-content;
         &-c{
+            display: flex;
+            flex-direction: column;
             margin: 10px 0px;
         }
         &-input{
@@ -323,6 +346,7 @@ form{
     &-cv{
         &-c{
             display: flex;
+            width: 100%;
             flex-direction: row
         }
         &-left{
@@ -345,23 +369,24 @@ form{
         }
     }
     &-view{
-        background-color: #E74C3C;
+        border: solid 2px #E74C3C;
+        background: none;
         width: 100px;
         font-size: 0.75rem;
         border-radius: 15px;
-        border: none;
         color: white;
     }
     &-submit{
-        border:solid 3px #E74C3C;
-        background: none;
+        background-color:#E74C3C;
+        border: none;
         width: 50%;
+        margin: auto;
         padding: 10px;
         border-radius: 50px;
         color: white;
-        margin: 30px 5px;
+        margin: 10px 5px;
         // margin-bottom: 30px;
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 }
 .hr3{
@@ -408,5 +433,197 @@ form{
     &-secondary{
         background-color: initial;
         border: solid 1px gray;
+    }
+}
+
+.display-none{
+    display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+    #container{
+        flex-direction: column;
+        padding: 0;
+    }
+    #navbar{
+        height: auto;
+        padding: 0;
+        z-index: 10;
+        border-radius: 0;
+        overflow: hidden;
+        width: 100%;
+        position: absolute;
+    }
+    .navbar{
+        &-caption{
+            width: auto;
+        }
+        &-content{
+            height: 0;
+            visibility: hidden;
+            overflow: hidden;
+            &-c{
+                height: 0px;
+                display: flex;
+                width: inherit;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+        &-header{
+            flex-direction: row;
+            height: 50px;
+        }
+    }
+    .hr-navbar{
+        display: none;
+    }
+    #content{
+        padding: 0;
+        width: initial;
+        box-sizing: border-box;
+        margin: 3rem 2rem;
+    }
+    #header{
+        padding-top: 3rem;
+    }
+    h1{
+        text-align: center;
+    }
+    .payment{
+        &-content{
+            justify-content: space-evenly;
+        }
+        &-col{
+            width: 45%;
+        }
+    }
+    .participant{
+        &-content{
+            justify-content: center;
+        }
+        &-col{
+            width: 45%;
+        }
+        &-col-content{
+            display: flex;
+            flex-direction: row;
+        }
+        &-delete{
+            align-self: flex-start;
+            position: relative;
+            left: 95%;
+        }
+    }
+    .editgroup{
+        &-col{
+            width: 100%;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px){
+    #container{
+        flex-direction: column;
+        padding: 0;
+    }
+    #navbar{
+        height: auto;
+        padding: 0;
+        z-index: 10;
+        border-radius: 0;
+        overflow: hidden;
+        width: 100%;
+        position: absolute;
+    }
+    .navbar{
+        &-caption{
+            width: auto;
+        }
+        &-content{
+            height: 0;
+            visibility: hidden;
+            overflow: hidden;
+            &-c{
+                height: 0px;
+                display: flex;
+                width: inherit;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+        &-header{
+            flex-direction: row;
+            height: 50px;
+        }
+    }
+    .hr-navbar{
+        display: none;
+    }
+    #content{
+        padding: 0;
+        width: initial;
+        box-sizing: border-box;
+        margin: 3rem 2rem;
+    }
+    #header{
+        padding-top: 3rem;
+    }
+    h1{
+        text-align: center;
+    }
+    .payment{
+        &-content{
+            justify-content: space-evenly;
+        }
+        &-col{
+            width: 100%;
+        }
+    }
+    .participant{
+        &-col{
+            width: 100%;
+        }
+        &-col-content{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        &-delete{
+            align-self: flex-start;
+            position: relative;
+            right: -2%;
+        }
+    }
+    #header{
+        padding-top: 4rem;
+    }
+    .editgroup{
+        &-info{
+            flex-direction: column;
+            &-c{
+                width: 100%;
+                display: flex;
+                align-items: center;
+            }
+            &-c > label{
+                align-self: flex-start;
+            }
+            &-input{
+                width: 100%;
+            }
+            &-left{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            &-right{
+                width: 100%;
+            }
+        }
+        &-col{
+            width: 100%;
+        }
     }
 }

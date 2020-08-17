@@ -480,26 +480,28 @@ $("#hamburger").click(function(){
   }
   });
 
-    // const changeFile = (e) => {
-    //   var fileName = e.files[0].name;
-    //   $("#file-name").text(fileName);
-    //   $("#file-status").text("Pending");
-    //   if(fileName.includes(".jpg") || fileName.includes(".png")){
-    //   setTimeout(function(){$("#payment-form").submit()}, 500)
-    //   $(e).next("p").text("");
-    //   }else{
-    //   console.log($(e).find("p"));
-    //   $(e).next("p").text("File extension must be png or jpg");
-    //   }
-    //   }
+    const changeFile = (e) => {
+      var fileName = e.files[0].name;
+      $("#file-name").text(fileName);
+      $("#file-status").text("Pending");
+      if(fileName.includes(".jpg") || fileName.includes(".png")){
+      setTimeout(function(){$("#payment-form").submit()}, 500)
+      $(e).next("p").text("");
+      }else{
+      console.log($(e).find("p"));
+      $(e).next("p").text("File extension must be png or jpg");
+      }
+      }
   
 const expandForm = (e) => {
-  const addMember = $(e).closest(".add-member");
-  if(addMember.height() == 40){
+  const addMember = $("#memberform");
+  if(addMember.height() == 0){
     $(e).children(".plus").css({ "transform": "rotate(0deg)" });
-    addMember.css({ "height": "100%", "background-color": "#2C3044" })
+    $(e).closest(".add-member").css({ "background-color" : "#2C3044"});
+    addMember.css({ "height": "auto", "margin":"15px 0", "padding":"20px" })
   } else {
-    addMember.css({ "height": "5rem", "background-color": "#E74C3C" })
+    addMember.css({ "height": "0", "margin":"0", "padding":"0"})
     $(e).children(".plus").css({ "transform": "rotate(90deg)" });
+    $(e).closest(".add-member").css({ "background-color" : "#E74C3C"});
   }
 }

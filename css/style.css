@@ -62,13 +62,23 @@ body {
     background-color: #e74c3c; }
 
 #hackathon-logo {
+  max-width: 100%;
   width: 50%;
+  height: auto;
+  align-items: flex-start;
   display: none; }
+
+#hackathon-laptop {
+  width: 50%;
+  max-width: 50%;
+  height: 70vh
+ } 
 
 .home {
   background: url("../assets/img/home/BG_Home_1920-min.png") no-repeat;
   background-size: cover;
   position: relative;
+  overflow-x: hidden;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -244,24 +254,31 @@ body {
       bottom: 0;
       height: 20%;
       transition: 0.5s ease;
-      padding: 1rem; }
+      padding: 0 .5rem; }
       .why-card-content > h5 {
         margin: .6rem 0; }
       .why-card-content:hover {
         cursor: pointer;
-        height: 45%; }
+        height: 50%; }
       .why-card-content-heading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
         text-align: center;
         font-size: 1.3rem; }
       .why-card-content-par-container {
-        height: 45%;
-        overflow: hidden;
-        margin-bottom: 5px; }
+        height: inherit;
+        margin: .5rem 0 }
+        .why-card-content-par {
+          height: 65%;
+          overflow: hidden; }  
+      .why-card-content-par-container::after{
+        content: "Click to enlarge";
+        color: #e74c3c;
+      }
       .why-card-content-content-par {
         font-size: 0.78em; }
-    .why-card span {
-      color: red;
-      font-size: 0.78em; }
 
 #why-active-heading {
   color: #e74c3c;
@@ -499,7 +516,8 @@ body {
   .about, .why, .faq, .contact, .foot, .socmed {
     padding: 3rem 1rem; }
   .home {
-    padding: 0; }
+    padding: 0;
+    margin-top: 5.5rem; }
     .home-text {
       padding: 0; }
   .home-content {
@@ -580,8 +598,9 @@ body {
           color: #e74c3c;
           font-size: 1rem; }
   #hackathon-logo {
-    display: flex;
+    display: block;
     align-self: center;
+    max-width: 100%;
     width: 50%; }
   .copyright {
     display: flex;

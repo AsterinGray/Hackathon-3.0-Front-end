@@ -96,6 +96,7 @@ body {
   padding-top: 10vh;
   & img{
     width: 50%;
+    max-height: 100%;
   }
   &-text {
     @include flexcc();

@@ -175,11 +175,10 @@ hr{
         background-color: #2C3044;
     }
 }
-
 .timeline {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+display: flex;
+justify-content: center;
+align-items: center;
   padding: 3rem 0rem;
   flex-direction: column;
   position: relative;
@@ -189,12 +188,13 @@ hr{
   }
   & > h1 {
     text-align: center;
-    
   }
   &-wrapper {
     width: 100%;
+    z-index: 2;
   }
   &-icons {
+      width: 100%;
     & > div {
       width: 100rem;
       display: flex;
@@ -212,7 +212,6 @@ hr{
     background-color: #3498db;
   }
   &-dot {
-    // z-index: -1;
     width: 76%;
     transform: translateY(-60%);
     & > div {
@@ -230,6 +229,7 @@ hr{
     align-items: center;
     color: white;
     font: 1.5rem CircularStd;
+    z-index: 3;
   }
 }
 
@@ -755,6 +755,7 @@ input[type="file"] {
 @media only screen and (max-width: 1024px) {
 body{
     flex-direction: column;
+    overflow-x: hidden;
 }
 #container{
     padding: 0;
@@ -806,6 +807,34 @@ hr{
      display: flex;
      justify-content: flex-end;
  }
+
+ #content{
+     overflow-x: hidden;
+ }
+
+  .timeline{
+      display: flex;
+    &-wrapper{
+        overflow: auto;
+      width: 80rem;
+      &::-webkit-scrollbar{
+          display: none;
+      }
+    }
+    &-line{
+        width: 60rem;
+    }
+    &-icons{
+        width: 60rem;
+    }
+    &-dot{
+        width: 45rem;
+    }
+    &-contents{
+        width: 60rem;
+    }
+  }
+
  .nav{
     height: 0;
     padding: 0;
@@ -963,6 +992,7 @@ hr{
 @media only screen and (max-width: 768px) {
     body{
         flex-direction: column;
+        overflow-x: hidden;
     }
     #container{
         padding: 0;
